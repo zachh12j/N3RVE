@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472021727D6C00C7D64A /* AppDelegate.swift */; };
+		DE29472321727D6C00C7D64A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472221727D6C00C7D64A /* ViewController.swift */; };
+		DE29472621727D6C00C7D64A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472421727D6C00C7D64A /* Main.storyboard */; };
+		DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE29472721727D6F00C7D64A /* Assets.xcassets */; };
+		DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */; };
+		DE29473621727D6F00C7D64A /* AerisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29473521727D6F00C7D64A /* AerisTests.swift */; };
+		DE29474121727D7000C7D64A /* AerisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29474021727D7000C7D64A /* AerisUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE29473221727D6F00C7D64A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE29471521727D6B00C7D64A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE29471C21727D6C00C7D64A;
+			remoteInfo = Aeris;
+		};
+		DE29473D21727D7000C7D64A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE29471521727D6B00C7D64A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE29471C21727D6C00C7D64A;
+			remoteInfo = Aeris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE29471D21727D6C00C7D64A /* Aeris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aeris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE29472021727D6C00C7D64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE29472221727D6C00C7D64A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE29472521727D6C00C7D64A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE29472721727D6F00C7D64A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE29472A21727D6F00C7D64A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE29472C21727D6F00C7D64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE29473121727D6F00C7D64A /* AerisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AerisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE29473521727D6F00C7D64A /* AerisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisTests.swift; sourceTree = "<group>"; };
+		DE29473721727D6F00C7D64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE29473C21727D7000C7D64A /* AerisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AerisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE29474021727D7000C7D64A /* AerisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisUITests.swift; sourceTree = "<group>"; };
+		DE29474221727D7000C7D64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE29471A21727D6C00C7D64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29472E21727D6F00C7D64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29473921727D7000C7D64A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE29471421727D6B00C7D64A = {
+			isa = PBXGroup;
+			children = (
+				DE29471F21727D6C00C7D64A /* Aeris */,
+				DE29473421727D6F00C7D64A /* AerisTests */,
+				DE29473F21727D7000C7D64A /* AerisUITests */,
+				DE29471E21727D6C00C7D64A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE29471E21727D6C00C7D64A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE29471D21727D6C00C7D64A /* Aeris.app */,
+				DE29473121727D6F00C7D64A /* AerisTests.xctest */,
+				DE29473C21727D7000C7D64A /* AerisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE29471F21727D6C00C7D64A /* Aeris */ = {
+			isa = PBXGroup;
+			children = (
+				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
+				DE29472221727D6C00C7D64A /* ViewController.swift */,
+				DE29472421727D6C00C7D64A /* Main.storyboard */,
+				DE29472721727D6F00C7D64A /* Assets.xcassets */,
+				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
+				DE29472C21727D6F00C7D64A /* Info.plist */,
+			);
+			path = Aeris;
+			sourceTree = "<group>";
+		};
+		DE29473421727D6F00C7D64A /* AerisTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE29473521727D6F00C7D64A /* AerisTests.swift */,
+				DE29473721727D6F00C7D64A /* Info.plist */,
+			);
+			path = AerisTests;
+			sourceTree = "<group>";
+		};
+		DE29473F21727D7000C7D64A /* AerisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE29474021727D7000C7D64A /* AerisUITests.swift */,
+				DE29474221727D7000C7D64A /* Info.plist */,
+			);
+			path = AerisUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE29471C21727D6C00C7D64A /* Aeris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE29474521727D7000C7D64A /* Build configuration list for PBXNativeTarget "Aeris" */;
+			buildPhases = (
+				DE29471921727D6C00C7D64A /* Sources */,
+				DE29471A21727D6C00C7D64A /* Frameworks */,
+				DE29471B21727D6C00C7D64A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aeris;
+			productName = Aeris;
+			productReference = DE29471D21727D6C00C7D64A /* Aeris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE29473021727D6F00C7D64A /* AerisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE29474821727D7000C7D64A /* Build configuration list for PBXNativeTarget "AerisTests" */;
+			buildPhases = (
+				DE29472D21727D6F00C7D64A /* Sources */,
+				DE29472E21727D6F00C7D64A /* Frameworks */,
+				DE29472F21727D6F00C7D64A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE29473321727D6F00C7D64A /* PBXTargetDependency */,
+			);
+			name = AerisTests;
+			productName = AerisTests;
+			productReference = DE29473121727D6F00C7D64A /* AerisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE29473B21727D7000C7D64A /* AerisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE29474B21727D7000C7D64A /* Build configuration list for PBXNativeTarget "AerisUITests" */;
+			buildPhases = (
+				DE29473821727D7000C7D64A /* Sources */,
+				DE29473921727D7000C7D64A /* Frameworks */,
+				DE29473A21727D7000C7D64A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE29473E21727D7000C7D64A /* PBXTargetDependency */,
+			);
+			name = AerisUITests;
+			productName = AerisUITests;
+			productReference = DE29473C21727D7000C7D64A /* AerisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE29471521727D6B00C7D64A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Camilo Rossi";
+				TargetAttributes = {
+					DE29471C21727D6C00C7D64A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					DE29473021727D6F00C7D64A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = DE29471C21727D6C00C7D64A;
+					};
+					DE29473B21727D7000C7D64A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = DE29471C21727D6C00C7D64A;
+					};
+				};
+			};
+			buildConfigurationList = DE29471821727D6B00C7D64A /* Build configuration list for PBXProject "Aeris" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE29471421727D6B00C7D64A;
+			productRefGroup = DE29471E21727D6C00C7D64A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE29471C21727D6C00C7D64A /* Aeris */,
+				DE29473021727D6F00C7D64A /* AerisTests */,
+				DE29473B21727D7000C7D64A /* AerisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE29471B21727D6C00C7D64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
+				DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */,
+				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29472F21727D6F00C7D64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29473A21727D7000C7D64A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE29471921727D6C00C7D64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE29472321727D6C00C7D64A /* ViewController.swift in Sources */,
+				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29472D21727D6F00C7D64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE29473621727D6F00C7D64A /* AerisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29473821727D7000C7D64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE29474121727D7000C7D64A /* AerisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE29473321727D6F00C7D64A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE29471C21727D6C00C7D64A /* Aeris */;
+			targetProxy = DE29473221727D6F00C7D64A /* PBXContainerItemProxy */;
+		};
+		DE29473E21727D7000C7D64A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE29471C21727D6C00C7D64A /* Aeris */;
+			targetProxy = DE29473D21727D7000C7D64A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE29472421727D6C00C7D64A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE29472521727D6C00C7D64A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE29472A21727D6F00C7D64A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE29474321727D7000C7D64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE29474421727D7000C7D64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE29474621727D7000C7D64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBD42XY6P7;
+				INFOPLIST_FILE = Aeris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.Aeris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE29474721727D7000C7D64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBD42XY6P7;
+				INFOPLIST_FILE = Aeris/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.Aeris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DE29474921727D7000C7D64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBD42XY6P7;
+				INFOPLIST_FILE = AerisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.AerisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aeris.app/Aeris";
+			};
+			name = Debug;
+		};
+		DE29474A21727D7000C7D64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBD42XY6P7;
+				INFOPLIST_FILE = AerisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.AerisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aeris.app/Aeris";
+			};
+			name = Release;
+		};
+		DE29474C21727D7000C7D64A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBD42XY6P7;
+				INFOPLIST_FILE = AerisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.AerisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Aeris;
+			};
+			name = Debug;
+		};
+		DE29474D21727D7000C7D64A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBD42XY6P7;
+				INFOPLIST_FILE = AerisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.AerisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Aeris;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE29471821727D6B00C7D64A /* Build configuration list for PBXProject "Aeris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE29474321727D7000C7D64A /* Debug */,
+				DE29474421727D7000C7D64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE29474521727D7000C7D64A /* Build configuration list for PBXNativeTarget "Aeris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE29474621727D7000C7D64A /* Debug */,
+				DE29474721727D7000C7D64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE29474821727D7000C7D64A /* Build configuration list for PBXNativeTarget "AerisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE29474921727D7000C7D64A /* Debug */,
+				DE29474A21727D7000C7D64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE29474B21727D7000C7D64A /* Build configuration list for PBXNativeTarget "AerisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE29474C21727D7000C7D64A /* Debug */,
+				DE29474D21727D7000C7D64A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE29471521727D6B00C7D64A /* Project object */;
+}
