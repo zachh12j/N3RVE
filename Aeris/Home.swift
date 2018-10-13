@@ -9,7 +9,11 @@
 import UIKit
 
 class Home: UIViewController {
-
+    
+    @IBAction func fromHomeToCategories(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromHomeToCategories", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
