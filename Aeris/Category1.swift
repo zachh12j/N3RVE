@@ -98,7 +98,7 @@ class Category1: UIViewController {
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "fromCategory1ToResults") {
-            var vc = segue.destination as! ResultsViewController
+            let vc = segue.destination as! ResultsViewController
             vc.noCorrect = noCorrect
             vc.total = questions.count
         }
