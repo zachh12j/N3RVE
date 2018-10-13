@@ -57,5 +57,37 @@ class Categories: UIViewController {
         Category5.layer.shadowOpacity = 0.7
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        super.touchesBegan(touches, with: event)
+        
+        let touch: UITouch = touches.first as! UITouch
+        
+        if (touch.view == Category1)
+        {
+            print("Touch detected on 1")
+        }
+        
+        if (touch.view == Category2)
+        {
+            print("Touch detected on 2")
+        }
+        
+        if (touch.view == Category3)
+        {
+            print("Touch detected on 3")
+        }
+        
+        if (touch.view == Category4)
+        {
+            print("Touch detected on 4")
+        }
+        
+        if (touch.view == Category5)
+        {
+            print("Touch detected on 5")
+        }
+        
+    }
     
 }
