@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="1689" y="23"/>
         </scene>
-        <!--Results-->
+        <!--Results View Controller-->
         <scene sceneID="FtF-tt-0IU">
             <objects>
-                <viewController storyboardIdentifier="Results" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Myo-Z9-wPc" customClass="Results" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Results" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Myo-Z9-wPc" customClass="ResultsViewController" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2TP-Ij-xhI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
