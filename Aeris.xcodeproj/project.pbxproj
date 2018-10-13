@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472021727D6C00C7D64A /* AppDelegate.swift */; };
-		DE29472321727D6C00C7D64A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472221727D6C00C7D64A /* ViewController.swift */; };
+		DE29472321727D6C00C7D64A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472221727D6C00C7D64A /* Home.swift */; };
 		DE29472621727D6C00C7D64A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472421727D6C00C7D64A /* Main.storyboard */; };
 		DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE29472721727D6F00C7D64A /* Assets.xcassets */; };
 		DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		DE29471D21727D6C00C7D64A /* Aeris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aeris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29472021727D6C00C7D64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE29472221727D6C00C7D64A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE29472221727D6C00C7D64A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DE29472521727D6C00C7D64A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE29472721727D6F00C7D64A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE29472A21727D6F00C7D64A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
-				DE29472221727D6C00C7D64A /* ViewController.swift */,
+				DE29472221727D6C00C7D64A /* Home.swift */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE29472321727D6C00C7D64A /* ViewController.swift in Sources */,
+				DE29472321727D6C00C7D64A /* Home.swift in Sources */,
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,10 +439,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.Aeris;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerisapp.aeris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,10 +457,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.Aeris;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aerisapp.aeris;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
