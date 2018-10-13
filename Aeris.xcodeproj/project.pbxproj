@@ -14,7 +14,7 @@
 		DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */; };
 		DE29473621727D6F00C7D64A /* AerisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29473521727D6F00C7D64A /* AerisTests.swift */; };
 		DE29474121727D7000C7D64A /* AerisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29474021727D7000C7D64A /* AerisUITests.swift */; };
-		DE29474F217282F300C7D64A /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29474E217282F300C7D64A /* Categories.swift */; };
+		DEF2C888217283F2008F75A4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C887217283F2008F75A4 /* Categories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,7 @@
 		DE29473C21727D7000C7D64A /* AerisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AerisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29474021727D7000C7D64A /* AerisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisUITests.swift; sourceTree = "<group>"; };
 		DE29474221727D7000C7D64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE29474E217282F300C7D64A /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		DEF2C887217283F2008F75A4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			children = (
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
 				DE29472221727D6C00C7D64A /* Home.swift */,
-				DE29474E217282F300C7D64A /* Categories.swift */,
+				DEF2C887217283F2008F75A4 /* Categories.swift */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
@@ -261,7 +261,7 @@
 			files = (
 				DE29472321727D6C00C7D64A /* Home.swift in Sources */,
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
-				DE29474F217282F300C7D64A /* Categories.swift in Sources */,
+				DEF2C888217283F2008F75A4 /* Categories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

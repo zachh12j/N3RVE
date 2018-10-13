@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF9-e2-IZ1">
-                                <rect key="frame" x="139" y="396" width="96" height="30"/>
+                                <rect key="frame" x="139.66666666666666" y="396" width="96" height="30"/>
                                 <state key="normal" title="Lancer le quiz"/>
                                 <connections>
                                     <action selector="fromHomeToCategories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJM-Fa-WVt"/>
@@ -44,20 +44,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="d28-tO-OiR">
+        <!--Categories-->
+        <scene sceneID="W3x-ul-sZt">
             <objects>
-                <viewController id="2PU-HT-WiM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bcO-dY-PUW">
+                <viewController storyboardIdentifier="Categories" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LxV-9B-Eo7" customClass="Categories" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RZu-nO-Ctp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="AoH-OR-OuB"/>
+                        <viewLayoutGuide key="safeArea" id="Jfr-B6-Lpr"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xJb-x0-IoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65x-Dy-1e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855" y="27"/>
+            <point key="canvasLocation" x="906" y="23"/>
         </scene>
     </scenes>
 </document>
