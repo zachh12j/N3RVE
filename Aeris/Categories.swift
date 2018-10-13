@@ -65,27 +65,27 @@ class Categories: UIViewController {
         
         if (touch.view == Category1)
         {
-            print("Touch detected on 1")
+            self.performSegue(withIdentifier: "fromCategoriesToCategory1", sender: self)
         }
         
         if (touch.view == Category2)
         {
-            print("Touch detected on 2")
+            self.performSegue(withIdentifier: "fromCategoriesToCategory2", sender: self)
         }
         
         if (touch.view == Category3)
         {
-            print("Touch detected on 3")
+            self.performSegue(withIdentifier: "fromCategoriesToCategory3", sender: self)
         }
         
         if (touch.view == Category4)
         {
-            print("Touch detected on 4")
+            self.performSegue(withIdentifier: "fromCategoriesToCategory4", sender: self)
         }
         
         if (touch.view == Category5)
         {
-            print("Touch detected on 5")
+            self.performSegue(withIdentifier: "fromCategoriesToCategory5", sender: self)
         }
         
     }

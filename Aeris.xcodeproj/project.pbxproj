@@ -20,6 +20,7 @@
 		DEF2C88E21728F52008F75A4 /* Category3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88D21728F52008F75A4 /* Category3.swift */; };
 		DEF2C89021728F72008F75A4 /* Category4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88F21728F72008F75A4 /* Category4.swift */; };
 		DEF2C89421729062008F75A4 /* Category5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C89321729062008F75A4 /* Category5.swift */; };
+		DEF2C89621729862008F75A4 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C89521729862008F75A4 /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		DEF2C88D21728F52008F75A4 /* Category3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category3.swift; sourceTree = "<group>"; };
 		DEF2C88F21728F72008F75A4 /* Category4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category4.swift; sourceTree = "<group>"; };
 		DEF2C89321729062008F75A4 /* Category5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category5.swift; sourceTree = "<group>"; };
+		DEF2C89521729862008F75A4 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				DEF2C88D21728F52008F75A4 /* Category3.swift */,
 				DEF2C88F21728F72008F75A4 /* Category4.swift */,
 				DEF2C89321729062008F75A4 /* Category5.swift */,
+				DEF2C89521729862008F75A4 /* Results.swift */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
 				DEF2C888217283F2008F75A4 /* Categories.swift in Sources */,
 				DEF2C89421729062008F75A4 /* Category5.swift in Sources */,
+				DEF2C89621729862008F75A4 /* Results.swift in Sources */,
 				DEF2C88C21728F3B008F75A4 /* Category2.swift in Sources */,
 				DEF2C88E21728F52008F75A4 /* Category3.swift in Sources */,
 			);
