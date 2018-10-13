@@ -19,7 +19,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         
         // Set the results
-        lblResults.text = "You got \(noCorrect) out of \(total) correct"
+        lblResults.text = "Vous avez répondu correctement à \(noCorrect) questions sur \(total)"
         
         // Calculate the percentage of quesitons you got right
         var percentRight = Double(noCorrect) / Double(total)
@@ -28,11 +28,11 @@ class ResultsViewController: UIViewController {
         // Based on the percentage of questions you got right present the user with different message
         var title = ""
         if(percentRight < 40) {
-            title = "Not Good"
+            title = "Pas très bon…"
         } else if(percentRight < 70) {
-            title = "Almost"
+            title = "Presque!"
         } else {
-            title = "Good Job"
+            title = "Bravo!"
         }
         lblTitle.text = title
     }

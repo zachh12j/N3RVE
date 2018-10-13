@@ -204,6 +204,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer0:" destination="bGt-sD-BqY" eventType="touchUpInside" id="b0v-bp-qgq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbp-hN-6c9">
                                 <rect key="frame" x="16" y="296" width="343" height="30"/>
@@ -212,6 +215,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer1:" destination="bGt-sD-BqY" eventType="touchUpInside" id="7VR-yQ-GHM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCY-32-LWq">
                                 <rect key="frame" x="16" y="334" width="343" height="30"/>
@@ -220,6 +226,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer2:" destination="bGt-sD-BqY" eventType="touchUpInside" id="qqv-uc-W0Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THA-mD-f6N">
                                 <rect key="frame" x="16" y="372" width="343" height="30"/>
@@ -228,6 +237,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer3:" destination="bGt-sD-BqY" eventType="touchUpInside" id="xON-w4-L9j"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-nd-tl7">
                                 <rect key="frame" x="16" y="757" width="343" height="21"/>
@@ -241,6 +253,12 @@
                         <viewLayoutGuide key="safeArea" id="VPY-7r-kIy"/>
                     </view>
                     <connections>
+                        <outlet property="answer0" destination="R3j-x5-Ycm" id="9i5-KH-ee4"/>
+                        <outlet property="answer1" destination="tbp-hN-6c9" id="mlM-vi-0Ca"/>
+                        <outlet property="answer2" destination="tCY-32-LWq" id="Q6l-3d-fL5"/>
+                        <outlet property="answer3" destination="THA-mD-f6N" id="oYZ-40-KE8"/>
+                        <outlet property="lblProgress" destination="Olx-nd-tl7" id="zPr-od-bDL"/>
+                        <outlet property="lblQuestion" destination="BTi-No-H41" id="Zpt-g3-vsP"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory3ToResults" modalTransitionStyle="crossDissolve" id="2gQ-nL-W09"/>
                     </connections>
                 </viewController>
@@ -256,37 +274,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Écran de résultats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXL-mk-Hhl">
-                                <rect key="frame" x="118" y="396" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Écran de résultats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXL-mk-Hhl">
+                                <rect key="frame" x="118.66666666666669" y="395.66666666666669" width="138" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vous avez eu X/X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rny-HD-XCq">
-                                <rect key="frame" x="118" y="533" width="133" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez eu X/X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rny-HD-XCq">
+                                <rect key="frame" x="16" y="538.33333333333337" width="343" height="15.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rU0-3E-obf" firstAttribute="bottom" secondItem="Rny-HD-XCq" secondAttribute="bottom" constant="224" id="1rl-UN-z36"/>
+                            <constraint firstItem="TXL-mk-Hhl" firstAttribute="centerX" secondItem="2TP-Ij-xhI" secondAttribute="centerX" id="5ZT-PI-ZDF"/>
+                            <constraint firstItem="Rny-HD-XCq" firstAttribute="leading" secondItem="rU0-3E-obf" secondAttribute="leading" constant="16" id="IzA-FK-z0L"/>
+                            <constraint firstItem="rU0-3E-obf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rny-HD-XCq" secondAttribute="trailing" symbolic="YES" id="Xtl-RR-Y5b"/>
+                            <constraint firstItem="Rny-HD-XCq" firstAttribute="centerX" secondItem="2TP-Ij-xhI" secondAttribute="centerX" id="jgA-8H-h1Y"/>
+                            <constraint firstItem="TXL-mk-Hhl" firstAttribute="centerY" secondItem="2TP-Ij-xhI" secondAttribute="centerY" id="ufO-7P-KiG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rU0-3E-obf"/>
                     </view>
                     <connections>
-                        <outlet property="LabelScore" destination="Rny-HD-XCq" id="3kP-5a-dNl"/>
-                        <outlet property="LabelTitle" destination="TXL-mk-Hhl" id="Cch-Xi-w9T"/>
-                        <outlet property="Title" destination="TXL-mk-Hhl" id="lKm-8I-ADd"/>
-                        <outlet property="fromResultsToHome" destination="TXL-mk-Hhl" id="2xx-fL-xuM"/>
                         <outlet property="lblResults" destination="Rny-HD-XCq" id="Kuc-JF-Vfh"/>
                         <outlet property="lblTitle" destination="TXL-mk-Hhl" id="RhB-eB-0nh"/>
-                        <outlet property="lblTitlw" destination="TXL-mk-Hhl" id="nXD-TC-pqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-DJ-4gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479" y="23"/>
+            <point key="canvasLocation" x="2477.5999999999999" y="22.906403940886701"/>
         </scene>
         <!--Category4-->
         <scene sceneID="KIA-In-Kcd">
@@ -310,6 +329,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer0:" destination="kpX-Ni-FWN" eventType="touchUpInside" id="HuB-QD-YT8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDP-Ee-mDZ">
                                 <rect key="frame" x="16" y="296" width="343" height="30"/>
@@ -318,6 +340,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer1:" destination="kpX-Ni-FWN" eventType="touchUpInside" id="sOZ-3E-Mm0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGK-8e-FGf">
                                 <rect key="frame" x="16" y="334" width="343" height="30"/>
@@ -326,6 +351,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer2:" destination="kpX-Ni-FWN" eventType="touchUpInside" id="Aym-A5-dWK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5c-Q5-E2a">
                                 <rect key="frame" x="16" y="372" width="343" height="30"/>
@@ -334,6 +362,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer3:" destination="kpX-Ni-FWN" eventType="touchUpInside" id="D8L-EV-gFq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP4-4F-8vi">
                                 <rect key="frame" x="16" y="757" width="343" height="21"/>
@@ -347,6 +378,12 @@
                         <viewLayoutGuide key="safeArea" id="WAi-se-Gbq"/>
                     </view>
                     <connections>
+                        <outlet property="answer0" destination="CIM-3n-JPa" id="TtO-Fr-rwD"/>
+                        <outlet property="answer1" destination="kDP-Ee-mDZ" id="XzN-U8-peq"/>
+                        <outlet property="answer2" destination="XGK-8e-FGf" id="41M-Hx-544"/>
+                        <outlet property="answer3" destination="V5c-Q5-E2a" id="fz8-py-zgk"/>
+                        <outlet property="lblProgress" destination="tP4-4F-8vi" id="Eh5-kF-5Vx"/>
+                        <outlet property="lblQuestion" destination="HzN-tF-VWy" id="XxP-ME-H9m"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory4ToResults" modalTransitionStyle="crossDissolve" id="rd2-gN-QWN"/>
                     </connections>
                 </viewController>
@@ -376,6 +413,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer0:" destination="c0g-XR-W0Z" eventType="touchUpInside" id="hol-Fw-oWI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YI-1G-57e">
                                 <rect key="frame" x="16" y="296" width="343" height="30"/>
@@ -384,6 +424,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer1:" destination="c0g-XR-W0Z" eventType="touchUpInside" id="TaP-yJ-o4X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9B-PH-dKf">
                                 <rect key="frame" x="16" y="334" width="343" height="30"/>
@@ -392,6 +435,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer2:" destination="c0g-XR-W0Z" eventType="touchUpInside" id="2WB-y1-bqF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWy-qd-xgc">
                                 <rect key="frame" x="16" y="372" width="343" height="30"/>
@@ -400,6 +446,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer3:" destination="c0g-XR-W0Z" eventType="touchUpInside" id="ZbH-Fo-IZy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uq-QV-IK3">
                                 <rect key="frame" x="16" y="757" width="343" height="21"/>
@@ -413,6 +462,12 @@
                         <viewLayoutGuide key="safeArea" id="ZXZ-6Q-jlo"/>
                     </view>
                     <connections>
+                        <outlet property="answer0" destination="6Ao-iJ-usX" id="L3R-6t-Djc"/>
+                        <outlet property="answer1" destination="4YI-1G-57e" id="3eL-e2-d8x"/>
+                        <outlet property="answer2" destination="y9B-PH-dKf" id="AvM-IV-Ixe"/>
+                        <outlet property="answer3" destination="iWy-qd-xgc" id="dat-g8-8Sh"/>
+                        <outlet property="lblProgress" destination="3uq-QV-IK3" id="CnG-qn-dyT"/>
+                        <outlet property="lblQuestion" destination="92y-Pt-gvF" id="TOr-aO-wcb"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory5ToResults" modalTransitionStyle="crossDissolve" id="U2C-v5-zPy"/>
                     </connections>
                 </viewController>
@@ -442,6 +497,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer0:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="L5l-Bw-Yj4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsp-l9-lsf">
                                 <rect key="frame" x="16" y="296" width="343" height="30"/>
@@ -450,6 +508,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer1:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="UcK-d0-1Rb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtm-m8-vtd">
                                 <rect key="frame" x="16" y="334" width="343" height="30"/>
@@ -458,6 +519,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer2:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="diw-JC-ioQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0N0-uv-f2f">
                                 <rect key="frame" x="16" y="372" width="343" height="30"/>
@@ -466,6 +530,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitAnswer3:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="E6y-Nx-FgX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hK-uF-IMw">
                                 <rect key="frame" x="16" y="757" width="343" height="21"/>
@@ -479,6 +546,12 @@
                         <viewLayoutGuide key="safeArea" id="Iy2-CA-mnQ"/>
                     </view>
                     <connections>
+                        <outlet property="answer0" destination="mRk-a6-IYq" id="Ny9-jj-DnR"/>
+                        <outlet property="answer1" destination="Vsp-l9-lsf" id="zSn-oV-cdl"/>
+                        <outlet property="answer2" destination="mtm-m8-vtd" id="LtS-e7-M9s"/>
+                        <outlet property="answer3" destination="0N0-uv-f2f" id="OKv-eQ-W3c"/>
+                        <outlet property="lblProgress" destination="5hK-uF-IMw" id="P4A-7Z-D5O"/>
+                        <outlet property="lblQuestion" destination="maU-yw-3ja" id="sdA-Wf-V9D"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory2ToResults" modalTransitionStyle="crossDissolve" id="7rw-Pn-IFf"/>
                     </connections>
                 </viewController>
@@ -509,7 +582,6 @@
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="SubmitAnswer1:" destination="0La-Yt-cdw" eventType="touchUpInside" id="FqX-vw-RDz"/>
                                     <action selector="submitAnswer1:" destination="0La-Yt-cdw" eventType="touchUpInside" id="1vD-AQ-Gmm"/>
                                 </connections>
                             </button>
@@ -521,7 +593,6 @@
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="SubmitAnswer2:" destination="0La-Yt-cdw" eventType="touchUpInside" id="Xgz-Xq-H9f"/>
                                     <action selector="submitAnswer2:" destination="0La-Yt-cdw" eventType="touchUpInside" id="aNy-E8-5Cv"/>
                                 </connections>
                             </button>
@@ -533,7 +604,6 @@
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="SubmitAnswer3:" destination="0La-Yt-cdw" eventType="touchUpInside" id="Z5e-Xb-T6W"/>
                                     <action selector="submitAnswer3:" destination="0La-Yt-cdw" eventType="touchUpInside" id="UOw-fL-WS1"/>
                                 </connections>
                             </button>
@@ -552,7 +622,6 @@
                                     <color key="titleColor" red="1" green="0.36487192219999998" blue="0.12478706019999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="SubmitAnswer0:" destination="0La-Yt-cdw" eventType="touchUpInside" id="UrS-p8-tfh"/>
                                     <action selector="submitAnswer0:" destination="0La-Yt-cdw" eventType="touchUpInside" id="ZiD-X4-aJo"/>
                                 </connections>
                             </button>
@@ -561,15 +630,6 @@
                         <viewLayoutGuide key="safeArea" id="Ivn-K5-cGm"/>
                     </view>
                     <connections>
-                        <outlet property="Answer0" destination="ali-D4-Qi6" id="Y1z-Nu-jYu"/>
-                        <outlet property="Answer1" destination="aYQ-T5-1Dp" id="xfe-Yi-arX"/>
-                        <outlet property="Answer2" destination="rWU-Lx-XFk" id="Qow-mW-M8K"/>
-                        <outlet property="Answer3" destination="rC7-OR-iby" id="NjO-hw-Bf3"/>
-                        <outlet property="Progression" destination="X3V-Ku-IXz" id="ABh-fJ-jmy"/>
-                        <outlet property="ProgressionLabel" destination="X3V-Ku-IXz" id="Oh4-qo-d0Q"/>
-                        <outlet property="Question" destination="qLW-Hc-eXl" id="tPS-Il-Ic4"/>
-                        <outlet property="QuestionLabel" destination="qLW-Hc-eXl" id="4jq-Db-rNf"/>
-                        <outlet property="ShowResults" destination="qLW-Hc-eXl" id="BSI-rx-rcd"/>
                         <outlet property="answer0" destination="ali-D4-Qi6" id="c22-kr-eO8"/>
                         <outlet property="answer1" destination="aYQ-T5-1Dp" id="2pa-qu-A6m"/>
                         <outlet property="answer2" destination="rWU-Lx-XFk" id="Gb2-Jp-UOl"/>
@@ -585,6 +645,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UDq-29-3rN"/>
+        <segue reference="2gQ-nL-W09"/>
     </inferredMetricsTieBreakers>
 </document>
