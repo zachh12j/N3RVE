@@ -170,11 +170,90 @@
                         <outlet property="Category3" destination="roM-FQ-gwp" id="1aI-1c-HG2"/>
                         <outlet property="Category4" destination="kWG-jS-r6T" id="M48-Pj-n6V"/>
                         <outlet property="Category5" destination="0Ed-VL-v3g" id="IaX-rB-UEf"/>
+                        <segue destination="0La-Yt-cdw" kind="presentation" identifier="fromCategoriesToCategory1" modalTransitionStyle="crossDissolve" id="HMC-xz-5sj"/>
+                        <segue destination="QXy-Fe-ZeC" kind="presentation" identifier="fromCategoriesToCategory2" modalTransitionStyle="crossDissolve" id="tuv-4b-HtP"/>
+                        <segue destination="bGt-sD-BqY" kind="presentation" identifier="fromCategoriesToCategory3" modalTransitionStyle="crossDissolve" id="Jap-Uq-oEa"/>
+                        <segue destination="kpX-Ni-FWN" kind="presentation" identifier="fromCategoriesToCategory4" modalTransitionStyle="crossDissolve" id="wBw-u9-JeM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65x-Dy-1e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="904.79999999999995" y="22.906403940886701"/>
+        </scene>
+        <!--Category3-->
+        <scene sceneID="Hwx-Fx-nbm">
+            <objects>
+                <viewController storyboardIdentifier="Category3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bGt-sD-BqY" customClass="Category3" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5N7-82-l7Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VPY-7r-kIy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUQ-gm-QBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="23"/>
+        </scene>
+        <!--Category4-->
+        <scene sceneID="KIA-In-Kcd">
+            <objects>
+                <viewController storyboardIdentifier="Category4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kpX-Ni-FWN" customClass="Category4" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ez0-cv-xcX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WAi-se-Gbq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iE8-P5-eOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="683"/>
+        </scene>
+        <!--Category5-->
+        <scene sceneID="1Ar-LD-U3B">
+            <objects>
+                <viewController storyboardIdentifier="Category5" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c0g-XR-W0Z" customClass="Category5" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g91-ww-Cmi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZXZ-6Q-jlo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbx-8r-nrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="1337"/>
+        </scene>
+        <!--Category2-->
+        <scene sceneID="F8d-EB-UbM">
+            <objects>
+                <viewController storyboardIdentifier="Category2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QXy-Fe-ZeC" customClass="Category2" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5i-nC-n1R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Iy2-CA-mnQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6n6-li-3Qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="-616"/>
+        </scene>
+        <!--Category1-->
+        <scene sceneID="AfF-wL-eCN">
+            <objects>
+                <viewController storyboardIdentifier="Category1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0La-Yt-cdw" customClass="Category1" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yaw-Fc-IxG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ivn-K5-cGm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CTC-jc-Lef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="-1258"/>
         </scene>
     </scenes>
 </document>
