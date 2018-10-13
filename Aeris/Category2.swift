@@ -9,25 +9,21 @@
 import UIKit
 
 class Category2: UIViewController {
-    @IBOutlet var ShowResults: UILabel!
+    @IBOutlet var Question: UILabel!
+    @IBOutlet var Answer0: UIButton!
+    @IBOutlet var Answer1: UIButton!
+    @IBOutlet var Answer2: UIButton!
+    @IBOutlet var Answer3: UIButton!
+    @IBOutlet var Progression: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        super.touchesBegan(touches, with: event)
-        
-        let touch: UITouch = touches.first as! UITouch
-        
-        if (touch.view == ShowResults)
-        {
-            self.performSegue(withIdentifier: "fromCategory2ToResults", sender: self)
-        }
-        
-    }
+    
     
 }
+
 

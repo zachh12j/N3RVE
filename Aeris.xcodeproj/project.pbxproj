@@ -21,6 +21,7 @@
 		DEF2C89021728F72008F75A4 /* Category4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88F21728F72008F75A4 /* Category4.swift */; };
 		DEF2C89421729062008F75A4 /* Category5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C89321729062008F75A4 /* Category5.swift */; };
 		DEF2C8982172995B008F75A4 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C8972172995B008F75A4 /* Results.swift */; };
+		DEF2C89A2172A9D6008F75A4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DEF2C88F21728F72008F75A4 /* Category4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category4.swift; sourceTree = "<group>"; };
 		DEF2C89321729062008F75A4 /* Category5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category5.swift; sourceTree = "<group>"; };
 		DEF2C8972172995B008F75A4 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				DEF2C89321729062008F75A4 /* Category5.swift */,
 				DEF2C8972172995B008F75A4 /* Results.swift */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
+				DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
@@ -280,6 +283,7 @@
 				DEF2C89021728F72008F75A4 /* Category4.swift in Sources */,
 				DE29472321727D6C00C7D64A /* Home.swift in Sources */,
 				DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */,
+				DEF2C89A2172A9D6008F75A4 /* ResultsViewController.swift in Sources */,
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
 				DEF2C888217283F2008F75A4 /* Categories.swift in Sources */,
 				DEF2C89421729062008F75A4 /* Category5.swift in Sources */,

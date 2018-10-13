@@ -9,24 +9,31 @@
 import UIKit
 
 class Results: UIViewController {
-    @IBOutlet var fromResultsToHome: UILabel!
+    @IBOutlet var LabelScore: UILabel!
+    @IBOutlet var LabelTitle: UILabel!
+    var noCorrect = 0
+    var total = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        super.touchesBegan(touches, with: event)
+        // Set the results
+        LabelScore.text = "You got \(noCorrect) out of \(total) correct"
         
-        let touch: UITouch = touches.first as! UITouch
+        // Calculate the percentage of quesitons you got right
+        var percentRight = Double(noCorrect) / Double(total)
+        percentRight *= 100
         
-        if (touch.view == fromResultsToHome)
-        {
-            self.performSegue(withIdentifier: "fromResultsToHome", sender: self)
+        // Based on the percentage of questions you got right present the user with different message
+        var title = ""
+        if(percentRight < 40) {
+            title = "Not Good"
+        } else if(percentRight < 70) {
+            title = "Almost"
+        } else {
+            title = "Good Job"
         }
-        
+        LabelTitle.text = title
     }
     
     
