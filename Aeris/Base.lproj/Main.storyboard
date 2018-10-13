@@ -279,6 +279,9 @@
                         <outlet property="LabelTitle" destination="TXL-mk-Hhl" id="Cch-Xi-w9T"/>
                         <outlet property="Title" destination="TXL-mk-Hhl" id="lKm-8I-ADd"/>
                         <outlet property="fromResultsToHome" destination="TXL-mk-Hhl" id="2xx-fL-xuM"/>
+                        <outlet property="lblResults" destination="Rny-HD-XCq" id="Kuc-JF-Vfh"/>
+                        <outlet property="lblTitle" destination="TXL-mk-Hhl" id="RhB-eB-0nh"/>
+                        <outlet property="lblTitlw" destination="TXL-mk-Hhl" id="nXD-TC-pqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-DJ-4gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
