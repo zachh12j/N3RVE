@@ -46,6 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="159" y="23"/>
         </scene>
         <!--Categories-->
         <scene sceneID="W3x-ul-sZt">
@@ -179,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65x-Dy-1e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="22.906403940886701"/>
+            <point key="canvasLocation" x="903" y="23"/>
         </scene>
         <!--Category3-->
         <scene sceneID="Hwx-Fx-nbm">
@@ -188,9 +189,22 @@
                     <view key="view" contentMode="scaleToFill" id="5N7-82-l7Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZw-Fq-HEa">
+                                <rect key="frame" x="145" y="396" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VPY-7r-kIy"/>
                     </view>
+                    <connections>
+                        <outlet property="ShowResults" destination="RZw-Fq-HEa" id="f48-JG-zHS"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory3ToResults" modalTransitionStyle="crossDissolve" id="2gQ-nL-W09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUQ-gm-QBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,13 +217,25 @@
                     <view key="view" contentMode="scaleToFill" id="2TP-Ij-xhI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Écran de résultats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXL-mk-Hhl">
+                                <rect key="frame" x="118" y="396" width="138" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rU0-3E-obf"/>
                     </view>
+                    <connections>
+                        <outlet property="fromResultsToHome" destination="TXL-mk-Hhl" id="2xx-fL-xuM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-DJ-4gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2513" y="23"/>
+            <point key="canvasLocation" x="2479" y="23"/>
         </scene>
         <!--Category4-->
         <scene sceneID="KIA-In-Kcd">
@@ -218,9 +244,22 @@
                     <view key="view" contentMode="scaleToFill" id="ez0-cv-xcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jF-DD-Eya">
+                                <rect key="frame" x="144" y="396" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WAi-se-Gbq"/>
                     </view>
+                    <connections>
+                        <outlet property="ShowResults" destination="6jF-DD-Eya" id="5Zy-iK-8gp"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory4ToResults" modalTransitionStyle="crossDissolve" id="rd2-gN-QWN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iE8-P5-eOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,9 +272,22 @@
                     <view key="view" contentMode="scaleToFill" id="g91-ww-Cmi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1W-n2-VrR">
+                                <rect key="frame" x="145" y="396" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZXZ-6Q-jlo"/>
                     </view>
+                    <connections>
+                        <outlet property="ShowResults" destination="G1W-n2-VrR" id="LjR-ff-Cxl"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory5ToResults" modalTransitionStyle="crossDissolve" id="U2C-v5-zPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fbx-8r-nrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,9 +300,22 @@
                     <view key="view" contentMode="scaleToFill" id="a5i-nC-n1R">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaU-AZ-u1U">
+                                <rect key="frame" x="145" y="396" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iy2-CA-mnQ"/>
                     </view>
+                    <connections>
+                        <outlet property="ShowResults" destination="jaU-AZ-u1U" id="ByF-Li-9Ac"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory2ToResults" modalTransitionStyle="crossDissolve" id="7rw-Pn-IFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6n6-li-3Qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,13 +328,29 @@
                     <view key="view" contentMode="scaleToFill" id="Yaw-Fc-IxG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLW-Hc-eXl">
+                                <rect key="frame" x="146" y="396" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ivn-K5-cGm"/>
                     </view>
+                    <connections>
+                        <outlet property="ShowResults" destination="qLW-Hc-eXl" id="BSI-rx-rcd"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory1ToResults" modalTransitionStyle="crossDissolve" id="UDq-29-3rN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTC-jc-Lef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1689" y="-1258"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="U2C-v5-zPy"/>
+    </inferredMetricsTieBreakers>
 </document>
