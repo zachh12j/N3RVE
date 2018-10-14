@@ -42,11 +42,27 @@
                     </view>
                     <connections>
                         <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromHomeToCategories" modalTransitionStyle="crossDissolve" id="5If-gr-3gG"/>
+                        <segue destination="ncB-Pc-GX8" kind="presentation" identifier="fromHomeToSettings" modalTransitionStyle="crossDissolve" id="Qns-Dy-XUh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159" y="23"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="2YQ-Q3-MIo">
+            <objects>
+                <viewController storyboardIdentifier="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ncB-Pc-GX8" customClass="Settings" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="unp-K1-QAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aEQ-Iw-hvd"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvM-Ti-RFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902" y="683"/>
         </scene>
         <!--Categories-->
         <scene sceneID="W3x-ul-sZt">
