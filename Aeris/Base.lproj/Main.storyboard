@@ -614,6 +614,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gX6-G5-xAi">
+                                <rect key="frame" x="16" y="465" width="343" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyc-Xo-430">
+                                <rect key="frame" x="121" y="493" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prochaine question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="0La-Yt-cdw" eventType="touchUpInside" id="ml5-rm-pKl"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ali-D4-Qi6">
                                 <rect key="frame" x="16" y="258" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -634,6 +649,8 @@
                         <outlet property="answer1" destination="aYQ-T5-1Dp" id="2pa-qu-A6m"/>
                         <outlet property="answer2" destination="rWU-Lx-XFk" id="Gb2-Jp-UOl"/>
                         <outlet property="answer3" destination="rC7-OR-iby" id="hRw-7a-ZAR"/>
+                        <outlet property="displayAnswer" destination="gX6-G5-xAi" id="mtQ-BQ-ePw"/>
+                        <outlet property="displayNextQuestion" destination="Iyc-Xo-430" id="0Hp-4h-Bry"/>
                         <outlet property="lblProgress" destination="X3V-Ku-IXz" id="HoM-Tf-Adf"/>
                         <outlet property="lblQuestion" destination="qLW-Hc-eXl" id="7ga-F4-RC6"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory1ToResults" modalTransitionStyle="crossDissolve" id="UDq-29-3rN"/>
@@ -645,6 +662,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2gQ-nL-W09"/>
+        <segue reference="UDq-29-3rN"/>
     </inferredMetricsTieBreakers>
 </document>
