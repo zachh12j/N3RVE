@@ -37,6 +37,34 @@ class Category1: UIViewController {
         Question(
             question: "What is the Capital of Australia?",
             answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
             correctAnswer: 3)
     ]
     
@@ -74,6 +102,7 @@ class Category1: UIViewController {
             displayAnswer.text = "Bonne réponse!"
             displayAnswer.textColor = UIColor.green
             displayNextQuestion.isHidden = false
+            displayNextQuestion.isEnabled = true
             answer0.isEnabled = false
             answer1.isEnabled = false
             answer2.isEnabled = false
@@ -84,6 +113,7 @@ class Category1: UIViewController {
             displayAnswer.text = "Mauvaise réponse!"
             displayAnswer.textColor = UIColor.red
             displayNextQuestion.isHidden = false
+            displayNextQuestion.isEnabled = true
             answer0.isEnabled = false
             answer1.isEnabled = false
             answer2.isEnabled = false
@@ -93,6 +123,8 @@ class Category1: UIViewController {
     }
     
     @IBAction func showNextQuestion(_ sender: Any) {
+        displayNextQuestion.isEnabled = false
+        displayNextQuestion.isHidden = true
         answer0.isEnabled = true
         answer1.isEnabled = true
         answer2.isEnabled = true
@@ -136,5 +168,3 @@ class Category1: UIViewController {
     }
 
 }
-
-

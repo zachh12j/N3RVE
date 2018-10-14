@@ -15,6 +15,8 @@ class Category4: UIViewController {
     @IBOutlet var answer2: UIButton!
     @IBOutlet var answer3: UIButton!
     @IBOutlet var lblProgress: UILabel!
+    @IBOutlet var displayAnswer: UILabel!
+    @IBOutlet var displayNextQuestion: UIButton!
     
     struct Question {
         let question: String
@@ -35,6 +37,34 @@ class Category4: UIViewController {
         Question(
             question: "What is the Capital of Australia?",
             answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
             correctAnswer: 3)
     ]
     
@@ -48,6 +78,8 @@ class Category4: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         currentQuestion = questions[0]
         setQuestion()
+        displayAnswer.text = ""
+        self.displayNextQuestion.isHidden = true
     }
     
     @IBAction func submitAnswer0(_ sender: Any) {
@@ -67,9 +99,40 @@ class Category4: UIViewController {
     func checkAnswer(idx: Int) {
         if(idx == currentQuestion!.correctAnswer) {
             noCorrect += 1
+            displayAnswer.text = "Bonne réponse!"
+            displayAnswer.textColor = UIColor.green
+            displayNextQuestion.isHidden = false
+            displayNextQuestion.isEnabled = true
+            answer0.isEnabled = false
+            answer1.isEnabled = false
+            answer2.isEnabled = false
+            answer3.isEnabled = false
         }
+        else
+        {
+            displayAnswer.text = "Mauvaise réponse!"
+            displayAnswer.textColor = UIColor.red
+            displayNextQuestion.isHidden = false
+            displayNextQuestion.isEnabled = true
+            answer0.isEnabled = false
+            answer1.isEnabled = false
+            answer2.isEnabled = false
+            answer3.isEnabled = false
+        }
+        
+    }
+    
+    @IBAction func showNextQuestion(_ sender: Any) {
+        displayNextQuestion.isEnabled = false
+        displayNextQuestion.isHidden = true
+        answer0.isEnabled = true
+        answer1.isEnabled = true
+        answer2.isEnabled = true
+        answer3.isEnabled = true
+        displayAnswer.text = ""
         loadNextQuestion()
     }
+    
     
     func loadNextQuestion() {
         // Show next question

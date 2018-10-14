@@ -248,6 +248,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTU-A7-i3Q">
+                                <rect key="frame" x="16" y="493" width="343" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnP-TJ-Un4">
+                                <rect key="frame" x="121" y="521" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prochaine question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="bGt-sD-BqY" eventType="touchUpInside" id="VG5-Yf-JTz"/>
+                                    <action selector="showNextQuestion:" destination="0La-Yt-cdw" eventType="touchUpInside" id="Zo4-GI-4xa"/>
+                                    <action selector="showNextQuestion:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="b88-OK-kP6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VPY-7r-kIy"/>
@@ -257,6 +274,8 @@
                         <outlet property="answer1" destination="tbp-hN-6c9" id="mlM-vi-0Ca"/>
                         <outlet property="answer2" destination="tCY-32-LWq" id="Q6l-3d-fL5"/>
                         <outlet property="answer3" destination="THA-mD-f6N" id="oYZ-40-KE8"/>
+                        <outlet property="displayAnswer" destination="pTU-A7-i3Q" id="IxF-Az-37g"/>
+                        <outlet property="displayNextQuestion" destination="CnP-TJ-Un4" id="gCQ-fA-Od9"/>
                         <outlet property="lblProgress" destination="Olx-nd-tl7" id="zPr-od-bDL"/>
                         <outlet property="lblQuestion" destination="BTi-No-H41" id="Zpt-g3-vsP"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory3ToResults" modalTransitionStyle="crossDissolve" id="2gQ-nL-W09"/>
@@ -373,6 +392,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvQ-Le-054">
+                                <rect key="frame" x="16" y="513" width="343" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMI-ba-KQ5">
+                                <rect key="frame" x="121" y="541" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prochaine question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="hSX-u2-iIn"/>
+                                    <action selector="showNextQuestion:" destination="kpX-Ni-FWN" eventType="touchUpInside" id="w9I-Ni-OBC"/>
+                                    <action selector="showNextQuestion:" destination="0La-Yt-cdw" eventType="touchUpInside" id="xvP-HS-ROk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WAi-se-Gbq"/>
@@ -382,6 +418,8 @@
                         <outlet property="answer1" destination="kDP-Ee-mDZ" id="XzN-U8-peq"/>
                         <outlet property="answer2" destination="XGK-8e-FGf" id="41M-Hx-544"/>
                         <outlet property="answer3" destination="V5c-Q5-E2a" id="fz8-py-zgk"/>
+                        <outlet property="displayAnswer" destination="QvQ-Le-054" id="HJS-B6-LxC"/>
+                        <outlet property="displayNextQuestion" destination="dMI-ba-KQ5" id="9p9-eN-PxU"/>
                         <outlet property="lblProgress" destination="tP4-4F-8vi" id="Eh5-kF-5Vx"/>
                         <outlet property="lblQuestion" destination="HzN-tF-VWy" id="XxP-ME-H9m"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory4ToResults" modalTransitionStyle="crossDissolve" id="rd2-gN-QWN"/>
@@ -457,6 +495,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSw-MT-kbD">
+                                <rect key="frame" x="16" y="484" width="343" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ias-Uq-O4L">
+                                <rect key="frame" x="121" y="512" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prochaine question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="c0g-XR-W0Z" eventType="touchUpInside" id="1kl-Qg-Ffb"/>
+                                    <action selector="showNextQuestion:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="Etf-pg-cwq"/>
+                                    <action selector="showNextQuestion:" destination="0La-Yt-cdw" eventType="touchUpInside" id="ubd-yi-UXg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZXZ-6Q-jlo"/>
@@ -466,6 +521,8 @@
                         <outlet property="answer1" destination="4YI-1G-57e" id="3eL-e2-d8x"/>
                         <outlet property="answer2" destination="y9B-PH-dKf" id="AvM-IV-Ixe"/>
                         <outlet property="answer3" destination="iWy-qd-xgc" id="dat-g8-8Sh"/>
+                        <outlet property="displayAnswer" destination="HSw-MT-kbD" id="gkD-1V-Mzm"/>
+                        <outlet property="displayNextQuestion" destination="Ias-Uq-O4L" id="DIo-Fn-082"/>
                         <outlet property="lblProgress" destination="3uq-QV-IK3" id="CnG-qn-dyT"/>
                         <outlet property="lblQuestion" destination="92y-Pt-gvF" id="TOr-aO-wcb"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory5ToResults" modalTransitionStyle="crossDissolve" id="U2C-v5-zPy"/>
@@ -541,6 +598,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TEXT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwR-0S-Qgc">
+                                <rect key="frame" x="16" y="506" width="343" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooj-W9-mvz">
+                                <rect key="frame" x="121" y="534" width="132" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Prochaine question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="QXy-Fe-ZeC" eventType="touchUpInside" id="Ale-J9-MqS"/>
+                                    <action selector="showNextQuestion:" destination="0La-Yt-cdw" eventType="touchUpInside" id="E6c-au-r48"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iy2-CA-mnQ"/>
@@ -550,6 +623,8 @@
                         <outlet property="answer1" destination="Vsp-l9-lsf" id="zSn-oV-cdl"/>
                         <outlet property="answer2" destination="mtm-m8-vtd" id="LtS-e7-M9s"/>
                         <outlet property="answer3" destination="0N0-uv-f2f" id="OKv-eQ-W3c"/>
+                        <outlet property="displayAnswer" destination="EwR-0S-Qgc" id="IXz-jh-0Nk"/>
+                        <outlet property="displayNextQuestion" destination="ooj-W9-mvz" id="cnF-b1-OtC"/>
                         <outlet property="lblProgress" destination="5hK-uF-IMw" id="P4A-7Z-D5O"/>
                         <outlet property="lblQuestion" destination="maU-yw-3ja" id="sdA-Wf-V9D"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory2ToResults" modalTransitionStyle="crossDissolve" id="7rw-Pn-IFf"/>
@@ -662,6 +737,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UDq-29-3rN"/>
+        <segue reference="U2C-v5-zPy"/>
     </inferredMetricsTieBreakers>
 </document>
