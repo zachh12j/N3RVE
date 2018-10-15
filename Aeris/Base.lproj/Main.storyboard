@@ -30,6 +30,14 @@
                                     <action selector="fromHomeToCategories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJM-Fa-WVt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1k-gf-2cN">
+                                <rect key="frame" x="148" y="434" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Paramètres"/>
+                                <connections>
+                                    <action selector="fromHomeToSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9OQ-G9-4JR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -56,13 +64,22 @@
                     <view key="view" contentMode="scaleToFill" id="unp-K1-QAe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARM-Lf-0gM">
+                                <rect key="frame" x="10" y="307" width="355" height="199"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aEQ-Iw-hvd"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="ARM-Lf-0gM" id="ThG-ah-rM9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvM-Ti-RFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="683"/>
+            <point key="canvasLocation" x="901.60000000000002" y="682.75862068965523"/>
         </scene>
         <!--Categories-->
         <scene sceneID="W3x-ul-sZt">

@@ -13,6 +13,9 @@ class Home: UIViewController {
     @IBAction func fromHomeToCategories(_ sender: Any) {
         self.performSegue(withIdentifier: "fromHomeToCategories", sender: self)
     }
+    @IBAction func fromHomeToSettings(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromHomeToSettings", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
