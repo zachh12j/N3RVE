@@ -17,45 +17,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue sur Aeris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpc-LE-GII">
-                                <rect key="frame" x="112" y="121" width="151" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF9-e2-IZ1">
-                                <rect key="frame" x="139.66666666666666" y="396" width="96" height="30"/>
-                                <state key="normal" title="Lancer le quiz"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="qdb-dl-x9w">
+                                <rect key="frame" x="-12" y="-27" width="399" height="866"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF9-e2-IZ1">
+                                <rect key="frame" x="9.6666666666666572" y="369" width="356" height="84"/>
+                                <state key="normal" image="Lancer"/>
                                 <connections>
                                     <action selector="fromHomeToCategories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJM-Fa-WVt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1k-gf-2cN">
-                                <rect key="frame" x="148" y="434" width="79" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1k-gf-2cN">
+                                <rect key="frame" x="9" y="443" width="356" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Paramètres"/>
+                                <state key="normal" image="Paramètres"/>
                                 <connections>
                                     <action selector="fromHomeToSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9OQ-G9-4JR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bienvenue" translatesAutoresizingMaskIntoConstraints="NO" id="yIA-bH-l2K">
+                                <rect key="frame" x="42" y="94" width="291" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sous-titre" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-ty-aCz">
+                                <rect key="frame" x="42" y="198" width="266" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="TWc-US-z7w">
+                                <rect key="frame" x="153" y="709" width="69" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Instagram" translatesAutoresizingMaskIntoConstraints="NO" id="Pmw-gG-n2U">
+                                <rect key="frame" x="76" y="709" width="69" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Snapchat" translatesAutoresizingMaskIntoConstraints="NO" id="ugP-28-Ku9">
+                                <rect key="frame" x="230" y="709" width="69" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Hpc-LE-GII" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JNC-lm-m7O"/>
-                            <constraint firstItem="Hpc-LE-GII" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="eMW-5H-VBc"/>
                             <constraint firstItem="hF9-e2-IZ1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rip-th-ezE"/>
                             <constraint firstItem="hF9-e2-IZ1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zU7-t8-baW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="qdb-dl-x9w" id="J1P-zP-Eg1"/>
                         <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromHomeToCategories" modalTransitionStyle="crossDissolve" id="5If-gr-3gG"/>
                         <segue destination="ncB-Pc-GX8" kind="presentation" identifier="fromHomeToSettings" modalTransitionStyle="crossDissolve" id="Qns-Dy-XUh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="23"/>
+            <point key="canvasLocation" x="157.59999999999999" y="22.906403940886701"/>
         </scene>
         <!--Settings-->
         <scene sceneID="2YQ-Q3-MIo">
@@ -769,6 +786,16 @@
             <point key="canvasLocation" x="1688.8" y="-1258.3743842364534"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="375" height="812"/>
+        <image name="Bienvenue" width="291" height="87"/>
+        <image name="Facebook" width="69" height="69"/>
+        <image name="Instagram" width="69" height="69"/>
+        <image name="Lancer" width="356" height="84"/>
+        <image name="Paramètres" width="356" height="84"/>
+        <image name="Snapchat" width="69" height="69"/>
+        <image name="Sous-titre" width="266" height="16"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="U2C-v5-zPy"/>
     </inferredMetricsTieBreakers>
