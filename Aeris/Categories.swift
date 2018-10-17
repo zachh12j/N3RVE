@@ -10,84 +10,53 @@ import UIKit
 
 class Categories: UIViewController {
     
-    @IBOutlet var Category1: UIView!
-    @IBOutlet var Category2: UIView!
-    @IBOutlet var Category3: UIView!
-    @IBOutlet var Category4: UIView!
-    @IBOutlet var Category5: UIView!
+    @IBOutlet var imageView: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Category1
-        Category1.layer.cornerRadius = 20.0
-        Category1.layer.shadowColor = UIColor.gray.cgColor
-        Category1.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        Category1.layer.shadowRadius = 12.0
-        Category1.layer.shadowOpacity = 0.7
+        self.view.sendSubviewToBack(imageView);
         
-        //Category2
-        Category2.layer.cornerRadius = 20.0
-        Category2.layer.shadowColor = UIColor.gray.cgColor
-        Category2.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        Category2.layer.shadowRadius = 12.0
-        Category2.layer.shadowOpacity = 0.7
+        let min = CGFloat(-30)
+        let max = CGFloat(30)
         
-        //Category3
-        Category3.layer.cornerRadius = 20.0
-        Category3.layer.shadowColor = UIColor.gray.cgColor
-        Category3.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        Category3.layer.shadowRadius = 12.0
-        Category3.layer.shadowOpacity = 0.7
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
         
-        //Category4
-        Category4.layer.cornerRadius = 20.0
-        Category4.layer.shadowColor = UIColor.gray.cgColor
-        Category4.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        Category4.layer.shadowRadius = 12.0
-        Category4.layer.shadowOpacity = 0.7
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
         
-        //Category5
-        Category5.layer.cornerRadius = 20.0
-        Category5.layer.shadowColor = UIColor.gray.cgColor
-        Category5.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        Category5.layer.shadowRadius = 12.0
-        Category5.layer.shadowOpacity = 0.7
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        
+        imageView.addMotionEffect(motionEffectGroup)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        super.touchesBegan(touches, with: event)
-        
-        let touch: UITouch = touches.first as! UITouch
-        
-        if (touch.view == Category1)
-        {
-            self.performSegue(withIdentifier: "fromCategoriesToCategory1", sender: self)
-        }
-        
-        if (touch.view == Category2)
-        {
-            self.performSegue(withIdentifier: "fromCategoriesToCategory2", sender: self)
-        }
-        
-        if (touch.view == Category3)
-        {
-            self.performSegue(withIdentifier: "fromCategoriesToCategory3", sender: self)
-        }
-        
-        if (touch.view == Category4)
-        {
-            self.performSegue(withIdentifier: "fromCategoriesToCategory4", sender: self)
-        }
-        
-        if (touch.view == Category5)
-        {
-            self.performSegue(withIdentifier: "fromCategoriesToCategory5", sender: self)
-        }
-        
+    let notification = UINotificationFeedbackGenerator()
+    let selection = UISelectionFeedbackGenerator()
+    
+    @IBAction func fromCategoriestoHome(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToHome", sender: self)
+        selection.selectionChanged()
+    }
+    @IBAction func fromCategoriesToCategory1(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToCategory1", sender: self)
+    }
+    @IBAction func fromCategoriesToCategory2(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToCategory2", sender: self)
+    }
+    @IBAction func fromCategoriesToCategory3(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToCategory3", sender: self)
+    }
+    @IBAction func fromCategoriesToCategory4(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToCategory4", sender: self)
+    }
+    @IBAction func fromCategoriesToCategory5(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToCategory5", sender: self)
     }
     
 }

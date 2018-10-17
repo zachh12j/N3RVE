@@ -8,7 +8,32 @@
 
 import UIKit
 
+@IBDesignable
+extension UILabel {
+    @IBInspectable
+    public var kerning:CGFloat {
+        set{
+            if let currentAttibutedText = self.attributedText {
+                let attribString = NSMutableAttributedString(attributedString: currentAttibutedText)
+                attribString.addAttributes([NSAttributedString.Key.kern:newValue], range:NSMakeRange(0, currentAttibutedText.length))
+                self.attributedText = attribString
+            }
+        } get {
+            var kerning:CGFloat = 0
+            if let attributedText = self.attributedText {
+                attributedText.enumerateAttribute(NSAttributedString.Key.kern,
+                                                  in: NSMakeRange(0, attributedText.length),
+                                                  options: .init(rawValue: 0)) { (value, range, stop) in
+                                                    kerning = value as? CGFloat ?? 0
+                }
+            }
+            return kerning
+        }
+    }
+}
+
 class Category1: UIViewController {
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var lblQuestion: UILabel!
     @IBOutlet var answer0: UIButton!
     @IBOutlet var answer1: UIButton!
@@ -23,7 +48,6 @@ class Category1: UIViewController {
         let answers: [String]
         let correctAnswer: Int
     }
-    
     
     var questions: [Question] = [
         Question(
@@ -73,13 +97,34 @@ class Category1: UIViewController {
     
     var noCorrect = 0
     
+    /////////////////////////////////////////////////////////
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.sendSubviewToBack(imageView);
         currentQuestion = questions[0]
         setQuestion()
         displayAnswer.text = ""
         self.displayNextQuestion.isHidden = true
+        
+        //Parallax background
+        let min = CGFloat(-30)
+        let max = CGFloat(30)
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        
+        imageView.addMotionEffect(motionEffectGroup)
+        //
     }
 
     @IBAction func submitAnswer0(_ sender: Any) {
@@ -133,6 +178,10 @@ class Category1: UIViewController {
         loadNextQuestion()
     }
     
+    @IBAction func fromCategory1ToCategories(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategory1ToCategories", sender: self)
+    }
+    
     
     func loadNextQuestion() {
         // Show next question
@@ -151,11 +200,13 @@ class Category1: UIViewController {
     // Set labels and buttions for the current question
     func setQuestion() {
         lblQuestion.text = currentQuestion!.question
+        lblQuestion.text = lblQuestion.text?.uppercased()
         answer0.setTitle(currentQuestion!.answers[0], for: .normal)
         answer1.setTitle(currentQuestion!.answers[1], for: .normal)
         answer2.setTitle(currentQuestion!.answers[2], for: .normal)
         answer3.setTitle(currentQuestion!.answers[3], for: .normal)
-        lblProgress.text = "\(currentQuestionPos + 1) / \(questions.count)"
+        lblProgress.text = "\(currentQuestionPos + 1) sur \(questions.count)"
+        lblProgress.text = lblProgress.text?.uppercased()
     }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
