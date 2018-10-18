@@ -14,6 +14,10 @@
 		DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */; };
 		DE29473621727D6F00C7D64A /* AerisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29473521727D6F00C7D64A /* AerisTests.swift */; };
 		DE29474121727D7000C7D64A /* AerisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29474021727D7000C7D64A /* AerisUITests.swift */; };
+		DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE41C4B921783798004077FB /* BackgroundMusic.mp3 */; };
+		DE41C4BE21783B88004077FB /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE41C4BB21783B87004077FB /* button.wav */; };
+		DE41C4BF21783B88004077FB /* deny.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE41C4BC21783B87004077FB /* deny.wav */; };
+		DE41C4C021783B88004077FB /* affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE41C4BD21783B88004077FB /* affirm.wav */; };
 		DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4826EC21740AC500E2CDF2 /* Settings.swift */; };
 		DEF2C888217283F2008F75A4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C887217283F2008F75A4 /* Categories.swift */; };
 		DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88921728EF0008F75A4 /* Category1.swift */; };
@@ -56,6 +60,10 @@
 		DE29473C21727D7000C7D64A /* AerisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AerisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29474021727D7000C7D64A /* AerisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisUITests.swift; sourceTree = "<group>"; };
 		DE29474221727D7000C7D64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE41C4B921783798004077FB /* BackgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic.mp3; sourceTree = "<group>"; };
+		DE41C4BB21783B87004077FB /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
+		DE41C4BC21783B87004077FB /* deny.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = deny.wav; sourceTree = "<group>"; };
+		DE41C4BD21783B88004077FB /* affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = affirm.wav; sourceTree = "<group>"; };
 		DE4826EC21740AC500E2CDF2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		DEF2C887217283F2008F75A4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		DEF2C88921728EF0008F75A4 /* Category1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category1.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
+				DE41C4B821783772004077FB /* Music */,
 			);
 			path = Aeris;
 			sourceTree = "<group>";
@@ -150,6 +159,17 @@
 				DE29474221727D7000C7D64A /* Info.plist */,
 			);
 			path = AerisUITests;
+			sourceTree = "<group>";
+		};
+		DE41C4B821783772004077FB /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				DE41C4BD21783B88004077FB /* affirm.wav */,
+				DE41C4BB21783B87004077FB /* button.wav */,
+				DE41C4BC21783B87004077FB /* deny.wav */,
+				DE41C4B921783798004077FB /* BackgroundMusic.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +276,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE41C4BF21783B88004077FB /* deny.wav in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
+				DE41C4BE21783B88004077FB /* button.wav in Resources */,
 				DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */,
+				DE41C4C021783B88004077FB /* affirm.wav in Resources */,
+				DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */,
 				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

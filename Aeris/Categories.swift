@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Categories: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    
+    var player: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,21 +43,45 @@ class Categories: UIViewController {
     @IBAction func fromCategoriestoHome(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategoriesToHome", sender: self)
         selection.selectionChanged()
+        buttonClickSound()
     }
     @IBAction func fromCategoriesToCategory1(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategoriesToCategory1", sender: self)
+        selection.selectionChanged()
+        buttonClickSound()
     }
     @IBAction func fromCategoriesToCategory2(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategoriesToCategory2", sender: self)
+        selection.selectionChanged()
+        buttonClickSound()
     }
     @IBAction func fromCategoriesToCategory3(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategoriesToCategory3", sender: self)
+        selection.selectionChanged()
+        buttonClickSound()
     }
     @IBAction func fromCategoriesToCategory4(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategoriesToCategory4", sender: self)
+        selection.selectionChanged()
+        buttonClickSound()
     }
     @IBAction func fromCategoriesToCategory5(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategoriesToCategory5", sender: self)
+        selection.selectionChanged()
+        buttonClickSound()
     }
     
+    func buttonClickSound() {
+        let url = Bundle.main.url(forResource: "button", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 @IBDesignable
 extension UILabel {
@@ -48,6 +49,7 @@ class Category1: UIViewController {
         let answers: [String]
         let correctAnswer: Int
     }
+    var player: AVAudioPlayer?
     
     var questions: [Question] = [
         Question(
@@ -126,7 +128,10 @@ class Category1: UIViewController {
         imageView.addMotionEffect(motionEffectGroup)
         //
     }
-
+    //FIN VIEWDIDLOAD
+    
+    let notification = UINotificationFeedbackGenerator()
+    
     @IBAction func submitAnswer0(_ sender: Any) {
         checkAnswer(idx: 0)
     }
@@ -152,6 +157,8 @@ class Category1: UIViewController {
             answer1.isEnabled = false
             answer2.isEnabled = false
             answer3.isEnabled = false
+            notification.notificationOccurred(.success)
+            goodAnswerSound()
         }
         else
         {
@@ -163,6 +170,8 @@ class Category1: UIViewController {
             answer1.isEnabled = false
             answer2.isEnabled = false
             answer3.isEnabled = false
+            notification.notificationOccurred(.error)
+            wrongAnswerSound()
         }
 
     }
@@ -180,6 +189,7 @@ class Category1: UIViewController {
     
     @IBAction func fromCategory1ToCategories(_ sender: Any) {
         self.performSegue(withIdentifier: "fromCategory1ToCategories", sender: self)
+        buttonClickSound()
     }
     
     
@@ -216,6 +226,49 @@ class Category1: UIViewController {
             vc.noCorrect = noCorrect
             vc.total = questions.count
         }
+    }
+    
+    func buttonClickSound() {
+        let url = Bundle.main.url(forResource: "button", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.volume = 1.0
+    }
+    func wrongAnswerSound() {
+        let url = Bundle.main.url(forResource: "deny", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.volume = 1.0
+    }
+    func goodAnswerSound() {
+        let url = Bundle.main.url(forResource: "affirm", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.volume = 1.0
     }
 
 }

@@ -297,33 +297,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Écran de résultats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXL-mk-Hhl">
-                                <rect key="frame" x="118.66666666666669" y="395.66666666666669" width="138" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gZq-jU-Lb6">
+                                <rect key="frame" x="-40" y="-40" width="455" height="892"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bravo!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXL-mk-Hhl">
+                                <rect key="frame" x="42" y="148" width="317" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous avez eu X/X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rny-HD-XCq">
-                                <rect key="frame" x="16" y="538.33333333333337" width="343" height="15.666666666666629"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vous avec obtenu un résultat de XX%. Vous avez donc répondu correctement à X questions sur X" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rny-HD-XCq">
+                                <rect key="frame" x="42" y="218" width="317" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj6-3D-cML">
+                                <rect key="frame" x="25" y="679" width="324" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="RetourMenu"/>
+                                <connections>
+                                    <action selector="fromResultsToCategories:" destination="Myo-Z9-wPc" eventType="touchUpInside" id="2HH-0K-kB9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rU0-3E-obf" firstAttribute="bottom" secondItem="Rny-HD-XCq" secondAttribute="bottom" constant="224" id="1rl-UN-z36"/>
-                            <constraint firstItem="TXL-mk-Hhl" firstAttribute="centerX" secondItem="2TP-Ij-xhI" secondAttribute="centerX" id="5ZT-PI-ZDF"/>
-                            <constraint firstItem="Rny-HD-XCq" firstAttribute="leading" secondItem="rU0-3E-obf" secondAttribute="leading" constant="16" id="IzA-FK-z0L"/>
-                            <constraint firstItem="rU0-3E-obf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rny-HD-XCq" secondAttribute="trailing" symbolic="YES" id="Xtl-RR-Y5b"/>
-                            <constraint firstItem="Rny-HD-XCq" firstAttribute="centerX" secondItem="2TP-Ij-xhI" secondAttribute="centerX" id="jgA-8H-h1Y"/>
-                            <constraint firstItem="TXL-mk-Hhl" firstAttribute="centerY" secondItem="2TP-Ij-xhI" secondAttribute="centerY" id="ufO-7P-KiG"/>
+                            <constraint firstItem="gZq-jU-Lb6" firstAttribute="trailing" secondItem="rU0-3E-obf" secondAttribute="trailing" constant="40" id="J7u-PT-U6C"/>
+                            <constraint firstItem="gZq-jU-Lb6" firstAttribute="leading" secondItem="rU0-3E-obf" secondAttribute="leading" constant="-40" id="c9k-kj-fIf"/>
+                            <constraint firstItem="gZq-jU-Lb6" firstAttribute="top" secondItem="2TP-Ij-xhI" secondAttribute="top" constant="-40" id="kpP-mY-Y2w"/>
+                            <constraint firstAttribute="bottom" secondItem="gZq-jU-Lb6" secondAttribute="bottom" constant="-40" id="pa2-BA-lyH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rU0-3E-obf"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="gZq-jU-Lb6" id="jmv-kd-hOS"/>
                         <outlet property="lblResults" destination="Rny-HD-XCq" id="Kuc-JF-Vfh"/>
                         <outlet property="lblTitle" destination="TXL-mk-Hhl" id="RhB-eB-0nh"/>
+                        <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromResultsToCategories" modalTransitionStyle="crossDissolve" id="Oq1-ti-4Fx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-DJ-4gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -799,12 +812,13 @@
         <image name="Q" width="89" height="62"/>
         <image name="QuestionSuivante" width="204" height="69"/>
         <image name="Retour" width="69" height="69"/>
+        <image name="RetourMenu" width="324" height="99"/>
         <image name="Réponse" width="356" height="84"/>
         <image name="Snapchat" width="69" height="69"/>
         <image name="Sous-titre" width="266" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UDq-29-3rN"/>
-        <segue reference="cvW-vB-bvN"/>
+        <segue reference="Oq1-ti-4Fx"/>
     </inferredMetricsTieBreakers>
 </document>

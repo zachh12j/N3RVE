@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
@@ -10,11 +12,11 @@
 			<key>UIApplicationShortcutItemType</key>
 			<string>Type01</string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Title 1</string>
+			<string>Lancer le quiz</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
-			<string>Type01</string>
+			<string>Type02</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Title 2</string>
 		</dict>
