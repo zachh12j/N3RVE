@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="157.59999999999999" y="22.906403940886701"/>
         </scene>
-        <!--View Controller-->
+        <!--Splash Screen-->
         <scene sceneID="NZu-AA-dE8">
             <objects>
-                <viewController id="zrS-4K-hVz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zrS-4K-hVz" customClass="SplashScreen" customModule="Aeris" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GCe-Z6-l8r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
