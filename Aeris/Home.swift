@@ -38,7 +38,7 @@ class Home: UIViewController {
         AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
         AudioPlayer.prepareToPlay()
         AudioPlayer.numberOfLoops = -1
-        AudioPlayer.volume = 0.5
+        AudioPlayer.volume = 0.15
         AudioPlayer.play()
         
         self.view.sendSubviewToBack(imageView);

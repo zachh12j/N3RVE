@@ -55,6 +55,7 @@ class ResultsViewController: UIViewController {
         }
         lblTitle.text = title
         lblTitle.numberOfLines = 0
+        lblResults.sizeToFit()
         
         // Set the results
         lblResults.text = "Vous avec obtenu un résultat de \(percentRight)%. Vous avez donc répondu correctement à \(noCorrect) questions sur \(total)."

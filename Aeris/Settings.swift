@@ -11,6 +11,7 @@ import UIKit
 
 class Settings: UIViewController {
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var animationView: UIImageView!
     
     var images: [UIImage]!
@@ -66,6 +67,25 @@ class Settings: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //BACKGROUND
+        self.view.sendSubviewToBack(imageView);
+        
+        let min = CGFloat(-30)
+        let max = CGFloat(30)
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        
+        imageView.addMotionEffect(motionEffectGroup)
     
         loading_1 = UIImage(named: "01.jpg")
         loading_2 = UIImage(named: "02.jpg")
@@ -120,4 +140,8 @@ class Settings: UIViewController {
         
         animationView.image = animatedImage
     }
+    @IBAction func fromSettingsToHome(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromSettingsToHome", sender: self)
+    }
+    
 }

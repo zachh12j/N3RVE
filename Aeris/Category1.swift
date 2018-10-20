@@ -57,40 +57,40 @@ class Category1: UIViewController {
             answers: ["1", "2", "3", "4"],
             correctAnswer: 1),
         Question(
-            question: "Have you subscrbed to Seemu Apps",
-            answers: ["Yes", "No", "I will", "No Thanks"],
+            question: "What is 3 x 3?",
+            answers: ["16", "3", "9", "5"],
+            correctAnswer: 2),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Canada?",
+            answers: ["Vancouver", "Toronto", "Ottawa", "Montreal"],
+            correctAnswer: 2),
+        Question(
+            question: "What is the Capital of United States?",
+            answers: ["Houston", "Las Vegas", "Washington, D.C.", "New-York"],
+            correctAnswer: 2),
+        Question(
+            question: "What is the Capital of Farnce?",
+            answers: ["Paris", "Cote-d'Azur", "Verdun", "Sainte-Marie"],
             correctAnswer: 0),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
+            question: "What is the Capital of Switzerland?",
+            answers: ["Berne", "Genenva", "Fribourg", "Vevey"],
+            correctAnswer: 0),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
+            question: "What is the Capital of Belgium?",
+            answers: ["Belgium City", "Bruxelles", "Berlin", "Mivata"],
+            correctAnswer: 2),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
+            question: "What is the Capital of Germany?",
+            answers: ["Stutgart", "Melbourne", "Berlin", "Tomorrowland"],
+            correctAnswer: 2),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            question: "What is the Capital of Brasil?",
+            answers: ["Rio de Janeiro", "Sao Paulo", "Brasil City", "Brasilia"],
             correctAnswer: 3)
     ]
     
@@ -145,6 +145,7 @@ class Category1: UIViewController {
         checkAnswer(idx: 3)
     }
     
+    
     // Check if an answer is correct then load the next question
     func checkAnswer(idx: Int) {
         if(idx == currentQuestion!.correctAnswer) {
@@ -159,6 +160,23 @@ class Category1: UIViewController {
             answer3.isEnabled = false
             notification.notificationOccurred(.success)
             goodAnswerSound()
+            print("\(currentQuestion!.correctAnswer)")
+            if(currentQuestion!.correctAnswer == 0)
+            {
+                print("The answer is right. Put this question in green")
+            }
+            if(currentQuestion!.correctAnswer == 1)
+            {
+                print("The answer is right. Put this question in green")
+            }
+            if(currentQuestion!.correctAnswer == 2)
+            {
+                print("The answer is right. Put this question in green")
+            }
+            if(currentQuestion!.correctAnswer == 3)
+            {
+                print("The answer is right. Put this question in green")
+            }
         }
         else
         {
@@ -172,6 +190,23 @@ class Category1: UIViewController {
             answer3.isEnabled = false
             notification.notificationOccurred(.error)
             wrongAnswerSound()
+            print("\(currentQuestion!.correctAnswer)")
+            if(currentQuestion!.correctAnswer == 0)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
+            if(currentQuestion!.correctAnswer == 1)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
+            if(currentQuestion!.correctAnswer == 2)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
+            if(currentQuestion!.correctAnswer == 3)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
         }
 
     }
@@ -217,6 +252,7 @@ class Category1: UIViewController {
         answer3.setTitle(currentQuestion!.answers[3], for: .normal)
         lblProgress.text = "\(currentQuestionPos + 1) sur \(questions.count)"
         lblProgress.text = lblProgress.text?.uppercased()
+        displayAnswer.text = displayAnswer.text?.uppercased()
     }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
