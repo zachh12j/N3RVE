@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */; };
+		DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */; };
+		DE27F74D217BC1190040A300 /* Introduction.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F74C217BC0370040A300 /* Introduction.mp4 */; };
+		DE27F74F217BCF660040A300 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27F74E217BCF660040A300 /* SplashScreen.swift */; };
 		DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472021727D6C00C7D64A /* AppDelegate.swift */; };
 		DE29472321727D6C00C7D64A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472221727D6C00C7D64A /* Home.swift */; };
 		DE29472621727D6C00C7D64A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472421727D6C00C7D64A /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic2.mp3; sourceTree = "<group>"; };
+		DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic3.mp3; sourceTree = "<group>"; };
+		DE27F74C217BC0370040A300 /* Introduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Introduction.mp4; sourceTree = "<group>"; };
+		DE27F74E217BCF660040A300 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		DE29471D21727D6C00C7D64A /* Aeris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aeris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29472021727D6C00C7D64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE29472221727D6C00C7D64A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -124,7 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
+				DE27F74E217BCF660040A300 /* SplashScreen.swift */,
 				DE29472221727D6C00C7D64A /* Home.swift */,
+				DE4826EC21740AC500E2CDF2 /* Settings.swift */,
 				DEF2C887217283F2008F75A4 /* Categories.swift */,
 				DEF2C88921728EF0008F75A4 /* Category1.swift */,
 				DEF2C88B21728F3B008F75A4 /* Category2.swift */,
@@ -132,12 +142,12 @@
 				DEF2C88F21728F72008F75A4 /* Category4.swift */,
 				DEF2C89321729062008F75A4 /* Category5.swift */,
 				DEF2C8972172995B008F75A4 /* Results.swift */,
-				DE29472421727D6C00C7D64A /* Main.storyboard */,
-				DE4826EC21740AC500E2CDF2 /* Settings.swift */,
 				DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */,
+				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
+				DE27F74C217BC0370040A300 /* Introduction.mp4 */,
 				DE41C4B821783772004077FB /* Music */,
 			);
 			path = Aeris;
@@ -168,6 +178,8 @@
 				DE41C4BB21783B87004077FB /* button.wav */,
 				DE41C4BC21783B87004077FB /* deny.wav */,
 				DE41C4B921783798004077FB /* BackgroundMusic.mp3 */,
+				DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */,
+				DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -276,12 +288,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE27F74D217BC1190040A300 /* Introduction.mp4 in Resources */,
 				DE41C4BF21783B88004077FB /* deny.wav in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
 				DE41C4BE21783B88004077FB /* button.wav in Resources */,
 				DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */,
 				DE41C4C021783B88004077FB /* affirm.wav in Resources */,
+				DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */,
 				DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */,
+				DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */,
 				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE27F74F217BCF660040A300 /* SplashScreen.swift in Sources */,
 				DEF2C89021728F72008F75A4 /* Category4.swift in Sources */,
 				DE29472321727D6C00C7D64A /* Home.swift in Sources */,
 				DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */,

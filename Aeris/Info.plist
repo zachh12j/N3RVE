@@ -3,22 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
-			<key>UIApplicationShortcutIconTypeSearch</key>
-			<string></string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypePlay</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>Type01</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Lancer le quiz</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemType</key>
-			<string>Type02</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Title 2</string>
 		</dict>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

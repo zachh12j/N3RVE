@@ -14,6 +14,10 @@ class Categories: UIViewController {
     @IBOutlet var imageView: UIImageView!
     var player: AVAudioPlayer?
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

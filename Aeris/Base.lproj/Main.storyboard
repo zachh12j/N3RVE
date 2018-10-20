@@ -110,6 +110,21 @@
             </objects>
             <point key="canvasLocation" x="157.59999999999999" y="22.906403940886701"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="NZu-AA-dE8">
+            <objects>
+                <viewController id="zrS-4K-hVz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GCe-Z6-l8r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YTq-Xv-Gct"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2T-e5-boB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-617" y="23"/>
+        </scene>
         <!--Settings-->
         <scene sceneID="2YQ-Q3-MIo">
             <objects>
@@ -121,17 +136,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kFK-7a-Kv0">
                                 <rect key="frame" x="-40" y="-40" width="455" height="892"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARM-Lf-0gM">
-                                <rect key="frame" x="10" y="307" width="355" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-Im-wRB">
                                 <rect key="frame" x="16" y="44" width="69" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Retour"/>
-                                <connections>
-                                    <action selector="fromSettingsToHome:" destination="ncB-Pc-GX8" eventType="touchUpInside" id="FCY-uM-0PH"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,8 +152,7 @@
                         <viewLayoutGuide key="safeArea" id="aEQ-Iw-hvd"/>
                     </view>
                     <connections>
-                        <outlet property="animationView" destination="ARM-Lf-0gM" id="ThG-ah-rM9"/>
-                        <outlet property="imageView" destination="ARM-Lf-0gM" id="QhG-Wt-fej"/>
+                        <outlet property="imageView" destination="kFK-7a-Kv0" id="HhR-j5-evE"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromSettingsToHome" modalTransitionStyle="crossDissolve" id="beG-jf-9Qn"/>
                     </connections>
                 </viewController>
@@ -923,6 +930,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="UDq-29-3rN"/>
         <segue reference="5If-gr-3gG"/>
-        <segue reference="pub-Dw-XOA"/>
+        <segue reference="beG-jf-9Qn"/>
     </inferredMetricsTieBreakers>
 </document>

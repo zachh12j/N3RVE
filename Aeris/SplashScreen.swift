@@ -1,8 +1,8 @@
 //
-//  Settings.swift
+//  SplashScreen.swift
 //  Aeris
 //
-//  Created by Camilo Rossi on 2018-10-14.
+//  Created by Camilo Rossi on 2018-10-20.
 //  Copyright © 2018 Camilo Rossi. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class Settings: UIViewController {
+class SplashScreen: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     var avPlayer: AVPlayer!

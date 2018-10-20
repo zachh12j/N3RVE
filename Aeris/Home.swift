@@ -13,6 +13,7 @@ class Home: UIViewController {
     
     var player: AVAudioPlayer?
     var AudioPlayer = AVAudioPlayer()
+    var MusicPLaying = false
     
     @IBOutlet var imageView: UIImageView!
     
@@ -29,17 +30,13 @@ class Home: UIViewController {
         buttonClickSound()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        //Background Music
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic", ofType: "mp3")!)
-        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
-        AudioPlayer.prepareToPlay()
-        AudioPlayer.numberOfLoops = -1
-        AudioPlayer.volume = 0.15
-        AudioPlayer.play()
         
         self.view.sendSubviewToBack(imageView);
         
