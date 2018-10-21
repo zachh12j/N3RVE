@@ -15,11 +15,13 @@ class SplashScreen: UIViewController{
     
     var avPlayer: AVPlayer!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         if let path = Bundle.main.path(forResource: "Introduction", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
@@ -27,18 +29,24 @@ class SplashScreen: UIViewController{
             videoPlayer.player = video
             videoPlayer.showsPlaybackControls = false
             
-            present(videoPlayer, animated: true, completion:
+            NotificationCenter.default.addObserver(self, selector: #selector(SplashScreen.finishVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+            
+            present(videoPlayer, animated: false, completion:
                 {
                     video.play()
-            })
+                })
+            
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(Settings.finishVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    deinit {
+        print("Remove NotificationCenter Deinit")
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func finishVideo()
     {
-        print("Video Finished")
+        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen")
     }
-    
 }
+
