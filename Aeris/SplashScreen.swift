@@ -14,6 +14,8 @@ import AVKit
 class SplashScreen: UIViewController{
     
     var avPlayer: AVPlayer!
+    var window: UIWindow?
+    var AudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad()
     {
@@ -46,7 +48,18 @@ class SplashScreen: UIViewController{
     
     @objc func finishVideo()
     {
-        UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashScreen")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as UIViewController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = vc
+        
+        //Partir la musique
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic3", ofType: "mp3")!)
+        AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        AudioPlayer.prepareToPlay()
+        AudioPlayer.numberOfLoops = -1
+        AudioPlayer.volume = 0.15
+        AudioPlayer.play()
     }
 }
 
