@@ -24,12 +24,13 @@ class SplashScreen: UIViewController{
     
     override func viewDidAppear(_ animated: Bool)
     {
-        if let path = Bundle.main.path(forResource: "Introduction", ofType: "mp4")
+        if let path = Bundle.main.path(forResource: "SplashAnimation", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             let videoPlayer = AVPlayerViewController()
             videoPlayer.player = video
             videoPlayer.showsPlaybackControls = false
+            videoPlayer.videoGravity=AVLayerVideoGravity.resizeAspectFill;
             
             NotificationCenter.default.addObserver(self, selector: #selector(SplashScreen.finishVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
             
@@ -50,6 +51,16 @@ class SplashScreen: UIViewController{
     {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as UIViewController
+        
+        vc.view.alpha = 0
+        UIView.animate(withDuration: 1.0, animations:
+        {
+            vc.view.alpha = 1
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = vc
+            
+        }, completion: nil)
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = vc
         
