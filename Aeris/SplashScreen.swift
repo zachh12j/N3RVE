@@ -13,6 +13,7 @@ import AVKit
 
 class SplashScreen: UIViewController{
     
+    var player: AVAudioPlayer?
     var avPlayer: AVPlayer!
     var window: UIWindow?
     var AudioPlayer = AVAudioPlayer()
@@ -20,11 +21,12 @@ class SplashScreen: UIViewController{
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        SplashScreenSound()
     }
     
     override func viewDidAppear(_ animated: Bool)
     {
-        if let path = Bundle.main.path(forResource: "SplashAnimation", ofType: "mp4")
+        if let path = Bundle.main.path(forResource: "SplashScreen", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             let videoPlayer = AVPlayerViewController()
@@ -71,6 +73,20 @@ class SplashScreen: UIViewController{
         AudioPlayer.numberOfLoops = -1
         AudioPlayer.volume = 0.15
         AudioPlayer.play()
+    }
+    
+    func SplashScreenSound() {
+        let url = Bundle.main.url(forResource: "SplashScreenSound", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
 

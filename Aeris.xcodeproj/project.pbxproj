@@ -10,7 +10,8 @@
 		DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */; };
 		DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */; };
 		DE27F751217BD1920040A300 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27F750217BD1910040A300 /* SplashScreen.swift */; };
-		DE27F755217D6CF10040A300 /* SplashAnimation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F754217D6CCC0040A300 /* SplashAnimation.mp4 */; };
+		DE27F757217D7C350040A300 /* SplashScreenSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE27F756217D7C350040A300 /* SplashScreenSound.wav */; };
+		DE27F759217D7C970040A300 /* SplashScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F758217D7C7B0040A300 /* SplashScreen.mp4 */; };
 		DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472021727D6C00C7D64A /* AppDelegate.swift */; };
 		DE29472321727D6C00C7D64A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472221727D6C00C7D64A /* Home.swift */; };
 		DE29472621727D6C00C7D64A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472421727D6C00C7D64A /* Main.storyboard */; };
@@ -53,9 +54,9 @@
 /* Begin PBXFileReference section */
 		DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic2.mp3; sourceTree = "<group>"; };
 		DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic3.mp3; sourceTree = "<group>"; };
-		DE27F74C217BC0370040A300 /* Introduction.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Introduction.mp4; sourceTree = "<group>"; };
 		DE27F750217BD1910040A300 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		DE27F754217D6CCC0040A300 /* SplashAnimation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SplashAnimation.mp4; path = ../../../Assets/Introduction/SplashAnimation.mp4; sourceTree = "<group>"; };
+		DE27F756217D7C350040A300 /* SplashScreenSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SplashScreenSound.wav; sourceTree = "<group>"; };
+		DE27F758217D7C7B0040A300 /* SplashScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreen.mp4; sourceTree = "<group>"; };
 		DE29471D21727D6C00C7D64A /* Aeris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aeris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29472021727D6C00C7D64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE29472221727D6C00C7D64A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -148,8 +149,7 @@
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
-				DE27F74C217BC0370040A300 /* Introduction.mp4 */,
-				DE27F754217D6CCC0040A300 /* SplashAnimation.mp4 */,
+				DE27F758217D7C7B0040A300 /* SplashScreen.mp4 */,
 				DE41C4B821783772004077FB /* Music */,
 			);
 			path = Aeris;
@@ -176,6 +176,7 @@
 		DE41C4B821783772004077FB /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				DE27F756217D7C350040A300 /* SplashScreenSound.wav */,
 				DE41C4BD21783B88004077FB /* affirm.wav */,
 				DE41C4BB21783B87004077FB /* button.wav */,
 				DE41C4BC21783B87004077FB /* deny.wav */,
@@ -290,7 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE27F755217D6CF10040A300 /* SplashAnimation.mp4 in Resources */,
+				DE27F759217D7C970040A300 /* SplashScreen.mp4 in Resources */,
 				DE41C4BF21783B88004077FB /* deny.wav in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
 				DE41C4BE21783B88004077FB /* button.wav in Resources */,
@@ -300,6 +301,7 @@
 				DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */,
 				DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */,
 				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
+				DE27F757217D7C350040A300 /* SplashScreenSound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
