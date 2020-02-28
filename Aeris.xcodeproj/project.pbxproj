@@ -53,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		0467265C240994C0009720FE /* SplashScreenNerve.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenNerve.mp4; sourceTree = "<group>"; };
+		0467265D240995E9009720FE /* SplashScreenN.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SplashScreenN.mp4; path = ../../../../../../../../Downloads/SplashScreenN.mp4; sourceTree = "<group>"; };
 		DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic2.mp3; sourceTree = "<group>"; };
 		DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic3.mp3; sourceTree = "<group>"; };
 		DE27F750217BD1910040A300 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -151,6 +152,7 @@
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
 				DE27F758217D7C7B0040A300 /* SplashScreen.mp4 */,
+				0467265D240995E9009720FE /* SplashScreenN.mp4 */,
 				0467265C240994C0009720FE /* SplashScreenNerve.mp4 */,
 				DE41C4B821783772004077FB /* Music */,
 			);
