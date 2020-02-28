@@ -17,6 +17,13 @@ class SplashScreen: UIViewController{
     var avPlayer: AVPlayer!
     var window: UIWindow?
     var AudioPlayer = AVAudioPlayer()
+    @IBOutlet weak var containerView: UIView!
+    
+    var videoPlayer = AVPlayerViewController()
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     override func viewDidLoad()
     {
@@ -24,23 +31,22 @@ class SplashScreen: UIViewController{
         SplashScreenSound()
     }
     
+    
+    
     override func viewDidAppear(_ animated: Bool)
     {
-        if let path = Bundle.main.path(forResource: "SplashScreen", ofType: "mp4")
+        if let path = Bundle.main.path(forResource: "SplashScreenNerve", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
-            let videoPlayer = AVPlayerViewController()
             videoPlayer.player = video
             videoPlayer.showsPlaybackControls = false
             videoPlayer.videoGravity=AVLayerVideoGravity.resizeAspectFill;
             
             NotificationCenter.default.addObserver(self, selector: #selector(SplashScreen.finishVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
             
-            present(videoPlayer, animated: false, completion:
-                {
-                    video.play()
-                })
-            
+            addChild(videoPlayer)
+            view.addSubview(videoPlayer.view)
+            video.play()
         }
         
     }
@@ -53,18 +59,23 @@ class SplashScreen: UIViewController{
     {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as UIViewController
-        
         vc.view.alpha = 0
-        UIView.animate(withDuration: 1.0, animations:
-        {
-            vc.view.alpha = 1
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
-            
-        }, completion: nil)
+
+        //Get our video view
+        let video = view.subviews[0]
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = vc
+        //Add this subview to view hierarchy
+        view.addSubview(vc.view)
+        view.bringSubviewToFront(vc.view)
+        
+        UIView.animate(withDuration: 1, animations: {
+            video.alpha = 0
+            vc.view.alpha = 1
+        })
+        {
+            _ in
+            self.present(vc, animated: false, completion: nil)
+        }
         
         //Partir la musique
         let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic3", ofType: "mp3")!)

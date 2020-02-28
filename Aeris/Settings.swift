@@ -12,33 +12,57 @@ import AVKit
 
 class Settings: UIViewController {
     
+    var player: AVAudioPlayer?
+    
+    let notification = UINotificationFeedbackGenerator()
+    let selection = UISelectionFeedbackGenerator()
+    
+    @IBAction func fromSettingsToHome(_ sender: Any) {
+        performSegue(withIdentifier: "fromSettingsToHome", sender: self)
+        selection.selectionChanged()
+        buttonClickSound()
+    }
     @IBOutlet var imageView: UIImageView!
     var avPlayer: AVPlayer!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if let path = Bundle.main.path(forResource: "Introduction", ofType: "mp4")
-        {
-            let video = AVPlayer(url: URL(fileURLWithPath: path))
-            let videoPlayer = AVPlayerViewController()
-            videoPlayer.player = video
-            videoPlayer.showsPlaybackControls = false
-            
-            present(videoPlayer, animated: true, completion:
-                {
-                    video.play()
-            })
-        }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(Settings.finishVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        self.view.sendSubviewToBack(imageView);
+        
+        let min = CGFloat(-30)
+        let max = CGFloat(30)
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        
+        imageView.addMotionEffect(motionEffectGroup)
     }
     
-    @objc func finishVideo()
-    {
-        print("Video Finished")
+    func buttonClickSound() {
+        let url = Bundle.main.url(forResource: "button", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
     
 }

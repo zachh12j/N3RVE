@@ -24,6 +24,7 @@ class Categories: UIViewController {
         
         self.view.sendSubviewToBack(imageView);
         
+        //Set background parallax effect -= 1;
         let min = CGFloat(-30)
         let max = CGFloat(30)
         
@@ -37,6 +38,7 @@ class Categories: UIViewController {
         
         let motionEffectGroup = UIMotionEffectGroup()
         motionEffectGroup.motionEffects = [xMotion,yMotion]
+        //Parallax end
         
         imageView.addMotionEffect(motionEffectGroup)
     }

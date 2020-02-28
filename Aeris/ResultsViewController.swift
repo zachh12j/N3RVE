@@ -16,6 +16,10 @@ class ResultsViewController: UIViewController {
     var noCorrect = 0
     var total = 0
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,7 +66,13 @@ class ResultsViewController: UIViewController {
     }
 
     @IBAction func fromResultsToCategories(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromResultsToCategories", sender: self)
+        self.performSegue(withIdentifier: "fromResultsToHome", sender: self)
+    }
+    
+    @IBAction func formSender(_ sender: Any) {
+        if let url = URL(string: "https://goo.gl/forms/tEAPbwp8DyVbmBw63") {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
 }

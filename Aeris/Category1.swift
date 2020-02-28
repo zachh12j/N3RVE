@@ -53,44 +53,44 @@ class Category1: UIViewController {
     
     var questions: [Question] = [
         Question(
-            question: "What is 1+1?",
-            answers: ["1", "2", "3", "4"],
-            correctAnswer: 1),
-        Question(
-            question: "What is 3 x 3?",
-            answers: ["16", "3", "9", "5"],
+            question: "Pendant combien de jours un individu devrait-il voyager en avion tous les jours avant de subir un accident?",
+            answers: ["1000 ans", "50 ans", "123 000 ans", "40 000 ans"],
             correctAnswer: 2),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            question: "Quelles sont les chances de mourir lors d'un crash?",
+            answers: ["1 pour 1 000", "1 pour 500", "1 pour 500 000", "1 pour 11 000 000"],
             correctAnswer: 3),
         Question(
-            question: "What is the Capital of Canada?",
-            answers: ["Vancouver", "Toronto", "Ottawa", "Montreal"],
+            question: "« Une étude menée entre 1983 et 2000 démontre que __% des personnes ayant vécu un accident d'avion ont survécu. »",
+            answers: ["50,3%", "100%", "44,58%", "95,7%"],
+            correctAnswer: 3),
+        Question(
+            question: "À quelle fréquence enregistre-t-on des crash d'avions? Un incident tous les:",
+            answers: ["1 million de vols", "1,2 million de vols", "100 000 vols", "800 000 vols"],
+            correctAnswer: 1),
+        Question(
+            question: "Combien de fois le nombre de passagers décédés a-t-il baissé entre 1996 et 2017?",
+            answers: ["1,5x", "2x", "4x", "6,4x"],
             correctAnswer: 2),
         Question(
-            question: "What is the Capital of United States?",
-            answers: ["Houston", "Las Vegas", "Washington, D.C.", "New-York"],
+            question: "Compléter la phrase: Chaque jour, plus de _____ avions de ligne à réaction décollent pour réaliser chacuns en moyenne 3 trajets.",
+            answers: ["10 000", "100", "1 000 000", "25 000"],
+            correctAnswer: 3),
+        Question(
+            question: "Combien de fois l'automobile est-elle plus dangereuse que l'avion?",
+            answers: ["100x", "72x", "85x", "30x"],
+            correctAnswer: 1),
+        Question(
+            question: "Le moustique est combien de fois plus meurtrier qu'un crash d'avion?",
+            answers: ["10 fois", "100 fois", "1000 fois", "500 fois"],
             correctAnswer: 2),
         Question(
-            question: "What is the Capital of Farnce?",
-            answers: ["Paris", "Cote-d'Azur", "Verdun", "Sainte-Marie"],
-            correctAnswer: 0),
+            question: "Quel est le pourcentage des accidents d'avions qui surviennent dans les 8 premières minutes ou les 3 dernières?",
+            answers: ["50%", "80%", "100%", "25%"],
+            correctAnswer: 1),
         Question(
-            question: "What is the Capital of Switzerland?",
-            answers: ["Berne", "Genenva", "Fribourg", "Vevey"],
-            correctAnswer: 0),
-        Question(
-            question: "What is the Capital of Belgium?",
-            answers: ["Belgium City", "Bruxelles", "Berlin", "Mivata"],
-            correctAnswer: 2),
-        Question(
-            question: "What is the Capital of Germany?",
-            answers: ["Stutgart", "Melbourne", "Berlin", "Tomorrowland"],
-            correctAnswer: 2),
-        Question(
-            question: "What is the Capital of Brasil?",
-            answers: ["Rio de Janeiro", "Sao Paulo", "Brasil City", "Brasilia"],
+            question: "Quelle est la probabilité équivalente de subir un crash aérien?",
+            answers: ["Mourir mangé par un requin", "Gagner le jackpot au lotto", "Mourir par une noix de coco", "Mourir en avalant son stylo… oui oui, son stylo"],
             correctAnswer: 3)
     ]
     

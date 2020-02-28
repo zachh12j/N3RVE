@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Category5: UIViewController {
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var lblQuestion: UILabel!
     @IBOutlet var answer0: UIButton!
     @IBOutlet var answer1: UIButton!
@@ -23,7 +25,7 @@ class Category5: UIViewController {
         let answers: [String]
         let correctAnswer: Int
     }
-    
+    var player: AVAudioPlayer?
     
     var questions: [Question] = [
         Question(
@@ -31,40 +33,40 @@ class Category5: UIViewController {
             answers: ["1", "2", "3", "4"],
             correctAnswer: 1),
         Question(
-            question: "Have you subscrbed to Seemu Apps",
-            answers: ["Yes", "No", "I will", "No Thanks"],
+            question: "What is 3 x 3?",
+            answers: ["16", "3", "9", "5"],
+            correctAnswer: 2),
+        Question(
+            question: "What is the Capital of Australia?",
+            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            correctAnswer: 3),
+        Question(
+            question: "What is the Capital of Canada?",
+            answers: ["Vancouver", "Toronto", "Ottawa", "Montreal"],
+            correctAnswer: 2),
+        Question(
+            question: "What is the Capital of United States?",
+            answers: ["Houston", "Las Vegas", "Washington, D.C.", "New-York"],
+            correctAnswer: 2),
+        Question(
+            question: "What is the Capital of Farnce?",
+            answers: ["Paris", "Cote-d'Azur", "Verdun", "Sainte-Marie"],
             correctAnswer: 0),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
+            question: "What is the Capital of Switzerland?",
+            answers: ["Berne", "Genenva", "Fribourg", "Vevey"],
+            correctAnswer: 0),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
+            question: "What is the Capital of Belgium?",
+            answers: ["Belgium City", "Bruxelles", "Berlin", "Mivata"],
+            correctAnswer: 2),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
+            question: "What is the Capital of Germany?",
+            answers: ["Stutgart", "Melbourne", "Berlin", "Tomorrowland"],
+            correctAnswer: 2),
         Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
-            correctAnswer: 3),
-        Question(
-            question: "What is the Capital of Australia?",
-            answers: ["Sydney", "Melbourne", "Adelaide", "Canberra"],
+            question: "What is the Capital of Brasil?",
+            answers: ["Rio de Janeiro", "Sao Paulo", "Brasil City", "Brasilia"],
             correctAnswer: 3)
     ]
     
@@ -73,14 +75,42 @@ class Category5: UIViewController {
     
     var noCorrect = 0
     
+    /////////////////////////////////////////////////////////
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.sendSubviewToBack(imageView);
         currentQuestion = questions[0]
         setQuestion()
         displayAnswer.text = ""
         self.displayNextQuestion.isHidden = true
+        
+        //Parallax background
+        let min = CGFloat(-30)
+        let max = CGFloat(30)
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        
+        imageView.addMotionEffect(motionEffectGroup)
+        //
     }
+    //FIN VIEWDIDLOAD
+    
+    let notification = UINotificationFeedbackGenerator()
     
     @IBAction func submitAnswer0(_ sender: Any) {
         checkAnswer(idx: 0)
@@ -95,6 +125,7 @@ class Category5: UIViewController {
         checkAnswer(idx: 3)
     }
     
+    
     // Check if an answer is correct then load the next question
     func checkAnswer(idx: Int) {
         if(idx == currentQuestion!.correctAnswer) {
@@ -107,6 +138,25 @@ class Category5: UIViewController {
             answer1.isEnabled = false
             answer2.isEnabled = false
             answer3.isEnabled = false
+            notification.notificationOccurred(.success)
+            goodAnswerSound()
+            print("\(currentQuestion!.correctAnswer)")
+            if(currentQuestion!.correctAnswer == 0)
+            {
+                print("The answer is right. Put this question in green")
+            }
+            if(currentQuestion!.correctAnswer == 1)
+            {
+                print("The answer is right. Put this question in green")
+            }
+            if(currentQuestion!.correctAnswer == 2)
+            {
+                print("The answer is right. Put this question in green")
+            }
+            if(currentQuestion!.correctAnswer == 3)
+            {
+                print("The answer is right. Put this question in green")
+            }
         }
         else
         {
@@ -118,6 +168,25 @@ class Category5: UIViewController {
             answer1.isEnabled = false
             answer2.isEnabled = false
             answer3.isEnabled = false
+            notification.notificationOccurred(.error)
+            wrongAnswerSound()
+            print("\(currentQuestion!.correctAnswer)")
+            if(currentQuestion!.correctAnswer == 0)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
+            if(currentQuestion!.correctAnswer == 1)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
+            if(currentQuestion!.correctAnswer == 2)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
+            if(currentQuestion!.correctAnswer == 3)
+            {
+                print("The answer is wrong. Put this question in gray")
+            }
         }
         
     }
@@ -131,6 +200,11 @@ class Category5: UIViewController {
         answer3.isEnabled = true
         displayAnswer.text = ""
         loadNextQuestion()
+    }
+    
+    @IBAction func fromCategory5ToCategories(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategory5ToCategories", sender: self)
+        buttonClickSound()
     }
     
     
@@ -151,11 +225,14 @@ class Category5: UIViewController {
     // Set labels and buttions for the current question
     func setQuestion() {
         lblQuestion.text = currentQuestion!.question
+        lblQuestion.text = lblQuestion.text?.uppercased()
         answer0.setTitle(currentQuestion!.answers[0], for: .normal)
         answer1.setTitle(currentQuestion!.answers[1], for: .normal)
         answer2.setTitle(currentQuestion!.answers[2], for: .normal)
         answer3.setTitle(currentQuestion!.answers[3], for: .normal)
-        lblProgress.text = "\(currentQuestionPos + 1) / \(questions.count)"
+        lblProgress.text = "\(currentQuestionPos + 1) sur \(questions.count)"
+        lblProgress.text = lblProgress.text?.uppercased()
+        displayAnswer.text = displayAnswer.text?.uppercased()
     }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
@@ -167,6 +244,47 @@ class Category5: UIViewController {
         }
     }
     
+    func buttonClickSound() {
+        let url = Bundle.main.url(forResource: "button", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.volume = 1.0
+    }
+    func wrongAnswerSound() {
+        let url = Bundle.main.url(forResource: "deny", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.volume = 1.0
+    }
+    func goodAnswerSound() {
+        let url = Bundle.main.url(forResource: "affirm", withExtension: "wav")!
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.prepareToPlay()
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        player?.volume = 1.0
+    }
+    
 }
-
-
