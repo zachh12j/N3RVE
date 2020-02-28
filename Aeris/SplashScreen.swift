@@ -35,7 +35,7 @@ class SplashScreen: UIViewController{
     
     override func viewDidAppear(_ animated: Bool)
     {
-        if let path = Bundle.main.path(forResource: "SplashScreenN", ofType: "mp4")
+        if let path = Bundle.main.path(forResource: "SplashScreen", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             videoPlayer.player = video
