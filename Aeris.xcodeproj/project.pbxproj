@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046726662409AF9F009720FE /* SplashScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046726652409AF8A009720FE /* SplashScreen.mp4 */; };
+		046726682409B0D1009720FE /* SplashScreenSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726672409B0D1009720FE /* SplashScreenSound.wav */; };
+		0467266A2409B237009720FE /* SplashScreenWSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046726692409B1FC009720FE /* SplashScreenWSound.mp4 */; };
+		0467266C2409B388009720FE /* BackgroundMusic4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266B2409B388009720FE /* BackgroundMusic4.mp3 */; };
+		0467266E2409C6FC009720FE /* BackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */; };
+		046726702409D071009720FE /* SplashScreenAndSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */; };
 		DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */; };
 		DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */; };
 		DE27F751217BD1920040A300 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27F750217BD1910040A300 /* SplashScreen.swift */; };
-		DE27F757217D7C350040A300 /* SplashScreenSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE27F756217D7C350040A300 /* SplashScreenSound.wav */; };
 		DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472021727D6C00C7D64A /* AppDelegate.swift */; };
 		DE29472321727D6C00C7D64A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29472221727D6C00C7D64A /* Home.swift */; };
 		DE29472621727D6C00C7D64A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE29472421727D6C00C7D64A /* Main.storyboard */; };
@@ -51,12 +56,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0467265E240996E8009720FE /* SplashScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreen.mp4; sourceTree = "<group>"; };
+		046726652409AF8A009720FE /* SplashScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreen.mp4; sourceTree = "<group>"; };
+		046726672409B0D1009720FE /* SplashScreenSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SplashScreenSound.wav; sourceTree = "<group>"; };
+		046726692409B1FC009720FE /* SplashScreenWSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenWSound.mp4; sourceTree = "<group>"; };
+		0467266B2409B388009720FE /* BackgroundMusic4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic4.mp3; sourceTree = "<group>"; };
+		0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BackgroundVideo.mp4; sourceTree = "<group>"; };
+		0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenAndSound.mp4; sourceTree = "<group>"; };
 		DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic2.mp3; sourceTree = "<group>"; };
 		DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic3.mp3; sourceTree = "<group>"; };
 		DE27F750217BD1910040A300 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		DE27F756217D7C350040A300 /* SplashScreenSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SplashScreenSound.wav; sourceTree = "<group>"; };
-		DE29471D21727D6C00C7D64A /* Aeris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aeris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE29471D21727D6C00C7D64A /* N3RVE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = N3RVE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE29472021727D6C00C7D64A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE29472221727D6C00C7D64A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DE29472521727D6C00C7D64A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,7 +131,7 @@
 		DE29471E21727D6C00C7D64A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE29471D21727D6C00C7D64A /* Aeris.app */,
+				DE29471D21727D6C00C7D64A /* N3RVE.app */,
 				DE29473121727D6F00C7D64A /* AerisTests.xctest */,
 				DE29473C21727D7000C7D64A /* AerisUITests.xctest */,
 			);
@@ -148,7 +157,10 @@
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
-				0467265E240996E8009720FE /* SplashScreen.mp4 */,
+				046726652409AF8A009720FE /* SplashScreen.mp4 */,
+				046726692409B1FC009720FE /* SplashScreenWSound.mp4 */,
+				0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */,
+				0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */,
 				DE41C4B821783772004077FB /* Music */,
 			);
 			path = Aeris;
@@ -175,7 +187,8 @@
 		DE41C4B821783772004077FB /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				DE27F756217D7C350040A300 /* SplashScreenSound.wav */,
+				0467266B2409B388009720FE /* BackgroundMusic4.mp3 */,
+				046726672409B0D1009720FE /* SplashScreenSound.wav */,
 				DE41C4BD21783B88004077FB /* affirm.wav */,
 				DE41C4BB21783B87004077FB /* button.wav */,
 				DE41C4BC21783B87004077FB /* deny.wav */,
@@ -203,7 +216,7 @@
 			);
 			name = Aeris;
 			productName = Aeris;
-			productReference = DE29471D21727D6C00C7D64A /* Aeris.app */;
+			productReference = DE29471D21727D6C00C7D64A /* N3RVE.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DE29473021727D6F00C7D64A /* AerisTests */ = {
@@ -293,6 +306,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046726702409D071009720FE /* SplashScreenAndSound.mp4 in Resources */,
+				0467266E2409C6FC009720FE /* BackgroundVideo.mp4 in Resources */,
+				0467266A2409B237009720FE /* SplashScreenWSound.mp4 in Resources */,
+				046726682409B0D1009720FE /* SplashScreenSound.wav in Resources */,
+				046726662409AF9F009720FE /* SplashScreen.mp4 in Resources */,
+				0467266C2409B388009720FE /* BackgroundMusic4.mp3 in Resources */,
 				DE41C4BF21783B88004077FB /* deny.wav in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
 				DE41C4BE21783B88004077FB /* button.wav in Resources */,
@@ -302,7 +321,6 @@
 				DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */,
 				DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */,
 				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
-				DE27F757217D7C350040A300 /* SplashScreenSound.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,8 +538,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aerisapp.aeris;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.n3rve;
+				PRODUCT_NAME = N3RVE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -538,8 +556,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.aerisapp.aeris;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.n3rve;
+				PRODUCT_NAME = N3RVE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

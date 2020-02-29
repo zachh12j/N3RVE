@@ -28,14 +28,14 @@ class SplashScreen: UIViewController{
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        SplashScreenSound()
+        //SplashScreenSound()
     }
     
     
     
     override func viewDidAppear(_ animated: Bool)
     {
-        if let path = Bundle.main.path(forResource: "SplashScreen", ofType: "mp4")
+        if let path = Bundle.main.path(forResource: "SplashScreenAndSound", ofType: "mp4")
         {
             let video = AVPlayer(url: URL(fileURLWithPath: path))
             videoPlayer.player = video
@@ -78,14 +78,14 @@ class SplashScreen: UIViewController{
         }
         
         //Partir la musique
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic3", ofType: "mp3")!)
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic4", ofType: "mp3")!)
         AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
         AudioPlayer.prepareToPlay()
         AudioPlayer.numberOfLoops = -1
         AudioPlayer.volume = 0.15
         AudioPlayer.play()
     }
-    
+    /*
     func SplashScreenSound() {
         let url = Bundle.main.url(forResource: "SplashScreenSound", withExtension: "wav")!
         
@@ -99,5 +99,6 @@ class SplashScreen: UIViewController{
             print(error.localizedDescription)
         }
     }
+    */
 }
 

@@ -15,7 +15,10 @@ class Home: UIViewController {
     var AudioPlayer = AVAudioPlayer()
     var MusicPLaying = false
     
-    @IBOutlet var imageView: UIImageView!
+    var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    var paused: Bool = false
+    
     @IBOutlet weak var instagramButton: UIButton!
     
         let selection = UISelectionFeedbackGenerator()
@@ -39,37 +42,48 @@ class Home: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.view.sendSubviewToBack(imageView);
-        
-        let detailVC = UIViewController()
-        let navigationController = UINavigationController(rootViewController: detailVC)
-        navigationController.modalPresentationStyle = .fullScreen
-        present(navigationController, animated: true)
-        
-        let min = CGFloat(-30)
-        let max = CGFloat(30)
-        
-        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
-        xMotion.minimumRelativeValue = min
-        xMotion.maximumRelativeValue = max
-        
-        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
-        yMotion.minimumRelativeValue = min
-        yMotion.maximumRelativeValue = max
-        
-        let motionEffectGroup = UIMotionEffectGroup()
-        motionEffectGroup.motionEffects = [xMotion,yMotion]
-        
-        imageView.addMotionEffect(motionEffectGroup)
+        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
+
+        avPlayer = AVPlayer(url: theURL!)
+        avPlayerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        avPlayer.volume = 0
+        avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+
+        avPlayerLayer.frame = view.layer.bounds
+        view.backgroundColor = UIColor.clear;
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: Selector(("playerItemDidReachEnd:")),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+            object: avPlayer.currentItem)
+    }
+    
+    func playerItemDidReachEnd(notification: NSNotification) {
+        let p: AVPlayerItem = notification.object as! AVPlayerItem
+        p.seek(to: CMTime.zero)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        avPlayer.play()
+        paused = false
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        avPlayer.pause()
+        paused = true
     }
     
     @IBAction func didTapInsta(_ sender: Any) {
-        if let url = URL(string: "http://instagram.com/camilo.jrossi/") {
+        if let url = URL(string: "http://instagram.com/n3rve_app/") {
             UIApplication.shared.open(url, options: [:])
         }
     }
     @IBAction func didTapFacebook(_ sender: Any) {
-        if let url = URL(string: "http://facebook.com/camilo.jrossi") {
+        if let url = URL(string: "https://vm.tiktok.com/bKPSun/") {
             UIApplication.shared.open(url, options: [:])
         }
     }
