@@ -9,7 +9,10 @@
 import UIKit
 import AVFoundation
 
+// Put this piece of code anywhere you like
+
 class LoginScreen: UIViewController {
+    
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
@@ -21,6 +24,7 @@ class LoginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
 

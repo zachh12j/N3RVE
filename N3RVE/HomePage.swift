@@ -14,6 +14,7 @@ class HomePage: UIViewController {
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
+    var player: AVPlayer?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -22,42 +23,35 @@ class HomePage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
+        // Load the video from the app bundle.
+        let videoURL: NSURL = Bundle.main.url(forResource: "SplashScreenAndSound", withExtension: "mp4")! as NSURL
+        
+        player = AVPlayer(url: videoURL as URL)
+        player?.actionAtItemEnd = .none
+        player?.isMuted = true
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        playerLayer.zPosition = -1
 
-        avPlayer = AVPlayer(url: theURL!)
-        avPlayerLayer = AVPlayerLayer(player: avPlayer)
-        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        avPlayer.volume = 0
-        avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        playerLayer.frame = view.frame
 
-        avPlayerLayer.frame = view.layer.bounds
-        view.backgroundColor = UIColor.clear;
-        view.layer.insertSublayer(avPlayerLayer, at: 0)
+        view.layer.addSublayer(playerLayer)
 
+        player?.play()
+            
+        //loop video
         NotificationCenter.default.addObserver(self,
-                                               selector: Selector(("playerItemDidReachEnd:")),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: avPlayer.currentItem)
+                                               selector: Selector(("loopVideo")),
+            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+            object: nil)
 
     }
     
-    @objc func playerItemDidReachEnd(notification: Notification) {
-        if let playerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: CMTime.zero, completionHandler: nil)
-        }
+    func loopVideo() {
+        player!.seek(to: CMTime.zero)
     }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        avPlayer.play()
-        paused = false
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        avPlayer.pause()
-        paused = true
-    }
+    
     @IBAction func gotoLogin(_ sender: Any) {
         performSegue(withIdentifier: "fromHomePageToLogin", sender: self)
     }

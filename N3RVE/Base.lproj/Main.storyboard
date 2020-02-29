@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TitilliumWeb-SemiBold.ttf">
+            <string>TitilliumWeb-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--AV Player View Controller-->
         <scene sceneID="XO2-U9-DsK">
@@ -457,12 +462,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-NS-jBS">
-                                <rect key="frame" x="-577" y="-1" width="1528" height="814"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="N3RVE" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-bt-fHf">
-                                <rect key="frame" x="106" y="140" width="162" height="86"/>
+                                <rect key="frame" x="106" y="100" width="162" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcw-em-zad">
@@ -513,11 +514,112 @@
                                 <rect key="frame" x="-577" y="-1" width="1528" height="814"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="N3RVE" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-Dd-ede">
+                                <rect key="frame" x="106" y="100" width="163" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F6T-Dd-ede" secondAttribute="height" multiplier="163:86" id="OBy-gC-ulf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ew-dI-pX8">
+                                <rect key="frame" x="59" y="573" width="41" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="ToC"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BY CHECKING THIS BOX" translatesAutoresizingMaskIntoConstraints="NO" id="ddq-tt-yfH">
+                                <rect key="frame" x="124" y="569" width="194" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsq-Ez-gBy">
+                                <rect key="frame" x="54" y="626" width="266" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="SignUpButton"/>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="XBq-aC-AaW" eventType="touchUpInside" id="FZ1-VQ-GKC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="NAME" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="7wT-CY-wQs">
+                                <rect key="frame" x="59" y="194" width="256" height="66.999999999999972"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019607843139" green="0.23921568627450979" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LAST NAME" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-6j-rl7">
+                                <rect key="frame" x="59" y="269" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="Ypr-pB-MuF">
+                                <rect key="frame" x="58" y="344" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-m8-0GQ">
+                                <rect key="frame" x="59" y="419" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="REPEAT PASSWORD" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="x9d-CV-ZW6">
+                                <rect key="frame" x="58" y="494" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07s-Tf-Etn">
+                                <rect key="frame" x="166" y="724" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F6T-Dd-ede" firstAttribute="top" secondItem="yYE-Jw-rqm" secondAttribute="top" constant="56" id="B5b-yz-PyX"/>
+                            <constraint firstItem="F6T-Dd-ede" firstAttribute="centerX" secondItem="yYE-Jw-rqm" secondAttribute="centerX" id="dtw-23-2J8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yYE-Jw-rqm"/>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="Ypr-pB-MuF" id="bgf-F2-OmV"/>
+                        <outlet property="errorLabel" destination="07s-Tf-Etn" id="dzf-gV-E0a"/>
+                        <outlet property="lastNameField" destination="Uoe-6j-rl7" id="1pk-MZ-2Xp"/>
+                        <outlet property="nameField" destination="7wT-CY-wQs" id="DsC-Kb-rPi"/>
+                        <outlet property="passwordField" destination="1J8-m8-0GQ" id="O8V-Rc-7Qn"/>
+                        <outlet property="repeatPasswordField" destination="x9d-CV-ZW6" id="G4g-g5-Q5V"/>
+                        <outlet property="signUpButton" destination="Rsq-Ez-gBy" id="kn0-at-uGr"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromSingUpScreenToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rnn-VZ-Zon"/>
                         <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromSingUpScreenToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ida-WR-fBh"/>
                     </connections>
@@ -538,6 +640,35 @@
                                 <rect key="frame" x="-577" y="-1" width="1528" height="814"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="yq8-eD-Ohh">
+                                <rect key="frame" x="60" y="406" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="B1F-uQ-R1M">
+                                <rect key="frame" x="60" y="500" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                        <color key="value" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EZ-JZ-U5k">
+                                <rect key="frame" x="54" y="626" width="266" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="SignUpButton"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="QGT-rq-hTL"/>
@@ -948,6 +1079,7 @@
     </scenes>
     <resources>
         <image name="ARE YOU A" width="116" height="24"/>
+        <image name="BY CHECKING THIS BOX" width="194" height="47"/>
         <image name="Background" width="375" height="812"/>
         <image name="Catégorie 1" width="367" height="224"/>
         <image name="Catégorie 2" width="367" height="224"/>
@@ -958,6 +1090,7 @@
         <image name="Choix" width="286" height="37"/>
         <image name="ConnectedAs" width="186" height="18"/>
         <image name="Email" width="55" height="55"/>
+        <image name="EmptyBox" width="266" height="77"/>
         <image name="Form" width="74" height="74"/>
         <image name="Group 3" width="375" height="812"/>
         <image name="Instagram" width="55" height="55"/>
@@ -972,19 +1105,21 @@
         <image name="Return" width="59" height="59"/>
         <image name="Réponse" width="356" height="84"/>
         <image name="SignUp" width="266" height="77"/>
+        <image name="SignUpButton" width="266" height="77"/>
         <image name="SoundOff" width="59" height="59"/>
         <image name="SoundOn" width="59" height="59"/>
         <image name="TikTok" width="55" height="55"/>
+        <image name="ToC" width="51" height="51"/>
         <image name="Watcher" width="154" height="59"/>
         <image name="WelcomeToNerve" width="282" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="br8-gy-F5g"/>
+        <segue reference="1hf-5u-ZVR"/>
         <segue reference="28A-EK-YPJ"/>
         <segue reference="4gC-nr-dMc"/>
         <segue reference="jBf-De-Eie"/>
-        <segue reference="R5u-Tq-uOk"/>
-        <segue reference="cvW-vB-bvN"/>
-        <segue reference="NLn-gf-DKz"/>
+        <segue reference="rnn-VZ-Zon"/>
+        <segue reference="Ida-WR-fBh"/>
+        <segue reference="pub-Dw-XOA"/>
     </inferredMetricsTieBreakers>
 </document>
