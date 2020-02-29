@@ -60,7 +60,7 @@ class SplashScreen: UIViewController{
     {
         
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as UIViewController
+        let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomePage") as UIViewController
         vc.view.alpha = 0
 
         //Get our video view
