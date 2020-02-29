@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class Category4: UIViewController {
+class HomePage: UIViewController {
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!

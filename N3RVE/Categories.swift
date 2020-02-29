@@ -66,8 +66,8 @@ class Categories: UIViewController {
         selection.selectionChanged()
         buttonClickSound()
     }
-    @IBAction func fromCategoriesToCategory4(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromCategoriesToCategory4", sender: self)
+    @IBAction func fromCategoriesToHomePage(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToHomePage", sender: self)
         selection.selectionChanged()
         buttonClickSound()
     }
