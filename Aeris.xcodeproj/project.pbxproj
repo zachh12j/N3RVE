@@ -16,6 +16,7 @@
 		046726742409F89E009720FE /* Fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726712409F89E009720FE /* Fail.wav */; };
 		046726752409F89E009720FE /* Success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726722409F89E009720FE /* Success.wav */; };
 		046726762409F89E009720FE /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726732409F89E009720FE /* ButtonClick.wav */; };
+		04672678240A1000009720FE /* ButtonClick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04672677240A1000009720FE /* ButtonClick2.wav */; };
 		DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */; };
 		DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */; };
 		DE27F751217BD1920040A300 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27F750217BD1910040A300 /* SplashScreen.swift */; };
@@ -68,6 +69,7 @@
 		046726712409F89E009720FE /* Fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Fail.wav; sourceTree = "<group>"; };
 		046726722409F89E009720FE /* Success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Success.wav; sourceTree = "<group>"; };
 		046726732409F89E009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
+		04672677240A1000009720FE /* ButtonClick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ButtonClick2.wav; path = Aeris/Music/ButtonClick2.wav; sourceTree = "<group>"; };
 		DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic2.mp3; sourceTree = "<group>"; };
 		DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic3.mp3; sourceTree = "<group>"; };
 		DE27F750217BD1910040A300 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		DE29471421727D6B00C7D64A = {
 			isa = PBXGroup;
 			children = (
+				04672677240A1000009720FE /* ButtonClick2.wav */,
 				DE29471F21727D6C00C7D64A /* Aeris */,
 				DE29473421727D6F00C7D64A /* AerisTests */,
 				DE29473F21727D7000C7D64A /* AerisUITests */,
@@ -323,6 +326,7 @@
 				046726662409AF9F009720FE /* SplashScreen.mp4 in Resources */,
 				0467266C2409B388009720FE /* BackgroundMusic4.mp3 in Resources */,
 				046726762409F89E009720FE /* ButtonClick.wav in Resources */,
+				04672678240A1000009720FE /* ButtonClick2.wav in Resources */,
 				DE41C4BF21783B88004077FB /* deny.wav in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
 				DE41C4BE21783B88004077FB /* button.wav in Resources */,

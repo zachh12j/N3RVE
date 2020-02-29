@@ -48,6 +48,7 @@ class Settings: UIViewController {
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         avPlayer.volume = 0
+        
         avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
 
         avPlayerLayer.frame = view.layer.bounds
@@ -60,9 +61,10 @@ class Settings: UIViewController {
             object: avPlayer.currentItem)
     }
     
-    func playerItemDidReachEnd(notification: NSNotification) {
-        let p: AVPlayerItem = notification.object as! AVPlayerItem
-        p.seek(to: CMTime.zero)
+    @objc func playerItemDidReachEnd(notification: Notification) {
+        if let playerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: CMTime.zero, completionHandler: nil)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -78,7 +80,7 @@ class Settings: UIViewController {
     }
     
     func buttonClickSound() {
-        let url = Bundle.main.url(forResource: "button", withExtension: "wav")!
+        let url = Bundle.main.url(forResource: "ButtonClick2", withExtension: "wav")!
         
         do {
             player = try AVAudioPlayer(contentsOf: url)

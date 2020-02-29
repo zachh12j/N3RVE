@@ -79,7 +79,7 @@ class SplashScreen: UIViewController{
             self.present(vc, animated: false, completion: nil)
         }
         
-        //Partir la musique
+        //Start the music
         let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic4", ofType: "mp3")!)
         AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
         AudioPlayer.prepareToPlay()
@@ -89,9 +89,9 @@ class SplashScreen: UIViewController{
         
     }
     
-    @objc func muteSound()
+     func muteSound()
     {
-        AudioPlayer.volume = 0
+        
         print("YOU HAVE CLICKED")
     }
     /*
