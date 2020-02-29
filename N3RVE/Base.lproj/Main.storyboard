@@ -16,27 +16,6 @@
             </objects>
             <point key="canvasLocation" x="-580" y="-679"/>
         </scene>
-        <!--Login Form-->
-        <scene sceneID="56t-6P-oM8">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="LDb-sU-Uh3" customClass="LoginForm" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LAK-j0-f60">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="JoN-qW-e26">
-                                <rect key="frame" x="-577" y="-1" width="1528" height="814"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="nmN-6O-zdX"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ucW-oi-68C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="158" y="-679"/>
-        </scene>
         <!--Splash Screen-->
         <scene sceneID="NPU-ZL-hzk">
             <objects>
@@ -64,7 +43,6 @@
                     <connections>
                         <outlet property="containerView" destination="IgS-iY-Glq" id="n1x-Mc-Zz7"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromSplashScreenToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="2sD-G3-Rl3"/>
-                        <segue destination="LDb-sU-Uh3" kind="presentation" identifier="fromSplashScreenToLogin" modalPresentationStyle="fullScreen" id="mxE-js-cxL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Old-qN-o57" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.59999999999999" y="22.906403940886701"/>
+            <point key="canvasLocation" x="233" y="23"/>
         </scene>
         <!--Settings-->
         <scene sceneID="2YQ-Q3-MIo">
@@ -248,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvM-Ti-RFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157.59999999999999" y="767.73399014778329"/>
+            <point key="canvasLocation" x="233" y="1431"/>
         </scene>
         <!--Categories-->
         <scene sceneID="W3x-ul-sZt">
@@ -378,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65x-Dy-1e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901.60000000000002" y="22.906403940886701"/>
+            <point key="canvasLocation" x="-242" y="-2093"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="FtF-tt-0IU">
@@ -469,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bba-DJ-4gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2477.5999999999999" y="22.906403940886701"/>
+            <point key="canvasLocation" x="3105" y="1431"/>
         </scene>
         <!--Category4-->
         <scene sceneID="AfF-wL-eCN">
@@ -494,7 +472,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTC-jc-Lef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689" y="-679"/>
+            <point key="canvasLocation" x="2097" y="23"/>
         </scene>
         <!--Category3-->
         <scene sceneID="i3E-pc-eui">
@@ -519,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-OP-1BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1689" y="-1397"/>
+            <point key="canvasLocation" x="1142" y="-331"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="kqe-Rp-DB5">
@@ -546,7 +524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTs-Ih-YIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="-1396"/>
+            <point key="canvasLocation" x="1142" y="385"/>
         </scene>
         <!--Category1-->
         <scene sceneID="yxV-gh-O5C">
@@ -975,8 +953,8 @@
         <segue reference="o7u-q1-Myi"/>
         <segue reference="l03-Xl-0ZQ"/>
         <segue reference="jBf-De-Eie"/>
-        <segue reference="ebz-na-Xkp"/>
-        <segue reference="jwW-nv-fTj"/>
-        <segue reference="2sD-G3-Rl3"/>
+        <segue reference="R5u-Tq-uOk"/>
+        <segue reference="5If-gr-3gG"/>
+        <segue reference="NLn-gf-DKz"/>
     </inferredMetricsTieBreakers>
 </document>

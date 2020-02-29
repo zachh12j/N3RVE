@@ -17,9 +17,8 @@
 		046726752409F89E009720FE /* Success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726722409F89E009720FE /* Success.wav */; };
 		046726762409F89E009720FE /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726732409F89E009720FE /* ButtonClick.wav */; };
 		04672678240A1000009720FE /* ButtonClick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04672677240A1000009720FE /* ButtonClick2.wav */; };
-		0467267A240A201F009720FE /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672679240A201F009720FE /* LoginForm.swift */; };
 		04A1A0CC240AD1AD0088DD9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04A1A0CB240AD1AD0088DD9C /* GoogleService-Info.plist */; };
-		04FB8EE4240A361000C118B2 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04FB8EE4240A361000C118B2 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EDF72BB393D727398A563B1 /* libPods-N3RVE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C4831FCA9D76421CCC33B0 /* libPods-N3RVE.a */; };
 		5017DE99D2C06C809C432D31 /* libPods-N3RVE-N3RVEUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 048E7CC47D79CA68D24BE145 /* libPods-N3RVE-N3RVEUITests.a */; };
 		C95D0AC72C850D494577A71B /* libPods-N3RVETests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C28FF9DCA4C190E223AC36 /* libPods-N3RVETests.a */; };
@@ -40,7 +39,7 @@
 		DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4826EC21740AC500E2CDF2 /* Settings.swift */; };
 		DEF2C888217283F2008F75A4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C887217283F2008F75A4 /* Categories.swift */; };
 		DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88921728EF0008F75A4 /* Category1.swift */; };
-		DEF2C88C21728F3B008F75A4 /* Category2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88B21728F3B008F75A4 /* Category2.swift */; };
+		DEF2C88C21728F3B008F75A4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */; };
 		DEF2C88E21728F52008F75A4 /* Category3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88D21728F52008F75A4 /* Category3.swift */; };
 		DEF2C89021728F72008F75A4 /* Category4.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88F21728F72008F75A4 /* Category4.swift */; };
 		DEF2C89421729062008F75A4 /* Category5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C89321729062008F75A4 /* Category5.swift */; };
@@ -72,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				04FB8EE4240A361000C118B2 /* BuildFile in Embed Frameworks */,
+				04FB8EE4240A361000C118B2 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,7 +90,6 @@
 		046726722409F89E009720FE /* Success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Success.wav; sourceTree = "<group>"; };
 		046726732409F89E009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
 		04672677240A1000009720FE /* ButtonClick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick2.wav; sourceTree = "<group>"; };
-		04672679240A201F009720FE /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		048E7CC47D79CA68D24BE145 /* libPods-N3RVE-N3RVEUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-N3RVE-N3RVEUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A1A0CB240AD1AD0088DD9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		198ED25D1EDF0F1A930C6CBC /* Pods-N3RVE-N3RVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVE-N3RVEUITests.debug.xcconfig"; path = "Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +122,7 @@
 		DE4826EC21740AC500E2CDF2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		DEF2C887217283F2008F75A4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		DEF2C88921728EF0008F75A4 /* Category1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category1.swift; sourceTree = "<group>"; };
-		DEF2C88B21728F3B008F75A4 /* Category2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category2.swift; sourceTree = "<group>"; };
+		DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		DEF2C88D21728F52008F75A4 /* Category3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category3.swift; sourceTree = "<group>"; };
 		DEF2C88F21728F72008F75A4 /* Category4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category4.swift; sourceTree = "<group>"; };
 		DEF2C89321729062008F75A4 /* Category5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category5.swift; sourceTree = "<group>"; };
@@ -201,13 +199,12 @@
 				DE4826EC21740AC500E2CDF2 /* Settings.swift */,
 				DEF2C887217283F2008F75A4 /* Categories.swift */,
 				DEF2C88921728EF0008F75A4 /* Category1.swift */,
-				DEF2C88B21728F3B008F75A4 /* Category2.swift */,
+				DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */,
 				DEF2C88D21728F52008F75A4 /* Category3.swift */,
 				DEF2C88F21728F72008F75A4 /* Category4.swift */,
 				DEF2C89321729062008F75A4 /* Category5.swift */,
 				DEF2C8972172995B008F75A4 /* Results.swift */,
 				DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */,
-				04672679240A201F009720FE /* LoginForm.swift */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
@@ -269,7 +266,6 @@
 				52B710597B305FC9E6146C8A /* Pods-N3RVETests.debug.xcconfig */,
 				1A0272D2458675DE3704AC8C /* Pods-N3RVETests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -505,9 +501,8 @@
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
 				DEF2C888217283F2008F75A4 /* Categories.swift in Sources */,
 				DEF2C89421729062008F75A4 /* Category5.swift in Sources */,
-				0467267A240A201F009720FE /* LoginForm.swift in Sources */,
 				DEF2C8982172995B008F75A4 /* Results.swift in Sources */,
-				DEF2C88C21728F3B008F75A4 /* Category2.swift in Sources */,
+				DEF2C88C21728F3B008F75A4 /* LoginScreen.swift in Sources */,
 				DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */,
 				DEF2C88E21728F52008F75A4 /* Category3.swift in Sources */,
 			);
