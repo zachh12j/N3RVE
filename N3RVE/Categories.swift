@@ -56,8 +56,8 @@ class Categories: UIViewController {
         selection.selectionChanged()
         buttonClickSound()
     }
-    @IBAction func fromCategoriesToCategory2(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromCategoriesToCategory2", sender: self)
+    @IBAction func fromCategoriesToLoginScreen(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategoriesToLoginScreen", sender: self)
         selection.selectionChanged()
         buttonClickSound()
     }

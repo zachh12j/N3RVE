@@ -300,7 +300,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Catégorie 2"/>
                                 <connections>
-                                    <action selector="fromCategoriesToCategory2:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="wBu-3a-iAt"/>
+                                    <action selector="fromCategoriesToLoginScreen:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="wBu-3a-iAt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmI-gT-0YF" userLabel="c3">
@@ -371,7 +371,7 @@
                         <segue destination="0La-Yt-cdw" kind="presentation" identifier="fromCategoriesToCategory4" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="HMC-xz-5sj"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromCategoriesToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="pub-Dw-XOA"/>
                         <segue destination="zuC-eI-uhz" kind="presentation" identifier="fromCategoriesToCategory1" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1hf-5u-ZVR"/>
-                        <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromCategoriesToCategory2" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Xi8-JG-UGr"/>
+                        <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromCategoriesToLoginScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Xi8-JG-UGr"/>
                         <segue destination="XBq-aC-AaW" kind="presentation" identifier="fromCategoriesToCategory3" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="niR-Z8-PKf"/>
                         <segue destination="KXF-aE-b44" kind="presentation" identifier="fromCategoriesToCategory5" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Dvd-xd-nDX"/>
                     </connections>
@@ -521,10 +521,10 @@
             </objects>
             <point key="canvasLocation" x="1689" y="-1397"/>
         </scene>
-        <!--Category2-->
+        <!--Login Screen-->
         <scene sceneID="kqe-Rp-DB5">
             <objects>
-                <viewController storyboardIdentifier="Category2" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xV8-VN-XJU" customClass="Category2" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreen" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xV8-VN-XJU" customClass="LoginScreen" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q6u-KI-bgT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -538,8 +538,8 @@
                         <viewLayoutGuide key="safeArea" id="QGT-rq-hTL"/>
                     </view>
                     <connections>
-                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory2ToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ebz-na-Xkp"/>
-                        <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromCategory2ToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="jwW-nv-fTj"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromLoginScreenToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ebz-na-Xkp"/>
+                        <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromLoginScreenToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="jwW-nv-fTj"/>
                         <segue destination="XBq-aC-AaW" kind="presentation" identifier="fromStartupToLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="l03-Xl-0ZQ"/>
                         <segue destination="0La-Yt-cdw" kind="presentation" identifier="fromStartupToSingUp" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="jBf-De-Eie"/>
                     </connections>
@@ -975,8 +975,8 @@
         <segue reference="o7u-q1-Myi"/>
         <segue reference="l03-Xl-0ZQ"/>
         <segue reference="jBf-De-Eie"/>
-        <segue reference="R5u-Tq-uOk"/>
-        <segue reference="cvW-vB-bvN"/>
+        <segue reference="ebz-na-Xkp"/>
+        <segue reference="jwW-nv-fTj"/>
         <segue reference="2sD-G3-Rl3"/>
     </inferredMetricsTieBreakers>
 </document>

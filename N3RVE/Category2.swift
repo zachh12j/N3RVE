@@ -1,5 +1,5 @@
 //
-//  Category2.swift
+//  LoginScreen.swift
 //  Aeris
 //
 //  Created by Camilo Rossi on 2018-10-13.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class Category2: UIViewController {
+class LoginScreen: UIViewController {
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
