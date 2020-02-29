@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -345,6 +345,7 @@
 				DE29471A21727D6C00C7D64A /* Frameworks */,
 				DE29471B21727D6C00C7D64A /* Resources */,
 				04FB8EE5240A361000C118B2 /* Embed Frameworks */,
+				A4085BA0EDD0DEDDC090F94F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,6 +383,7 @@
 				DE29473821727D7000C7D64A /* Sources */,
 				DE29473921727D7000C7D64A /* Frameworks */,
 				DE29473A21727D7000C7D64A /* Resources */,
+				DFDFA4AFD54D7894C12D49A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -539,6 +541,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4085BA0EDD0DEDDC090F94F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE/Pods-N3RVE-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE/Pods-N3RVE-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-N3RVE/Pods-N3RVE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFDFA4AFD54D7894C12D49A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9FAB076FF36207AD7A59989 /* [CP] Check Pods Manifest.lock */ = {
@@ -761,14 +797,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BBD42XY6P7;
+				DEVELOPMENT_TEAM = 2K34Y7LDN6;
 				INFOPLIST_FILE = N3RVE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.n3rve;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -781,14 +818,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BBD42XY6P7;
+				DEVELOPMENT_TEAM = 2K34Y7LDN6;
 				INFOPLIST_FILE = N3RVE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.n3rve;
+				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
