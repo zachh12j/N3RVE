@@ -58,4 +58,11 @@ class HomePage: UIViewController {
         avPlayer.pause()
         paused = true
     }
+    @IBAction func gotoLogin(_ sender: Any) {
+        performSegue(withIdentifier: "fromHomePageToLogin", sender: self)
+    }
+    @IBAction func gotoSignUp(_ sender: Any) {
+        performSegue(withIdentifier: "fromHomePageToSignUp", sender: self)
+    }
+    
 }

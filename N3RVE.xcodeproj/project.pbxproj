@@ -40,7 +40,7 @@
 		DEF2C888217283F2008F75A4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C887217283F2008F75A4 /* Categories.swift */; };
 		DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88921728EF0008F75A4 /* Category1.swift */; };
 		DEF2C88C21728F3B008F75A4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */; };
-		DEF2C88E21728F52008F75A4 /* Category3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88D21728F52008F75A4 /* Category3.swift */; };
+		DEF2C88E21728F52008F75A4 /* SingUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */; };
 		DEF2C89021728F72008F75A4 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88F21728F72008F75A4 /* HomePage.swift */; };
 		DEF2C89421729062008F75A4 /* Category5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C89321729062008F75A4 /* Category5.swift */; };
 		DEF2C8982172995B008F75A4 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C8972172995B008F75A4 /* Results.swift */; };
@@ -123,7 +123,7 @@
 		DEF2C887217283F2008F75A4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		DEF2C88921728EF0008F75A4 /* Category1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category1.swift; sourceTree = "<group>"; };
 		DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		DEF2C88D21728F52008F75A4 /* Category3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category3.swift; sourceTree = "<group>"; };
+		DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpScreen.swift; sourceTree = "<group>"; };
 		DEF2C88F21728F72008F75A4 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		DEF2C89321729062008F75A4 /* Category5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category5.swift; sourceTree = "<group>"; };
 		DEF2C8972172995B008F75A4 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 				DEF2C887217283F2008F75A4 /* Categories.swift */,
 				DEF2C88921728EF0008F75A4 /* Category1.swift */,
 				DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */,
-				DEF2C88D21728F52008F75A4 /* Category3.swift */,
+				DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */,
 				DEF2C88F21728F72008F75A4 /* HomePage.swift */,
 				DEF2C89321729062008F75A4 /* Category5.swift */,
 				DEF2C8972172995B008F75A4 /* Results.swift */,
@@ -504,7 +504,7 @@
 				DEF2C8982172995B008F75A4 /* Results.swift in Sources */,
 				DEF2C88C21728F3B008F75A4 /* LoginScreen.swift in Sources */,
 				DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */,
-				DEF2C88E21728F52008F75A4 /* Category3.swift in Sources */,
+				DEF2C88E21728F52008F75A4 /* SingUpScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

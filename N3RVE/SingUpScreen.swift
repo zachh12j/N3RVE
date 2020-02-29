@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class Category3: UIViewController {
+class SingUpScreen: UIViewController {
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!

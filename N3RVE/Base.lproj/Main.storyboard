@@ -288,7 +288,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Catégorie 3"/>
                                 <connections>
-                                    <action selector="fromCategoriesToCategory3:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="OkO-Ph-vgb"/>
+                                    <action selector="fromCategoriesToSingUpScreen:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="OkO-Ph-vgb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-VD-hQQ" userLabel="c4">
@@ -350,7 +350,7 @@
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromCategoriesToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="pub-Dw-XOA"/>
                         <segue destination="zuC-eI-uhz" kind="presentation" identifier="fromCategoriesToCategory1" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1hf-5u-ZVR"/>
                         <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromCategoriesToLoginScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Xi8-JG-UGr"/>
-                        <segue destination="XBq-aC-AaW" kind="presentation" identifier="fromCategoriesToCategory3" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="niR-Z8-PKf"/>
+                        <segue destination="XBq-aC-AaW" kind="presentation" identifier="fromCategoriesToSingUpScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="niR-Z8-PKf"/>
                         <segue destination="KXF-aE-b44" kind="presentation" identifier="fromCategoriesToCategory5" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Dvd-xd-nDX"/>
                     </connections>
                 </viewController>
@@ -461,6 +461,31 @@
                                 <rect key="frame" x="-577" y="-1" width="1528" height="814"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="N3RVE" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-bt-fHf">
+                                <rect key="frame" x="106" y="140" width="162" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcw-em-zad">
+                                <rect key="frame" x="54" y="628" width="266" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="SignUp"/>
+                                <connections>
+                                    <action selector="gotoSignUp:" destination="0La-Yt-cdw" eventType="touchUpInside" id="lI9-Mo-73g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUd-V4-1Gj">
+                                <rect key="frame" x="54" y="543" width="266" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Login"/>
+                                <connections>
+                                    <action selector="gotoLogin:" destination="0La-Yt-cdw" eventType="touchUpInside" id="sq2-8p-RZU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUQ-TJ-jRI">
+                                <rect key="frame" x="158" y="713" width="59" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="SoundOn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ivn-K5-cGm"/>
@@ -468,16 +493,18 @@
                     <connections>
                         <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromHomePageToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="cvW-vB-bvN"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromHomePageToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="R5u-Tq-uOk"/>
+                        <segue destination="XBq-aC-AaW" kind="presentation" identifier="fromHomePageToSignUp" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4gC-nr-dMc"/>
+                        <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromHomePageToLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="28A-EK-YPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTC-jc-Lef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="23"/>
+            <point key="canvasLocation" x="232.80000000000001" y="22.906403940886701"/>
         </scene>
-        <!--Category3-->
+        <!--Sing Up Screen-->
         <scene sceneID="i3E-pc-eui">
             <objects>
-                <viewController storyboardIdentifier="Category3" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XBq-aC-AaW" customClass="Category3" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingUpScreen" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XBq-aC-AaW" customClass="SingUpScreen" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ga-vP-gc6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -491,8 +518,8 @@
                         <viewLayoutGuide key="safeArea" id="yYE-Jw-rqm"/>
                     </view>
                     <connections>
-                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromCategory3ToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rnn-VZ-Zon"/>
-                        <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromCategory3ToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ida-WR-fBh"/>
+                        <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromSingUpScreenToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rnn-VZ-Zon"/>
+                        <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromSingUpScreenToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ida-WR-fBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-OP-1BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -934,6 +961,8 @@
         <image name="Form" width="74" height="74"/>
         <image name="Group 3" width="375" height="812"/>
         <image name="Instagram" width="55" height="55"/>
+        <image name="Login" width="266" height="77"/>
+        <image name="N3RVE" width="163" height="44"/>
         <image name="OR" width="34" height="23"/>
         <image name="Player" width="154" height="59"/>
         <image name="Q" width="89" height="62"/>
@@ -942,6 +971,7 @@
         <image name="RetourMenu" width="324" height="99"/>
         <image name="Return" width="59" height="59"/>
         <image name="Réponse" width="356" height="84"/>
+        <image name="SignUp" width="266" height="77"/>
         <image name="SoundOff" width="59" height="59"/>
         <image name="SoundOn" width="59" height="59"/>
         <image name="TikTok" width="55" height="55"/>
@@ -950,8 +980,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="br8-gy-F5g"/>
-        <segue reference="o7u-q1-Myi"/>
-        <segue reference="l03-Xl-0ZQ"/>
+        <segue reference="28A-EK-YPJ"/>
+        <segue reference="4gC-nr-dMc"/>
         <segue reference="jBf-De-Eie"/>
         <segue reference="R5u-Tq-uOk"/>
         <segue reference="cvW-vB-bvN"/>
