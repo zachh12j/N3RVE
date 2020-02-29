@@ -8,6 +8,9 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAuth
+import FirebaseAnalytics
+import Firebase
 
 class Home: UIViewController {
     
@@ -42,7 +45,7 @@ class Home: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let theURL = Bundle.main.url(forResource: "BackgroundVideoAndSound", withExtension: "mp4")
+        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
 
         avPlayer = AVPlayer(url: theURL!)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
@@ -112,5 +115,20 @@ class Home: UIViewController {
             print(error.localizedDescription)
         }
     }
+    
+    @IBAction func Logout(_ sender: Any) {
+    
+        do {
+               try Auth.auth().signOut()
+           }
+        catch let signOutError as NSError {
+               print ("Error signing out: %@", signOutError)
+           }
+           
+           let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+           let initial = storyboard.instantiateInitialViewController()
+           UIApplication.shared.keyWindow?.rootViewController = initial
+    }
+    
 }
 

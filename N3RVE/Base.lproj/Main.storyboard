@@ -142,6 +142,14 @@
                                     <constraint firstAttribute="width" secondItem="xpS-Iy-k1G" secondAttribute="height" multiplier="137:24" id="krh-68-1lV"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFp-Z3-uHm">
+                                <rect key="frame" x="156" y="358" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LOGOUT"/>
+                                <connections>
+                                    <action selector="Logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hb-4X-ajr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -621,11 +629,12 @@
                         <outlet property="signUpButton" destination="Rsq-Ez-gBy" id="kn0-at-uGr"/>
                         <segue destination="Myo-Z9-wPc" kind="presentation" identifier="fromSingUpScreenToResults" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="rnn-VZ-Zon"/>
                         <segue destination="LxV-9B-Eo7" kind="presentation" identifier="fromSingUpScreenToCategories" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ida-WR-fBh"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromSignupPageToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="58E-c9-Jgr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-OP-1BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="381"/>
+            <point key="canvasLocation" x="1126" y="350"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="kqe-Rp-DB5">
@@ -1114,11 +1123,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="br8-gy-F5g"/>
-        <segue reference="o7u-q1-Myi"/>
-        <segue reference="l03-Xl-0ZQ"/>
+        <segue reference="28A-EK-YPJ"/>
+        <segue reference="4gC-nr-dMc"/>
         <segue reference="jBf-De-Eie"/>
-        <segue reference="rnn-VZ-Zon"/>
-        <segue reference="Ida-WR-fBh"/>
-        <segue reference="2sD-G3-Rl3"/>
+        <segue reference="R5u-Tq-uOk"/>
+        <segue reference="cvW-vB-bvN"/>
+        <segue reference="58E-c9-Jgr"/>
     </inferredMetricsTieBreakers>
 </document>

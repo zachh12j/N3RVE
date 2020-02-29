@@ -24,7 +24,7 @@ class HomePage: UIViewController {
         super.viewDidLoad()
         
         // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "SplashScreenAndSound", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "1min-video", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none
@@ -41,11 +41,15 @@ class HomePage: UIViewController {
         player?.play()
             
         //loop video
-        NotificationCenter.default.addObserver(self,
-                                               selector: Selector(("loopVideo")),
-            name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: nil)
-
+        NotificationCenter.default.addObserver(self,selector: Selector(("itemDidReachEnd:")),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+        object: player?.currentItem)
+        
+        }
+    func itemDidReachEnd(notification: NSNotification) {
+        player?.seek(to: CMTime.zero)
+        player?.play()
+    
     }
     
     func loopVideo() {
