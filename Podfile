@@ -3,8 +3,7 @@
 
 target 'N3RVE' do
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
-  use_modular_headers!
+  use_frameworks!
 
   # Pods for N3RVE
 
@@ -17,8 +16,8 @@ target 'N3RVE' do
     # Pods for testing
   end
 
-	pod 'Firebase/Auth'
 	pod 'Firebase/Analytics'
+	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
 

@@ -1,0 +1,6 @@
+framework module Pods_N3RVETests {
+  umbrella header "Pods-N3RVETests-umbrella.h"
+
+  export *
+  module * { export * }
+}

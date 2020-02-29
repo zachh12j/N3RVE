@@ -42,7 +42,7 @@ class Home: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
+        let theURL = Bundle.main.url(forResource: "BackgroundVideoAndSound", withExtension: "mp4")
 
         avPlayer = AVPlayer(url: theURL!)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)

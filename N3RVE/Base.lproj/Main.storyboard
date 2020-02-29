@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Coo-jD-cRh">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -361,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65x-Dy-1e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-242" y="-2093"/>
+            <point key="canvasLocation" x="233" y="-1406"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="FtF-tt-0IU">
@@ -626,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-OP-1BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="-331"/>
+            <point key="canvasLocation" x="1126" y="381"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="kqe-Rp-DB5">
@@ -682,7 +681,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTs-Ih-YIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="385"/>
+            <point key="canvasLocation" x="1127" y="-320"/>
         </scene>
         <!--Category1-->
         <scene sceneID="yxV-gh-O5C">
@@ -1114,12 +1113,12 @@
         <image name="WelcomeToNerve" width="282" height="118"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1hf-5u-ZVR"/>
-        <segue reference="28A-EK-YPJ"/>
-        <segue reference="4gC-nr-dMc"/>
+        <segue reference="br8-gy-F5g"/>
+        <segue reference="o7u-q1-Myi"/>
+        <segue reference="l03-Xl-0ZQ"/>
         <segue reference="jBf-De-Eie"/>
         <segue reference="rnn-VZ-Zon"/>
         <segue reference="Ida-WR-fBh"/>
-        <segue reference="pub-Dw-XOA"/>
+        <segue reference="2sD-G3-Rl3"/>
     </inferredMetricsTieBreakers>
 </document>
