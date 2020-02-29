@@ -187,35 +187,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kFK-7a-Kv0">
-                                <rect key="frame" x="-40" y="-40" width="455" height="892"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="nqD-9N-gFY">
+                                <rect key="frame" x="-577" y="0.0" width="1528" height="814"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa2-Im-wRB">
-                                <rect key="frame" x="16" y="44" width="69" height="69"/>
+                                <rect key="frame" x="21" y="49" width="59" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Retour"/>
+                                <state key="normal" backgroundImage="Return"/>
                                 <connections>
                                     <action selector="fromSettingsToHome:" destination="ncB-Pc-GX8" eventType="touchUpInside" id="TRE-lN-09D"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT4-L6-VTY">
+                                <rect key="frame" x="158" y="220" width="59" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="SoundOff"/>
+                                <connections>
+                                    <action selector="muteSound:" destination="ncB-Pc-GX8" eventType="touchUpInside" id="9gR-Bu-EeL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPk-lE-u93">
+                                <rect key="frame" x="158" y="287" width="59" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="SoundOn"/>
+                                <connections>
+                                    <action selector="unmuteSound:" destination="ncB-Pc-GX8" eventType="touchUpInside" id="vQD-H4-tFb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="kFK-7a-Kv0" secondAttribute="bottom" constant="-40" id="4q0-Bg-8dr"/>
-                            <constraint firstItem="kFK-7a-Kv0" firstAttribute="top" secondItem="unp-K1-QAe" secondAttribute="top" constant="-40" id="6yL-qO-bmd"/>
-                            <constraint firstItem="kFK-7a-Kv0" firstAttribute="leading" secondItem="aEQ-Iw-hvd" secondAttribute="leading" constant="-40" id="8d5-WA-TUY"/>
-                            <constraint firstItem="kFK-7a-Kv0" firstAttribute="trailing" secondItem="aEQ-Iw-hvd" secondAttribute="trailing" constant="40" id="Enr-XM-v0e"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aEQ-Iw-hvd"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="kFK-7a-Kv0" id="HhR-j5-evE"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="fromSettingsToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="beG-jf-9Qn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvM-Ti-RFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="768"/>
+            <point key="canvasLocation" x="157.59999999999999" y="767.73399014778329"/>
         </scene>
         <!--Categories-->
         <scene sceneID="W3x-ul-sZt">
@@ -1430,7 +1440,10 @@
         <image name="QuestionSuivante" width="204" height="69"/>
         <image name="Retour" width="69" height="69"/>
         <image name="RetourMenu" width="324" height="99"/>
+        <image name="Return" width="59" height="59"/>
         <image name="Réponse" width="356" height="84"/>
+        <image name="SoundOff" width="59" height="59"/>
+        <image name="SoundOn" width="59" height="59"/>
         <image name="TikTok" width="55" height="55"/>
         <image name="Watcher" width="154" height="59"/>
         <image name="WelcomeToNerve" width="282" height="118"/>
@@ -1439,6 +1452,6 @@
         <segue reference="br8-gy-F5g"/>
         <segue reference="Xmv-IG-MHG"/>
         <segue reference="5If-gr-3gG"/>
-        <segue reference="NLn-gf-DKz"/>
+        <segue reference="beG-jf-9Qn"/>
     </inferredMetricsTieBreakers>
 </document>

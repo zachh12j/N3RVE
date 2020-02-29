@@ -14,6 +14,12 @@ class Settings: UIViewController {
     
     var player: AVAudioPlayer?
     
+    var playerAudio:AVAudioPlayer = AVAudioPlayer()
+    
+    var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    var paused: Bool = false
+    
     let notification = UINotificationFeedbackGenerator()
     let selection = UISelectionFeedbackGenerator()
     
@@ -22,9 +28,13 @@ class Settings: UIViewController {
         selection.selectionChanged()
         buttonClickSound()
     }
-    @IBOutlet var imageView: UIImageView!
-    var avPlayer: AVPlayer!
     
+    @IBAction func unmuteSound(_ sender: Any) {
+    }
+    
+    @IBAction func muteSound(_ sender: Any) {
+        SplashScreen().muteSound()
+    }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -32,23 +42,39 @@ class Settings: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.sendSubviewToBack(imageView);
-        
-        let min = CGFloat(-30)
-        let max = CGFloat(30)
-        
-        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
-        xMotion.minimumRelativeValue = min
-        xMotion.maximumRelativeValue = max
-        
-        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
-        yMotion.minimumRelativeValue = min
-        yMotion.maximumRelativeValue = max
-        
-        let motionEffectGroup = UIMotionEffectGroup()
-        motionEffectGroup.motionEffects = [xMotion,yMotion]
-        
-        imageView.addMotionEffect(motionEffectGroup)
+        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
+
+        avPlayer = AVPlayer(url: theURL!)
+        avPlayerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        avPlayer.volume = 0
+        avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+
+        avPlayerLayer.frame = view.layer.bounds
+        view.backgroundColor = UIColor.clear;
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: Selector(("playerItemDidReachEnd:")),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+            object: avPlayer.currentItem)
+    }
+    
+    func playerItemDidReachEnd(notification: NSNotification) {
+        let p: AVPlayerItem = notification.object as! AVPlayerItem
+        p.seek(to: CMTime.zero)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        avPlayer.play()
+        paused = false
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        avPlayer.pause()
+        paused = true
     }
     
     func buttonClickSound() {

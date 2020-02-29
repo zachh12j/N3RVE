@@ -50,13 +50,15 @@ class SplashScreen: UIViewController{
         }
         
     }
+    /*
     deinit {
         print("Remove NotificationCenter Deinit")
         NotificationCenter.default.removeObserver(self)
     }
-    
+    */
     @objc func finishVideo()
     {
+        
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "Home") as UIViewController
         vc.view.alpha = 0
@@ -84,6 +86,13 @@ class SplashScreen: UIViewController{
         AudioPlayer.numberOfLoops = -1
         AudioPlayer.volume = 0.15
         AudioPlayer.play()
+        
+    }
+    
+    @objc func muteSound()
+    {
+        AudioPlayer.volume = 0
+        print("YOU HAVE CLICKED")
     }
     /*
     func SplashScreenSound() {
