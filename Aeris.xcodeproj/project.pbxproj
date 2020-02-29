@@ -17,6 +17,8 @@
 		046726752409F89E009720FE /* Success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726722409F89E009720FE /* Success.wav */; };
 		046726762409F89E009720FE /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726732409F89E009720FE /* ButtonClick.wav */; };
 		04672678240A1000009720FE /* ButtonClick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04672677240A1000009720FE /* ButtonClick2.wav */; };
+		0467267A240A201F009720FE /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04672679240A201F009720FE /* LoginForm.swift */; };
+		0467267C240A283E009720FE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0467267B240A283D009720FE /* GoogleService-Info.plist */; };
 		DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */; };
 		DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */; };
 		DE27F751217BD1920040A300 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE27F750217BD1910040A300 /* SplashScreen.swift */; };
@@ -70,6 +72,8 @@
 		046726722409F89E009720FE /* Success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Success.wav; sourceTree = "<group>"; };
 		046726732409F89E009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
 		04672677240A1000009720FE /* ButtonClick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ButtonClick2.wav; path = Aeris/Music/ButtonClick2.wav; sourceTree = "<group>"; };
+		04672679240A201F009720FE /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		0467267B240A283D009720FE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic2.mp3; sourceTree = "<group>"; };
 		DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic3.mp3; sourceTree = "<group>"; };
 		DE27F750217BD1910040A300 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
@@ -162,10 +166,12 @@
 				DEF2C89321729062008F75A4 /* Category5.swift */,
 				DEF2C8972172995B008F75A4 /* Results.swift */,
 				DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */,
+				04672679240A201F009720FE /* LoginForm.swift */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
+				0467267B240A283D009720FE /* GoogleService-Info.plist */,
 				046726652409AF8A009720FE /* SplashScreen.mp4 */,
 				046726692409B1FC009720FE /* SplashScreenWSound.mp4 */,
 				0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */,
@@ -335,6 +341,7 @@
 				DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */,
 				DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */,
 				DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */,
+				0467267C240A283E009720FE /* GoogleService-Info.plist in Resources */,
 				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
 				046726752409F89E009720FE /* Success.wav in Resources */,
 			);
@@ -369,6 +376,7 @@
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
 				DEF2C888217283F2008F75A4 /* Categories.swift in Sources */,
 				DEF2C89421729062008F75A4 /* Category5.swift in Sources */,
+				0467267A240A201F009720FE /* LoginForm.swift in Sources */,
 				DEF2C8982172995B008F75A4 /* Results.swift in Sources */,
 				DEF2C88C21728F3B008F75A4 /* Category2.swift in Sources */,
 				DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */,
@@ -554,6 +562,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.n3rve;
 				PRODUCT_NAME = N3RVE;
 				SWIFT_VERSION = 5.0;
@@ -571,6 +583,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.camilorossi.n3rve;
 				PRODUCT_NAME = N3RVE;

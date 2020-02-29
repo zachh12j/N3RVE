@@ -1,46 +1,34 @@
 //
-//  ViewController.swift
+//  Settings.swift
 //  Aeris
 //
-//  Created by Camilo Rossi on 2018-10-13.
+//  Created by Camilo Rossi on 2018-10-14.
 //  Copyright © 2018 Camilo Rossi. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
+import AVKit
 
-class Home: UIViewController {
+class LoginForm: UIViewController {
     
     var player: AVAudioPlayer?
-    var AudioPlayer = AVAudioPlayer()
-    var MusicPLaying = false
+    
+    var playerAudio:AVAudioPlayer = AVAudioPlayer()
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     
-    @IBOutlet weak var instagramButton: UIButton!
-    
-        let selection = UISelectionFeedbackGenerator()
-    
-    @IBAction func fromHomeToCategories(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromHomeToCategory1", sender: self)
-        selection.selectionChanged()
-        buttonClickSound()
-    }
-    @IBAction func fromHomeToSettings(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromHomeToSettings", sender: self)
-        selection.selectionChanged()
-        buttonClickSound()
-    }
-    
+    let notification = UINotificationFeedbackGenerator()
+    let selection = UISelectionFeedbackGenerator()
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
 
@@ -48,6 +36,7 @@ class Home: UIViewController {
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         avPlayer.volume = 0
+        
         avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
 
         avPlayerLayer.frame = view.layer.bounds
@@ -77,28 +66,7 @@ class Home: UIViewController {
         avPlayer.pause()
         paused = true
     }
-    
-    @IBAction func didTapInsta(_ sender: Any) {
-        if let url = URL(string: "http://instagram.com/n3rve_app/") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    @IBAction func didTapFacebook(_ sender: Any) {
-        if let url = URL(string: "https://vm.tiktok.com/bKPSun/") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    @IBAction func didTapSnapchat(_ sender: Any) {
-        if let url = URL(string: "http://facebook.com/camilo.jrossi") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    
-    
-    let url = Bundle.main.url(forResource: "BackgroundMusic", withExtension: "mp3")!
-    
-    
-
+    /*
     func buttonClickSound() {
         let url = Bundle.main.url(forResource: "ButtonClick2", withExtension: "wav")!
         
@@ -112,5 +80,5 @@ class Home: UIViewController {
             print(error.localizedDescription)
         }
     }
+    */
 }
-
