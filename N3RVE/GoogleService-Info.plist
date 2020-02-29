@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>288700682027-7bidimhnlicim2dahmen9u3irbf7bckq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.288700682027-7bidimhnlicim2dahmen9u3irbf7bckq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDwW0Px4sXCzTGOCkAYSHEUh66glcghLXA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>288700682027</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.camilorossi.n3rve</string>
+	<key>PROJECT_ID</key>
+	<string>n3rve-7906a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>n3rve-7906a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:288700682027:ios:11e705bf48b66156143f6e</string>
+	<key>DATABASE_URL</key>
+	<string>https://n3rve-7906a.firebaseio.com</string>
+</dict>
+</plist>
