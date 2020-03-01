@@ -17,6 +17,7 @@ class Home: UIViewController {
     var player: AVAudioPlayer?
     var AudioPlayer = AVAudioPlayer()
     var MusicPLaying = false
+    @IBOutlet weak var usernameLabel: UILabel!
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!

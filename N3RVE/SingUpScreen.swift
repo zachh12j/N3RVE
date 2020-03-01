@@ -67,6 +67,7 @@ class SingUpScreen: UIViewController {
                                                selector: Selector(("playerItemDidReachEnd:")),
                                                name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
             object: avPlayer.currentItem)
+        avPlayer.play()
 
     }
     
@@ -83,19 +84,40 @@ class SingUpScreen: UIViewController {
     self.present(alertController, animated: true, completion: nil)
             }
     else{
-    Auth.auth().createUser(withEmail: emailField.text!, password: emailField.text!){ (user, error) in
-     if error == nil {
+        
+        let firstName = nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let lastName = lastNameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+    Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){ (user, error) in
+     //It's fine has passes
+        if error == nil {
        self.performSegue(withIdentifier: "fromSignupPageToHome", sender: self)
-                    }
+        
+            
+            // User was created successfully, now store the first name and last name
+            let db = Firestore.firestore()
+            
+            db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid": user!.user.uid ]) { (error) in
+                
+                
+                if error != nil {
+                    // Show error message
+                    print("Error")
+            
+                        }
+                }
+        }
+    //Check for
      else{
        let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                         
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
-           }
+        }
                 }
           }
+        
     }
     
     @objc func playerItemDidReachEnd(notification: Notification) {

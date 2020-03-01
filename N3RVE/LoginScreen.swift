@@ -27,6 +27,7 @@ class LoginScreen: UIViewController {
         return .lightContent
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -68,19 +69,30 @@ class LoginScreen: UIViewController {
         paused = true
     }
     @IBAction func loginAction(_ sender: Any) {
-          
-    Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
-       if error == nil{
-         self.performSegue(withIdentifier: "fromLoginToHome", sender: self)
-                      }
-        else{
-         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        
-          alertController.addAction(defaultAction)
-          self.present(alertController, animated: true, completion: nil)
-             }
-    }
+        
+        // TODO: Validate Text Fields
+        
+        // Create cleaned versions of the text field
+        _ = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        _ = passwordField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Signing in the user
+        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (result, error) in
+            
+            if error != nil {
+                // Couldn't sign in
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                               
+                 alertController.addAction(defaultAction)
+                 self.present(alertController, animated: true, completion: nil)
+            }
+            else {
+                
+                self.performSegue(withIdentifier: "fromLoginToHome", sender: self)
+                
+            }
+        }
             
     }
 }
