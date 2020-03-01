@@ -36,7 +36,6 @@ class SingUpScreen: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var repeatPasswordField: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -52,7 +51,7 @@ class SingUpScreen: UIViewController {
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         */
         
-        let theURL = Bundle.main.url(forResource: "1min-video", withExtension: "mp4")
+        let theURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")
 
         avPlayer = AVPlayer(url: theURL!)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)

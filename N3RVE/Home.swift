@@ -45,7 +45,7 @@ class Home: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
+        let theURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")
 
         avPlayer = AVPlayer(url: theURL!)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
@@ -125,7 +125,7 @@ class Home: UIViewController {
                print ("Error signing out: %@", signOutError)
            }
            
-           let storyboard = UIStoryboard(name: "HomePage", bundle: nil)
+           let storyboard = UIStoryboard(name: "Main", bundle: nil)
            let initial = storyboard.instantiateInitialViewController()
            UIApplication.shared.keyWindow?.rootViewController = initial
     }

@@ -8,11 +8,16 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAnalytics
+import FirebaseAuth
+import Firebase
 
 // Put this piece of code anywhere you like
 
 class LoginScreen: UIViewController {
     
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
@@ -26,7 +31,7 @@ class LoginScreen: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        let theURL = Bundle.main.url(forResource: "BackgroundVideo", withExtension: "mp4")
+        let theURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")
 
         avPlayer = AVPlayer(url: theURL!)
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
@@ -61,5 +66,21 @@ class LoginScreen: UIViewController {
         super.viewDidDisappear(animated)
         avPlayer.pause()
         paused = true
+    }
+    @IBAction func loginAction(_ sender: Any) {
+          
+    Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
+       if error == nil{
+         self.performSegue(withIdentifier: "fromLoginToHome", sender: self)
+                      }
+        else{
+         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        
+          alertController.addAction(defaultAction)
+          self.present(alertController, animated: true, completion: nil)
+             }
+    }
+            
     }
 }

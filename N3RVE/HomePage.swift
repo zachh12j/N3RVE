@@ -8,6 +8,9 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAnalytics
+import FirebaseAuth
+import Firebase
 
 class HomePage: UIViewController {
     
@@ -20,11 +23,17 @@ class HomePage: UIViewController {
         return .lightContent
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+           self.performSegue(withIdentifier: "fromHomePageToHome", sender: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "1min-video", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none
