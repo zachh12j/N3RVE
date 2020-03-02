@@ -31,8 +31,9 @@ class SingUpScreen: UIViewController {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var lastNameField: UITextField!
+
+    @IBOutlet weak var firstAndLastField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var repeatPasswordField: UITextField!
@@ -85,8 +86,8 @@ class SingUpScreen: UIViewController {
             }
     else{
         
-        let firstName = nameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let lastName = lastNameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let firstName = firstAndLastField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let username = usernameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
     Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){ (user, error) in
      //It's fine has passes
@@ -97,7 +98,7 @@ class SingUpScreen: UIViewController {
             // User was created successfully, now store the first name and last name
             let db = Firestore.firestore()
             
-            db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid": user!.user.uid ]) { (error) in
+            db.collection("users").addDocument(data: ["firstandlastname":firstName, "username":username, "uid": user!.user.uid ]) { (error) in
                 
                 
                 if error != nil {

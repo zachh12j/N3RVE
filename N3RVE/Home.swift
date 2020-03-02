@@ -19,6 +19,7 @@ class Home: UIViewController {
     var MusicPLaying = false
     @IBOutlet weak var usernameLabel: UILabel!
     
+    var getCurrentUserData: CollectionReference!
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
@@ -62,6 +63,49 @@ class Home: UIViewController {
                                                selector: Selector(("playerItemDidReachEnd:")),
                                                name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
             object: avPlayer.currentItem)
+        
+        getCurrentUserData = Firestore.firestore().collection("users")
+        getDocument()
+    }
+    
+    private func getDocument() {
+         //Get sspecific document from current user
+         let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+
+         // Get data
+         docRef.getDocuments { (querySnapshot, err) in
+             if let err = err {
+                 print(err.localizedDescription)
+                 return
+             } else if querySnapshot!.documents.count != 1 {
+                 print("More than one documents or none")
+             } else {
+                 let document = querySnapshot!.documents.first
+                 let dataDescription = document?.data()
+                 guard let username = dataDescription?["username"] else { return }
+                 print(username)
+                self.usernameLabel.text = "@\(username)"
+             }
+         }
+     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        /*
+        getCurrentUserData.getDocuments { (snapshot, error) in
+            if let err = error {
+                debugPrint("Error Fetching Docs: \(err)")
+            } else {
+                guard let snap = snapshot else { return }
+                for document in snap.documents {
+                    let data = document.data()
+                    let username = data["username"] as? String ?? "ANONYMOUS"
+                    
+                    self.usernameLabel.text = "@\(username)"
+                }
+            }
+        }
+        */
     }
     
     @objc func playerItemDidReachEnd(notification: Notification) {
@@ -125,11 +169,14 @@ class Home: UIViewController {
         catch let signOutError as NSError {
                print ("Error signing out: %@", signOutError)
            }
-           
+            
+        performSegue(withIdentifier: "fromHomeToHomePage", sender: self)
+           /*
            let storyboard = UIStoryboard(name: "Main", bundle: nil)
            let initial = storyboard.instantiateInitialViewController()
            UIApplication.shared.keyWindow?.rootViewController = initial
+            */
     }
-    
+
 }
 
