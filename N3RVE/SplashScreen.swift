@@ -17,6 +17,8 @@ class SplashScreen: UIViewController{
     var avPlayer: AVPlayer!
     var window: UIWindow?
     var AudioPlayer = AVAudioPlayer()
+    var isMusicPlaying = 0
+    var counter = 7
     @IBOutlet weak var containerView: UIView!
     
     var videoPlayer = AVPlayerViewController()
@@ -28,10 +30,18 @@ class SplashScreen: UIViewController{
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //SplashScreenSound()
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
-    
+    @objc func updateCounter() {
+        //example functionality
+        if counter > 0 {
+            print("\(counter) seconds to the end of the world")
+            counter -= 1
+        } else {
+            muteSound()
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool)
     {
@@ -50,12 +60,12 @@ class SplashScreen: UIViewController{
         }
         
     }
-    /*
+
     deinit {
         print("Remove NotificationCenter Deinit")
         NotificationCenter.default.removeObserver(self)
     }
-    */
+ 
     @objc func finishVideo()
     {
         
@@ -80,34 +90,24 @@ class SplashScreen: UIViewController{
         }
         
         //Start the music
+    }
+    
+     func muteSound()
+    {
+        if isMusicPlaying == 0{
+            print("Music has not been started")
+        //Music
         let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic4", ofType: "mp3")!)
         AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
         AudioPlayer.prepareToPlay()
         AudioPlayer.numberOfLoops = -1
         AudioPlayer.volume = 0.15
         AudioPlayer.play()
+        }
         
-    }
-    
-     func muteSound()
-    {
-        
-        print("YOU HAVE CLICKED")
-    }
-    /*
-    func SplashScreenSound() {
-        let url = Bundle.main.url(forResource: "SplashScreenSound", withExtension: "wav")!
-        
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
-            
-            player.prepareToPlay()
-            player.play()
-        } catch let error {
-            print(error.localizedDescription)
+        if AudioPlayer.isPlaying == true {
+        isMusicPlaying = 1
         }
     }
-    */
 }
 

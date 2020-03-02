@@ -18,6 +18,7 @@ class HomePage: UIViewController {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var player: AVPlayer?
+    var AudioPlayer = AVAudioPlayer()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -27,6 +28,7 @@ class HomePage: UIViewController {
         if Auth.auth().currentUser != nil {
            self.performSegue(withIdentifier: "fromHomePageToHome", sender: nil)
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(HomePage.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
     override func viewDidLoad() {
@@ -48,28 +50,37 @@ class HomePage: UIViewController {
         view.layer.addSublayer(playerLayer)
 
         player?.play()
-            
-        //loop video
-        NotificationCenter.default.addObserver(self,selector: Selector(("itemDidReachEnd:")),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-        object: player?.currentItem)
-        
         }
-    func itemDidReachEnd(notification: NSNotification) {
-        player?.seek(to: CMTime.zero)
-        player?.play()
-    
+    /*
+    func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
+        //1
+        var path = Bundle.main.path(forResource: file as String, ofType: type as String)
+        var url = NSURL.fileURL(withPath: path!)
+
+        //2
+        var error: NSError?
+
+        //3
+        var audioPlayer:AVAudioPlayer?
+        audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+
+        //4
+        return audioPlayer!
     }
-    
-    func loopVideo() {
-        player!.seek(to: CMTime.zero)
-    }
+    */
     
     @IBAction func gotoLogin(_ sender: Any) {
         performSegue(withIdentifier: "fromHomePageToLogin", sender: self)
     }
     @IBAction func gotoSignUp(_ sender: Any) {
         performSegue(withIdentifier: "fromHomePageToSignUp", sender: self)
+    }
+    
+    @objc func finishBackgroundVideo(notification: NSNotification)
+    {
+            if let playerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: CMTime.zero, completionHandler: nil)
+        }
     }
     
 }

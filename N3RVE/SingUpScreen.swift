@@ -30,6 +30,7 @@ class SingUpScreen: UIViewController {
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
+    var player: AVPlayer?
     
 
     @IBOutlet weak var firstAndLastField: UITextField!
@@ -47,34 +48,30 @@ class SingUpScreen: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        /*PLACEHOLDERS
-        nameField.attributedPlaceholder = NSAttributedString(string: "NAME",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        */
+        // Load the video from the app bundle.
+        let videoURL: NSURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")! as NSURL
         
-        let theURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")
+        player = AVPlayer(url: videoURL as URL)
+        player?.actionAtItemEnd = .none
+        player?.isMuted = true
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        playerLayer.zPosition = -1
 
-        avPlayer = AVPlayer(url: theURL!)
-        avPlayerLayer = AVPlayerLayer(player: avPlayer)
-        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        avPlayer.volume = 0
-        avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        playerLayer.frame = view.frame
 
-        avPlayerLayer.frame = view.layer.bounds
-        view.backgroundColor = UIColor.clear;
-        view.layer.insertSublayer(avPlayerLayer, at: 0)
+        view.layer.addSublayer(playerLayer)
 
-        NotificationCenter.default.addObserver(self,
-                                               selector: Selector(("playerItemDidReachEnd:")),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: avPlayer.currentItem)
-        avPlayer.play()
+        player?.play()
 
     }
     
     //END VIEWDIDLOAD
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(HomePage.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
   
     @IBAction func signUpTapped(_ sender: Any) {
     if passwordField.text != repeatPasswordField.text {
@@ -120,11 +117,11 @@ class SingUpScreen: UIViewController {
           }
         
     }
-    
-    @objc func playerItemDidReachEnd(notification: Notification) {
-        if let playerItem = notification.object as? AVPlayerItem {
+    //END SIGNUPTAPPED
+    @objc func finishBackgroundVideo(notification: NSNotification)
+    {
+            if let playerItem = notification.object as? AVPlayerItem {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
-    
 }
