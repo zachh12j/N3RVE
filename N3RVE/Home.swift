@@ -17,16 +17,15 @@ class Home: UIViewController {
     var player: AVAudioPlayer?
     var AudioPlayer = AVAudioPlayer()
     var MusicPLaying = false
-    @IBOutlet weak var usernameLabel: UILabel!
-    
     var getCurrentUserData: CollectionReference!
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var instagramButton: UIButton!
     
-        let selection = UISelectionFeedbackGenerator()
+    let selection = UISelectionFeedbackGenerator()
     
     @IBAction func fromHomeToCategories(_ sender: Any) {
         self.performSegue(withIdentifier: "fromHomeToCategory1", sender: self)
@@ -43,27 +42,29 @@ class Home: UIViewController {
         return .lightContent
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(Home.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Load the video from the app bundle.
+        let videoURL: NSURL = Bundle.main.url(forResource: "NerveLogoBackground", withExtension: "mp4")! as NSURL
         
-        let theURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")
-
-        avPlayer = AVPlayer(url: theURL!)
-        avPlayerLayer = AVPlayerLayer(player: avPlayer)
-        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        avPlayer.volume = 0
-        avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
-
-        avPlayerLayer.frame = view.layer.bounds
-        view.backgroundColor = UIColor.clear;
-        view.layer.insertSublayer(avPlayerLayer, at: 0)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: Selector(("playerItemDidReachEnd:")),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-            object: avPlayer.currentItem)
+        player = AVPlayer(url: videoURL as URL)
+        player?.actionAtItemEnd = .none
+        player?.isMuted = true
         
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        playerLayer.zPosition = -1
+
+        playerLayer.frame = view.frame
+
+        view.layer.addSublayer(playerLayer)
+
+        player?.play()
         getCurrentUserData = Firestore.firestore().collection("users")
         getDocument()
     }
@@ -88,43 +89,6 @@ class Home: UIViewController {
              }
          }
      }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        /*
-        getCurrentUserData.getDocuments { (snapshot, error) in
-            if let err = error {
-                debugPrint("Error Fetching Docs: \(err)")
-            } else {
-                guard let snap = snapshot else { return }
-                for document in snap.documents {
-                    let data = document.data()
-                    let username = data["username"] as? String ?? "ANONYMOUS"
-                    
-                    self.usernameLabel.text = "@\(username)"
-                }
-            }
-        }
-        */
-    }
-    
-    @objc func playerItemDidReachEnd(notification: Notification) {
-        if let playerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: CMTime.zero, completionHandler: nil)
-        }
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        avPlayer.play()
-        paused = false
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        avPlayer.pause()
-        paused = true
-    }
     
     @IBAction func didTapInsta(_ sender: Any) {
         if let url = URL(string: "http://instagram.com/n3rve_app/") {
@@ -171,11 +135,13 @@ class Home: UIViewController {
            }
             
         performSegue(withIdentifier: "fromHomeToHomePage", sender: self)
-           /*
-           let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let initial = storyboard.instantiateInitialViewController()
-           UIApplication.shared.keyWindow?.rootViewController = initial
-            */
+    }
+    
+    @objc func finishBackgroundVideo(notification: NSNotification)
+    {
+            if let playerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: CMTime.zero, completionHandler: nil)
+        }
     }
 
 }

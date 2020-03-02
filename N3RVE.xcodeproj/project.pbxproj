@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041CD8C4240DB0A300F47651 /* NerveLogoBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041CD8C3240DB0A300F47651 /* NerveLogoBackground.mp4 */; };
 		0447F6B0240AF2B60056244E /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6A5240AF2B50056244E /* TitilliumWeb-Italic.ttf */; };
 		0447F6B1240AF2B60056244E /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6A6240AF2B50056244E /* TitilliumWeb-ExtraLight.ttf */; };
 		0447F6B2240AF2B60056244E /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6A7240AF2B50056244E /* TitilliumWeb-Light.ttf */; };
@@ -18,17 +19,11 @@
 		0447F6B8240AF2B60056244E /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6AD240AF2B60056244E /* TitilliumWeb-SemiBoldItalic.ttf */; };
 		0447F6B9240AF2B60056244E /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6AE240AF2B60056244E /* TitilliumWeb-ExtraLightItalic.ttf */; };
 		0447F6BA240AF2B60056244E /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6AF240AF2B60056244E /* TitilliumWeb-LightItalic.ttf */; };
-		0447F6BC240AF9270056244E /* BackgroundHomePage.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6BB240AF9260056244E /* BackgroundHomePage.mp4 */; };
 		0447F6C5240B025F0056244E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447F6C4240B025F0056244E /* SceneDelegate.swift */; };
-		0447F6C9240B1A1D0056244E /* ItsWorkTime.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6C8240B1A1D0056244E /* ItsWorkTime.MOV */; };
-		0447F6CB240B1F600056244E /* 1min-video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6CA240B1F600056244E /* 1min-video.mp4 */; };
 		0447F6CD240B2BAF0056244E /* GlitchBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6CC240B2BAF0056244E /* GlitchBackground.mp4 */; };
 		0447F6CF240B71BD0056244E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6CE240B71BD0056244E /* GoogleService-Info.plist */; };
-		046726662409AF9F009720FE /* SplashScreen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046726652409AF8A009720FE /* SplashScreen.mp4 */; };
 		046726682409B0D1009720FE /* SplashScreenSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726672409B0D1009720FE /* SplashScreenSound.wav */; };
-		0467266A2409B237009720FE /* SplashScreenWSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 046726692409B1FC009720FE /* SplashScreenWSound.mp4 */; };
 		0467266C2409B388009720FE /* BackgroundMusic4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266B2409B388009720FE /* BackgroundMusic4.mp3 */; };
-		0467266E2409C6FC009720FE /* BackgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */; };
 		046726702409D071009720FE /* SplashScreenAndSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */; };
 		046726742409F89E009720FE /* Fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726712409F89E009720FE /* Fail.wav */; };
 		046726752409F89E009720FE /* Success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726722409F89E009720FE /* Success.wav */; };
@@ -95,6 +90,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041CD8C3240DB0A300F47651 /* NerveLogoBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NerveLogoBackground.mp4; sourceTree = "<group>"; };
 		0447F6A5240AF2B50056244E /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
 		0447F6A6240AF2B50056244E /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
 		0447F6A7240AF2B50056244E /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
@@ -106,17 +102,11 @@
 		0447F6AD240AF2B60056244E /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		0447F6AE240AF2B60056244E /* TitilliumWeb-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		0447F6AF240AF2B60056244E /* TitilliumWeb-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-LightItalic.ttf"; sourceTree = "<group>"; };
-		0447F6BB240AF9260056244E /* BackgroundHomePage.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BackgroundHomePage.mp4; sourceTree = "<group>"; };
 		0447F6C4240B025F0056244E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0447F6C8240B1A1D0056244E /* ItsWorkTime.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ItsWorkTime.MOV; sourceTree = "<group>"; };
-		0447F6CA240B1F600056244E /* 1min-video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1min-video.mp4"; sourceTree = "<group>"; };
 		0447F6CC240B2BAF0056244E /* GlitchBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GlitchBackground.mp4; sourceTree = "<group>"; };
 		0447F6CE240B71BD0056244E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		046726652409AF8A009720FE /* SplashScreen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreen.mp4; sourceTree = "<group>"; };
 		046726672409B0D1009720FE /* SplashScreenSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SplashScreenSound.wav; sourceTree = "<group>"; };
-		046726692409B1FC009720FE /* SplashScreenWSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenWSound.mp4; sourceTree = "<group>"; };
 		0467266B2409B388009720FE /* BackgroundMusic4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundMusic4.mp3; sourceTree = "<group>"; };
-		0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = BackgroundVideo.mp4; sourceTree = "<group>"; };
 		0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenAndSound.mp4; sourceTree = "<group>"; };
 		046726712409F89E009720FE /* Fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Fail.wav; sourceTree = "<group>"; };
 		046726722409F89E009720FE /* Success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Success.wav; sourceTree = "<group>"; };
@@ -275,14 +265,9 @@
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
 				DE29472C21727D6F00C7D64A /* Info.plist */,
 				0447F6CE240B71BD0056244E /* GoogleService-Info.plist */,
-				046726652409AF8A009720FE /* SplashScreen.mp4 */,
-				046726692409B1FC009720FE /* SplashScreenWSound.mp4 */,
-				0467266D2409C6E6009720FE /* BackgroundVideo.mp4 */,
 				0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */,
-				0447F6BB240AF9260056244E /* BackgroundHomePage.mp4 */,
-				0447F6C8240B1A1D0056244E /* ItsWorkTime.MOV */,
-				0447F6CA240B1F600056244E /* 1min-video.mp4 */,
 				0447F6CC240B2BAF0056244E /* GlitchBackground.mp4 */,
+				041CD8C3240DB0A300F47651 /* NerveLogoBackground.mp4 */,
 				DE41C4B821783772004077FB /* Music */,
 			);
 			path = N3RVE;
@@ -444,18 +429,15 @@
 				0447F6B1240AF2B60056244E /* TitilliumWeb-ExtraLight.ttf in Resources */,
 				046726702409D071009720FE /* SplashScreenAndSound.mp4 in Resources */,
 				0447F6B7240AF2B60056244E /* TitilliumWeb-Black.ttf in Resources */,
-				0467266E2409C6FC009720FE /* BackgroundVideo.mp4 in Resources */,
-				0467266A2409B237009720FE /* SplashScreenWSound.mp4 in Resources */,
 				0447F6B4240AF2B60056244E /* TitilliumWeb-Bold.ttf in Resources */,
 				046726682409B0D1009720FE /* SplashScreenSound.wav in Resources */,
-				046726662409AF9F009720FE /* SplashScreen.mp4 in Resources */,
+				041CD8C4240DB0A300F47651 /* NerveLogoBackground.mp4 in Resources */,
 				0467266C2409B388009720FE /* BackgroundMusic4.mp3 in Resources */,
 				046726762409F89E009720FE /* ButtonClick.wav in Resources */,
 				04672678240A1000009720FE /* ButtonClick2.wav in Resources */,
 				DE41C4BF21783B88004077FB /* deny.wav in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
 				DE41C4BE21783B88004077FB /* button.wav in Resources */,
-				0447F6CB240B1F600056244E /* 1min-video.mp4 in Resources */,
 				0447F6B0240AF2B60056244E /* TitilliumWeb-Italic.ttf in Resources */,
 				DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */,
 				0447F6B5240AF2B60056244E /* TitilliumWeb-Regular.ttf in Resources */,
@@ -463,13 +445,11 @@
 				0447F6B2240AF2B60056244E /* TitilliumWeb-Light.ttf in Resources */,
 				DE27F749217B88510040A300 /* BackgroundMusic2.mp3 in Resources */,
 				DE41C4BA21783799004077FB /* BackgroundMusic.mp3 in Resources */,
-				0447F6C9240B1A1D0056244E /* ItsWorkTime.MOV in Resources */,
 				0447F6BA240AF2B60056244E /* TitilliumWeb-LightItalic.ttf in Resources */,
 				DE27F74B217B89140040A300 /* BackgroundMusic3.mp3 in Resources */,
 				0447F6B6240AF2B60056244E /* TitilliumWeb-SemiBold.ttf in Resources */,
 				0447F6CF240B71BD0056244E /* GoogleService-Info.plist in Resources */,
 				0447F6B9240AF2B60056244E /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
-				0447F6BC240AF9270056244E /* BackgroundHomePage.mp4 in Resources */,
 				DE29472621727D6C00C7D64A /* Main.storyboard in Resources */,
 				0447F6B3240AF2B60056244E /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				046726752409F89E009720FE /* Success.wav in Resources */,

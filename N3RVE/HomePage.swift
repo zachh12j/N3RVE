@@ -33,9 +33,8 @@ class HomePage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "NerveLogoBackground", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none
@@ -51,23 +50,6 @@ class HomePage: UIViewController {
 
         player?.play()
         }
-    /*
-    func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
-        //1
-        var path = Bundle.main.path(forResource: file as String, ofType: type as String)
-        var url = NSURL.fileURL(withPath: path!)
-
-        //2
-        var error: NSError?
-
-        //3
-        var audioPlayer:AVAudioPlayer?
-        audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
-
-        //4
-        return audioPlayer!
-    }
-    */
     
     @IBAction func gotoLogin(_ sender: Any) {
         performSegue(withIdentifier: "fromHomePageToLogin", sender: self)
