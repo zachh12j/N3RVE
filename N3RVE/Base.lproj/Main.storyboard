@@ -61,10 +61,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlackLayer" translatesAutoresizingMaskIntoConstraints="NO" id="Usj-r3-3Af">
-                                <rect key="frame" x="-577" y="0.0" width="1528" height="814"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF9-e2-IZ1">
                                 <rect key="frame" x="16" y="563.66666666666663" width="154" height="59"/>
                                 <constraints>
@@ -481,10 +477,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlackLayer" translatesAutoresizingMaskIntoConstraints="NO" id="FCD-7b-P8o">
-                                <rect key="frame" x="-577" y="-1" width="1528" height="814"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="N3RVE" translatesAutoresizingMaskIntoConstraints="NO" id="i6v-bt-fHf">
                                 <rect key="frame" x="106" y="100" width="162" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1200,11 +1192,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="br8-gy-F5g"/>
-        <segue reference="28A-EK-YPJ"/>
-        <segue reference="l03-Xl-0ZQ"/>
-        <segue reference="jBf-De-Eie"/>
-        <segue reference="ebz-na-Xkp"/>
-        <segue reference="jwW-nv-fTj"/>
-        <segue reference="7Gg-p3-rnh"/>
+        <segue reference="o7u-q1-Myi"/>
+        <segue reference="4gC-nr-dMc"/>
+        <segue reference="fL6-2Z-xQV"/>
+        <segue reference="R5u-Tq-uOk"/>
+        <segue reference="5If-gr-3gG"/>
+        <segue reference="2sD-G3-Rl3"/>
     </inferredMetricsTieBreakers>
 </document>

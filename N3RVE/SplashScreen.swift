@@ -18,7 +18,7 @@ class SplashScreen: UIViewController{
     var window: UIWindow?
     var AudioPlayer = AVAudioPlayer()
     var isMusicPlaying = 0
-    var counter = 7
+    var counter = 6
     @IBOutlet weak var containerView: UIView!
     
     var videoPlayer = AVPlayerViewController()

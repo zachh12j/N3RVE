@@ -14,13 +14,14 @@ import Firebase
 
 class Home: UIViewController {
     
-    var player: AVAudioPlayer?
+    var playerSound: AVAudioPlayer?
     var AudioPlayer = AVAudioPlayer()
     var MusicPLaying = false
     var getCurrentUserData: CollectionReference!
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
+    var player: AVPlayer?
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var instagramButton: UIButton!
@@ -115,11 +116,11 @@ class Home: UIViewController {
         let url = Bundle.main.url(forResource: "ButtonClick2", withExtension: "wav")!
         
         do {
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else { return }
+            playerSound = try AVAudioPlayer(contentsOf: url)
+            guard player != nil else { return }
             
-            player.prepareToPlay()
-            player.play()
+            playerSound?.prepareToPlay()
+            playerSound?.play()
         } catch let error {
             print(error.localizedDescription)
         }
