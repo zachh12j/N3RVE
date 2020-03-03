@@ -29,7 +29,7 @@ class Home: UIViewController {
     let selection = UISelectionFeedbackGenerator()
     
     @IBAction func fromHomeToCategories(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromHomeToCategory1", sender: self)
+        self.performSegue(withIdentifier: "fromHomeToUserProfile", sender: self)
         selection.selectionChanged()
         buttonClickSound()
     }
@@ -107,10 +107,7 @@ class Home: UIViewController {
         }
     }
     
-    
     let url = Bundle.main.url(forResource: "BackgroundMusic", withExtension: "mp3")!
-    
-    
 
     func buttonClickSound() {
         let url = Bundle.main.url(forResource: "ButtonClick2", withExtension: "wav")!
@@ -144,6 +141,11 @@ class Home: UIViewController {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
+    
+    @IBAction func editProfile(_ sender: Any) {
+        performSegue(withIdentifier: "fromHomeToUserProfile", sender: self)
+    }
+    
 
 }
 

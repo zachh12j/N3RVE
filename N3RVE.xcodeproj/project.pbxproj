@@ -29,6 +29,7 @@
 		046726752409F89E009720FE /* Success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726722409F89E009720FE /* Success.wav */; };
 		046726762409F89E009720FE /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 046726732409F89E009720FE /* ButtonClick.wav */; };
 		04672678240A1000009720FE /* ButtonClick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04672677240A1000009720FE /* ButtonClick2.wav */; };
+		0476E09D240EB5B500E2C2DB /* BackgroungMusic5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0476E09C240EB5B500E2C2DB /* BackgroungMusic5.wav */; };
 		04FB8EE4240A361000C118B2 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		227883E838DF63C897374843 /* Pods_N3RVE_N3RVEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDF3CCED1577B55CC89959A /* Pods_N3RVE_N3RVEUITests.framework */; };
 		4346663F68CA80B017AEB3DB /* Pods_N3RVE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */; };
@@ -49,7 +50,7 @@
 		DE41C4C021783B88004077FB /* affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE41C4BD21783B88004077FB /* affirm.wav */; };
 		DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4826EC21740AC500E2CDF2 /* Settings.swift */; };
 		DEF2C888217283F2008F75A4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C887217283F2008F75A4 /* Categories.swift */; };
-		DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88921728EF0008F75A4 /* Category1.swift */; };
+		DEF2C88A21728EF0008F75A4 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88921728EF0008F75A4 /* UserProfile.swift */; };
 		DEF2C88C21728F3B008F75A4 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */; };
 		DEF2C88E21728F52008F75A4 /* SingUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */; };
 		DEF2C89021728F72008F75A4 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88F21728F72008F75A4 /* HomePage.swift */; };
@@ -112,6 +113,7 @@
 		046726722409F89E009720FE /* Success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Success.wav; sourceTree = "<group>"; };
 		046726732409F89E009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
 		04672677240A1000009720FE /* ButtonClick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick2.wav; sourceTree = "<group>"; };
+		0476E09C240EB5B500E2C2DB /* BackgroungMusic5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BackgroungMusic5.wav; sourceTree = "<group>"; };
 		12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_N3RVE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2649F0E79A940347E7DF8AD0 /* Pods-N3RVETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVETests.release.xcconfig"; path = "Target Support Files/Pods-N3RVETests/Pods-N3RVETests.release.xcconfig"; sourceTree = "<group>"; };
 		2BEF3E1F60D9B4175B66FA0C /* Pods-N3RVE-N3RVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVE-N3RVEUITests.debug.xcconfig"; path = "Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +145,7 @@
 		DE41C4BD21783B88004077FB /* affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = affirm.wav; sourceTree = "<group>"; };
 		DE4826EC21740AC500E2CDF2 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		DEF2C887217283F2008F75A4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		DEF2C88921728EF0008F75A4 /* Category1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category1.swift; sourceTree = "<group>"; };
+		DEF2C88921728EF0008F75A4 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpScreen.swift; sourceTree = "<group>"; };
 		DEF2C88F21728F72008F75A4 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
@@ -253,7 +255,7 @@
 				DE29472221727D6C00C7D64A /* Home.swift */,
 				DE4826EC21740AC500E2CDF2 /* Settings.swift */,
 				DEF2C887217283F2008F75A4 /* Categories.swift */,
-				DEF2C88921728EF0008F75A4 /* Category1.swift */,
+				DEF2C88921728EF0008F75A4 /* UserProfile.swift */,
 				DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */,
 				DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */,
 				DEF2C88F21728F72008F75A4 /* HomePage.swift */,
@@ -298,7 +300,6 @@
 				046726732409F89E009720FE /* ButtonClick.wav */,
 				046726712409F89E009720FE /* Fail.wav */,
 				046726722409F89E009720FE /* Success.wav */,
-				0467266B2409B388009720FE /* BackgroundMusic4.mp3 */,
 				046726672409B0D1009720FE /* SplashScreenSound.wav */,
 				DE41C4BD21783B88004077FB /* affirm.wav */,
 				DE41C4BB21783B87004077FB /* button.wav */,
@@ -306,6 +307,8 @@
 				DE41C4B921783798004077FB /* BackgroundMusic.mp3 */,
 				DE27F748217B88510040A300 /* BackgroundMusic2.mp3 */,
 				DE27F74A217B89130040A300 /* BackgroundMusic3.mp3 */,
+				0467266B2409B388009720FE /* BackgroundMusic4.mp3 */,
+				0476E09C240EB5B500E2C2DB /* BackgroungMusic5.wav */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				0447F6CD240B2BAF0056244E /* GlitchBackground.mp4 in Resources */,
 				046726742409F89E009720FE /* Fail.wav in Resources */,
 				0447F6B1240AF2B60056244E /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				0476E09D240EB5B500E2C2DB /* BackgroungMusic5.wav in Resources */,
 				046726702409D071009720FE /* SplashScreenAndSound.mp4 in Resources */,
 				0447F6B7240AF2B60056244E /* TitilliumWeb-Black.ttf in Resources */,
 				0447F6B4240AF2B60056244E /* TitilliumWeb-Bold.ttf in Resources */,
@@ -583,7 +587,7 @@
 				DE27F751217BD1920040A300 /* SplashScreen.swift in Sources */,
 				DEF2C89021728F72008F75A4 /* HomePage.swift in Sources */,
 				DE29472321727D6C00C7D64A /* Home.swift in Sources */,
-				DEF2C88A21728EF0008F75A4 /* Category1.swift in Sources */,
+				DEF2C88A21728EF0008F75A4 /* UserProfile.swift in Sources */,
 				0447F6C5240B025F0056244E /* SceneDelegate.swift in Sources */,
 				DEF2C89A2172A9D6008F75A4 /* ResultsViewController.swift in Sources */,
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
@@ -769,6 +773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 2K34Y7LDN6;
 				INFOPLIST_FILE = N3RVE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -776,6 +781,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.6;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;
@@ -790,6 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 2K34Y7LDN6;
 				INFOPLIST_FILE = N3RVE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -797,6 +804,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.6;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;

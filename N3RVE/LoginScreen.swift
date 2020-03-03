@@ -84,6 +84,10 @@ class LoginScreen: UIViewController {
                 
             }
         }
-            
     }
+    
+    @IBAction func backToMenu(_ sender: Any) {
+        performSegue(withIdentifier: "fromLoginToHomePage", sender: self)
+    }
+    
 }

@@ -85,6 +85,7 @@ class SingUpScreen: UIViewController {
         
         let firstName = firstAndLastField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let username = usernameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
     Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){ (user, error) in
      //It's fine has passes
@@ -95,7 +96,7 @@ class SingUpScreen: UIViewController {
             // User was created successfully, now store the first name and last name
             let db = Firestore.firestore()
             
-            db.collection("users").addDocument(data: ["firstandlastname":firstName, "username":username, "uid": user!.user.uid ]) { (error) in
+            db.collection("users").addDocument(data: ["firstandlastname":firstName, "username":username, "uid": user!.user.uid, "email":email]) { (error) in
                 
                 
                 if error != nil {
@@ -124,4 +125,9 @@ class SingUpScreen: UIViewController {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
+    
+    @IBAction func backToHome(_ sender: Any) {
+        performSegue(withIdentifier: "fromSignUpToHomePage", sender: self)
+    }
+    
 }

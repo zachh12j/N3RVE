@@ -97,7 +97,7 @@ class SplashScreen: UIViewController{
         if isMusicPlaying == 0{
             print("Music has not been started")
         //Music
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic4", ofType: "mp3")!)
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic5", ofType: "mp3")!)
         AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
         AudioPlayer.prepareToPlay()
         AudioPlayer.numberOfLoops = -1
