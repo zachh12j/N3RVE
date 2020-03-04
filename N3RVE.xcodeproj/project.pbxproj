@@ -27,6 +27,7 @@
 		046726702409D071009720FE /* SplashScreenAndSound.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */; };
 		04672678240A1000009720FE /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04672677240A1000009720FE /* ButtonClick.wav */; };
 		0476E09D240EB5B500E2C2DB /* BackgroundMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0476E09C240EB5B500E2C2DB /* BackgroundMusic.wav */; };
+		04F084BA241043B600FC054F /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F084B9241043B600FC054F /* LiveViewController.swift */; };
 		04FB8EE4240A361000C118B2 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		227883E838DF63C897374843 /* Pods_N3RVE_N3RVEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDF3CCED1577B55CC89959A /* Pods_N3RVE_N3RVEUITests.framework */; };
 		4346663F68CA80B017AEB3DB /* Pods_N3RVE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */; };
@@ -102,6 +103,7 @@
 		0467266F2409D053009720FE /* SplashScreenAndSound.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SplashScreenAndSound.mp4; sourceTree = "<group>"; };
 		04672677240A1000009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
 		0476E09C240EB5B500E2C2DB /* BackgroundMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BackgroundMusic.wav; sourceTree = "<group>"; };
+		04F084B9241043B600FC054F /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_N3RVE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2649F0E79A940347E7DF8AD0 /* Pods-N3RVETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVETests.release.xcconfig"; path = "Target Support Files/Pods-N3RVETests/Pods-N3RVETests.release.xcconfig"; sourceTree = "<group>"; };
 		2BEF3E1F60D9B4175B66FA0C /* Pods-N3RVE-N3RVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVE-N3RVEUITests.debug.xcconfig"; path = "Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,8 +213,8 @@
 				DE29471F21727D6C00C7D64A /* N3RVE */,
 				DE29473421727D6F00C7D64A /* N3RVETests */,
 				DE29473F21727D7000C7D64A /* N3RVEUITests */,
-				DE29471E21727D6C00C7D64A /* Products */,
 				6CD9B176F14FA3D1ADFD2613 /* Pods */,
+				DE29471E21727D6C00C7D64A /* Products */,
 				11AE4445202EE6CFBBC09A14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -230,7 +232,6 @@
 		DE29471F21727D6C00C7D64A /* N3RVE */ = {
 			isa = PBXGroup;
 			children = (
-				0447F6A4240AF2890056244E /* Fonts */,
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
 				0447F6C4240B025F0056244E /* SceneDelegate.swift */,
 				DE27F750217BD1910040A300 /* SplashScreen.swift */,
@@ -239,6 +240,7 @@
 				DEF2C887217283F2008F75A4 /* Categories.swift */,
 				DEF2C88921728EF0008F75A4 /* UserProfile.swift */,
 				044BB18D240F7797007E3694 /* OtherUserProfile.swift */,
+				04F084B9241043B600FC054F /* LiveViewController.swift */,
 				DEF2C88B21728F3B008F75A4 /* LoginScreen.swift */,
 				DEF2C88D21728F52008F75A4 /* SingUpScreen.swift */,
 				DEF2C88F21728F72008F75A4 /* HomePage.swift */,
@@ -254,6 +256,7 @@
 				0447F6CC240B2BAF0056244E /* GlitchBackground.mp4 */,
 				041CD8C3240DB0A300F47651 /* NerveLogoBackground.mp4 */,
 				044BB18B240F6D2B007E3694 /* BackgroundVid.mp4 */,
+				0447F6A4240AF2890056244E /* Fonts */,
 				DE41C4B821783772004077FB /* Sounds */,
 			);
 			path = N3RVE;
@@ -551,6 +554,7 @@
 				DEF2C89021728F72008F75A4 /* HomePage.swift in Sources */,
 				DE29472321727D6C00C7D64A /* Home.swift in Sources */,
 				044BB18E240F7797007E3694 /* OtherUserProfile.swift in Sources */,
+				04F084BA241043B600FC054F /* LiveViewController.swift in Sources */,
 				DEF2C88A21728EF0008F75A4 /* UserProfile.swift in Sources */,
 				0447F6C5240B025F0056244E /* SceneDelegate.swift in Sources */,
 				DEF2C89A2172A9D6008F75A4 /* ResultsViewController.swift in Sources */,
@@ -739,11 +743,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2K34Y7LDN6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = N3RVE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
@@ -762,11 +774,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2K34Y7LDN6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = N3RVE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";

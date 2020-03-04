@@ -33,7 +33,7 @@ class Home: UIViewController {
         buttonClickSound()
     }
     @IBAction func fromHomeToSettings(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromHomeToSettings", sender: self)
+        self.performSegue(withIdentifier: "goLive", sender: self)
         selection.selectionChanged()
         buttonClickSound()
     }

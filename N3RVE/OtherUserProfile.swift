@@ -12,16 +12,17 @@ import AVFoundation
 
 class OtherUserProfile: UIViewController {
 
+    @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var player: AVPlayer?
+    var peopleFollowing = 0
     
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(OtherUserProfile.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
@@ -93,4 +94,29 @@ class OtherUserProfile: UIViewController {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
+    @IBAction func followUser(_ sender: Any) {
+//        let db = Firestore.firestore().collection("users").whereField("username", isEqualTo: usernameLabel.text ?? nil!)
+//
+//        // Set the "capital" field of the city 'DC'
+//        db.collection("users").update({
+//            capital: true
+//        }, merge: true);
+        
+        
+        _ = Firestore.firestore().collection("users").whereField("username", isEqualTo: usernameLabel.text!).getDocuments() { (querySnapshot, err) in
+            if err != nil {
+                // Some error occured
+            } else if querySnapshot!.documents.count != 1 {
+                // Perhaps this is an error for you?
+            } else {
+                let document = querySnapshot!.documents.first
+                document!.reference.updateData([
+                    "currentFollowers": 99
+                ])
+            }
+        }
+        
+        followButton.isHidden = true
+    }
+    
 }

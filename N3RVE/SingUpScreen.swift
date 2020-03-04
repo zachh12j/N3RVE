@@ -31,7 +31,7 @@ class SingUpScreen: UIViewController {
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
     var player: AVPlayer?
-    
+    var newUserNoFollowers = 0
 
     @IBOutlet weak var firstAndLastField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
@@ -74,35 +74,27 @@ class SingUpScreen: UIViewController {
     }
   
     @IBAction func signUpTapped(_ sender: Any) {
+        
     if passwordField.text != repeatPasswordField.text {
     let alertController = UIAlertController(title: "Password Incorrect", message: "Please re-type password", preferredStyle: .alert)
     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                
     alertController.addAction(defaultAction)
     self.present(alertController, animated: true, completion: nil)
-            }
-    else{
-        
+            } else{
         let firstName = firstAndLastField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let username = usernameField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let email = emailField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
     Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){ (user, error) in
      //It's fine has passes
         if error == nil {
        self.performSegue(withIdentifier: "fromSignupPageToHome", sender: self)
-        
-            
             // User was created successfully, now store the first name and last name
             let db = Firestore.firestore()
             
-            db.collection("users").addDocument(data: ["firstandlastname":firstName, "username":username, "uid": user!.user.uid, "email":email]) { (error) in
-                
-                
+            db.collection("users").addDocument(data: ["firstandlastname":firstName, "username":username, "uid": user!.user.uid, "email":email, "currentFollowers":self.newUserNoFollowers]) { (error) in
                 if error != nil {
                     // Show error message
                     print("Error")
-            
                         }
                 }
         }

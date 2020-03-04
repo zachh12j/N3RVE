@@ -194,11 +194,28 @@
                         <segue destination="zuC-eI-uhz" kind="presentation" identifier="fromHomeToUserProfile" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="br8-gy-F5g"/>
                         <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromHomeToLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="o7u-q1-Myi"/>
                         <segue destination="0La-Yt-cdw" kind="presentation" identifier="fromHomeToHomePage" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fL6-2Z-xQV"/>
+                        <segue destination="fWB-eG-c5V" kind="show" identifier="goLive" id="C9x-JO-yRr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2186.9565217391305" y="20.758928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MSI-1N-a4I">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="fWB-eG-c5V" customClass="ViewController" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c5t-tA-pwW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="I1R-H2-WNI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bi2-gY-rmF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siu-CR-Epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="23"/>
         </scene>
         <!--Settings-->
         <scene sceneID="2YQ-Q3-MIo">
@@ -970,7 +987,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlo-Id-Mbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="740.625"/>
+            <point key="canvasLocation" x="2187" y="958"/>
         </scene>
         <!--Other User Profile-->
         <scene sceneID="uNk-FO-TkV">
@@ -1029,58 +1046,55 @@
                                             <action selector="searchForUserTapped:" destination="zuC-eI-uhz" eventType="touchUpInside" id="PNA-B9-Oex"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Role" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icL-fe-hjV">
-                                        <rect key="frame" x="50" y="557" width="108.5" height="30.5"/>
-                                        <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
-                                        <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player / Watcher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52p-RC-8tp">
-                                        <rect key="frame" x="50" y="583" width="130" height="27.5"/>
-                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-vO-ZPi">
-                                        <rect key="frame" x="50" y="492.5" width="123.5" height="30.5"/>
+                                        <rect key="frame" x="50" y="474.5" width="123.5" height="30.5"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sb-gL-yKk">
-                                        <rect key="frame" x="50" y="549" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="50" y="531" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cck-pI-jnh">
-                                        <rect key="frame" x="50" y="427.5" width="33" height="31"/>
+                                        <rect key="frame" x="50" y="409.5" width="33" height="31"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confidential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mc-f8-J9S">
-                                        <rect key="frame" x="50" y="453.5" width="93" height="28"/>
+                                        <rect key="frame" x="50" y="435.5" width="93" height="28"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First &amp; Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mi-sw-b92">
-                                        <rect key="frame" x="50" y="363" width="155" height="30.5"/>
+                                        <rect key="frame" x="50" y="345" width="155" height="30.5"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-KE-WbQ">
-                                        <rect key="frame" x="50" y="419.5" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="50" y="401.5" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zt-a1-7O4">
+                                        <rect key="frame" x="94.5" y="715" width="224" height="58"/>
+                                        <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                        <state key="normal" title="FOLLW THIS USER" backgroundImage="FollowBox">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="followUser:" destination="xhg-qy-x84" eventType="touchUpInside" id="MCo-GJ-QQ3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="icL-fe-hjV" firstAttribute="top" secondItem="oaf-vO-ZPi" secondAttribute="bottom" constant="34" id="0ly-IY-FC6"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Sb-gL-yKk" secondAttribute="trailing" symbolic="YES" id="0zi-ob-2YX"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" secondItem="fmP-1e-DQm" secondAttribute="trailing" constant="88" id="2DV-eQ-8nJ"/>
                                     <constraint firstItem="fak-Pv-gpn" firstAttribute="top" secondItem="0u5-Yv-d5W" secondAttribute="top" constant="18" id="4Es-49-sOJ"/>
@@ -1089,13 +1103,11 @@
                                     <constraint firstItem="fak-Pv-gpn" firstAttribute="centerX" secondItem="fmP-1e-DQm" secondAttribute="centerX" id="C8Y-hR-qQI"/>
                                     <constraint firstItem="oaf-vO-ZPi" firstAttribute="top" secondItem="9Mc-f8-J9S" secondAttribute="bottom" constant="11" id="CMM-Uw-YdN"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="top" secondItem="POK-XV-gTZ" secondAttribute="top" constant="44" id="Ef9-1A-S08"/>
-                                    <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="icL-fe-hjV" secondAttribute="trailing" symbolic="YES" id="Hpd-TD-Ztu"/>
                                     <constraint firstItem="wcu-pu-GPw" firstAttribute="leading" secondItem="fmP-1e-DQm" secondAttribute="leading" id="JMf-Lp-P7V"/>
                                     <constraint firstItem="Cck-pI-jnh" firstAttribute="top" secondItem="ZcF-KE-WbQ" secondAttribute="bottom" constant="8" id="Kew-0o-4DM"/>
                                     <constraint firstItem="2mi-sw-b92" firstAttribute="leading" secondItem="ZcF-KE-WbQ" secondAttribute="leading" id="NkD-Tm-bn6"/>
-                                    <constraint firstItem="icL-fe-hjV" firstAttribute="top" secondItem="2Sb-gL-yKk" secondAttribute="bottom" constant="8" id="OKc-ed-kMH"/>
                                     <constraint firstItem="R0A-ty-2nM" firstAttribute="top" secondItem="0u5-Yv-d5W" secondAttribute="top" constant="20" id="PhB-Ny-TY5"/>
-                                    <constraint firstItem="2mi-sw-b92" firstAttribute="top" secondItem="wcu-pu-GPw" secondAttribute="bottom" constant="23" id="QUc-fl-UMv"/>
+                                    <constraint firstItem="2mi-sw-b92" firstAttribute="top" secondItem="wcu-pu-GPw" secondAttribute="bottom" constant="5" id="QUc-fl-UMv"/>
                                     <constraint firstItem="Cck-pI-jnh" firstAttribute="top" secondItem="2mi-sw-b92" secondAttribute="bottom" constant="34" id="Qft-VI-9Ke"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oaf-vO-ZPi" secondAttribute="trailing" symbolic="YES" id="R8r-zX-trU"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9Mc-f8-J9S" secondAttribute="trailing" symbolic="YES" id="TBs-BY-m9l"/>
@@ -1103,29 +1115,28 @@
                                     <constraint firstItem="ZcF-KE-WbQ" firstAttribute="leading" secondItem="Cck-pI-jnh" secondAttribute="leading" id="VAt-UC-3ln"/>
                                     <constraint firstItem="9Mc-f8-J9S" firstAttribute="leading" secondItem="oaf-vO-ZPi" secondAttribute="leading" id="W1X-Gh-QtH"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2mi-sw-b92" secondAttribute="trailing" symbolic="YES" id="XDW-FF-MCb"/>
-                                    <constraint firstItem="wcu-pu-GPw" firstAttribute="trailing" secondItem="fmP-1e-DQm" secondAttribute="trailing" id="Xf6-x2-PBi"/>
+                                    <constraint firstItem="wcu-pu-GPw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fmP-1e-DQm" secondAttribute="trailing" id="Xf6-x2-PBi"/>
                                     <constraint firstItem="R0A-ty-2nM" firstAttribute="leading" secondItem="0u5-Yv-d5W" secondAttribute="leading" constant="16" id="YEi-6H-luV"/>
-                                    <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="52p-RC-8tp" secondAttribute="trailing" symbolic="YES" id="aJI-F4-o1t"/>
                                     <constraint firstItem="wcu-pu-GPw" firstAttribute="top" secondItem="fmP-1e-DQm" secondAttribute="bottom" constant="8" id="bAg-Wn-iB5"/>
                                     <constraint firstItem="wcu-pu-GPw" firstAttribute="leading" secondItem="2mi-sw-b92" secondAttribute="leading" constant="37" id="eUn-Ly-d21"/>
                                     <constraint firstItem="POK-XV-gTZ" firstAttribute="bottom" secondItem="0u5-Yv-d5W" secondAttribute="bottom" constant="34" id="exx-0t-JO2"/>
-                                    <constraint firstItem="2Sb-gL-yKk" firstAttribute="leading" secondItem="icL-fe-hjV" secondAttribute="leading" id="f50-lu-x3N"/>
                                     <constraint firstItem="oaf-vO-ZPi" firstAttribute="leading" secondItem="2Sb-gL-yKk" secondAttribute="leading" id="fPk-wg-5u4"/>
                                     <constraint firstItem="ang-IW-6Gy" firstAttribute="leading" secondItem="fak-Pv-gpn" secondAttribute="trailing" constant="8" id="kGI-wg-oHC"/>
+                                    <constraint firstItem="0Zt-a1-7O4" firstAttribute="centerX" secondItem="wcu-pu-GPw" secondAttribute="centerX" id="kvN-5r-ib9"/>
                                     <constraint firstItem="fak-Pv-gpn" firstAttribute="centerY" secondItem="ang-IW-6Gy" secondAttribute="centerY" id="m3v-cc-bLw"/>
                                     <constraint firstItem="Cck-pI-jnh" firstAttribute="leading" secondItem="9Mc-f8-J9S" secondAttribute="leading" id="rnb-VH-yAQ"/>
                                     <constraint firstItem="fmP-1e-DQm" firstAttribute="leading" secondItem="0u5-Yv-d5W" secondAttribute="leading" constant="87" id="s1P-3U-Syg"/>
-                                    <constraint firstItem="icL-fe-hjV" firstAttribute="leading" secondItem="52p-RC-8tp" secondAttribute="leading" id="s62-7T-TRa"/>
                                     <constraint firstItem="fmP-1e-DQm" firstAttribute="top" secondItem="R0A-ty-2nM" secondAttribute="bottom" constant="15" id="sUI-l6-MwD"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Sb-gL-yKk" secondAttribute="bottom" constant="311" id="vJa-1m-YsD"/>
                                     <constraint firstItem="9Mc-f8-J9S" firstAttribute="top" secondItem="ZcF-KE-WbQ" secondAttribute="bottom" constant="34" id="ySl-o7-yWu"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" secondItem="POK-XV-gTZ" secondAttribute="trailing" id="zYl-Sm-6iR"/>
-                                    <constraint firstItem="52p-RC-8tp" firstAttribute="top" secondItem="2Sb-gL-yKk" secondAttribute="bottom" constant="34" id="zjC-Gt-ATL"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="0u5-Yv-d5W"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="y6d-Lw-uDI" firstAttribute="bottom" secondItem="0Zt-a1-7O4" secondAttribute="bottom" constant="35" id="HS9-jc-Gon"/>
                             <constraint firstItem="y6d-Lw-uDI" firstAttribute="trailing" secondItem="ang-IW-6Gy" secondAttribute="trailing" constant="22" id="R0o-Yr-KPt"/>
                             <constraint firstItem="ang-IW-6Gy" firstAttribute="top" secondItem="y6d-Lw-uDI" secondAttribute="top" constant="20" id="ScS-Xz-IqM"/>
                         </constraints>
@@ -1134,8 +1145,8 @@
                     <connections>
                         <outlet property="ageLabel" destination="Cck-pI-jnh" id="jKa-A6-hmp"/>
                         <outlet property="emailLabel" destination="2Sb-gL-yKk" id="U9M-rN-TYW"/>
+                        <outlet property="followButton" destination="0Zt-a1-7O4" id="yMM-2X-1Qg"/>
                         <outlet property="nameLabel" destination="ZcF-KE-WbQ" id="cwB-kf-ZjW"/>
-                        <outlet property="roleLabel" destination="icL-fe-hjV" id="pre-8b-Tn9"/>
                         <outlet property="searchField" destination="fak-Pv-gpn" id="cgp-og-SoL"/>
                         <outlet property="usernameLabel" destination="wcu-pu-GPw" id="lvq-N1-DlV"/>
                         <segue destination="zuC-eI-uhz" kind="presentation" identifier="searchUserToUser" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="X6U-uK-4A5"/>
@@ -1143,7 +1154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqC-fP-Qze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3109" y="741"/>
+            <point key="canvasLocation" x="3133" y="958"/>
         </scene>
         <!--Category5-->
         <scene sceneID="7EX-OA-z0m">
@@ -1355,6 +1366,7 @@
         <image name="Choix" width="286" height="37"/>
         <image name="ConnectedAs" width="186" height="18"/>
         <image name="EmptyBox" width="266" height="60"/>
+        <image name="FollowBox" width="224" height="58"/>
         <image name="Form" width="74" height="74"/>
         <image name="Group 3" width="375" height="812"/>
         <image name="Login" width="266" height="77"/>
@@ -1381,6 +1393,6 @@
         <segue reference="o7u-q1-Myi"/>
         <segue reference="l03-Xl-0ZQ"/>
         <segue reference="fL6-2Z-xQV"/>
-        <segue reference="nW8-mQ-wzq"/>
+        <segue reference="58E-c9-Jgr"/>
     </inferredMetricsTieBreakers>
 </document>
