@@ -1,6 +1,6 @@
 /*
  * libbambuser - Bambuser iOS library
- * Copyright 2015 Bambuser AB
+ * Copyright 2016 Bambuser AB
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted.
@@ -14,13 +14,10 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#ifndef libbambuser_bridge_h
-#define libbambuser_bridge_h
+#ifndef libbambuserplayer_bridge_h
+#define libbambuserplayer_bridge_h
 
+#import "libbambuserplayer.h"
 #import "libbambuser.h"
-#endif
 
-curl -XGET "https://api.bambuser.com/broadcasts?limit=2&titleContains=Test" \
--H "Content-Type: application/json" \
--H "Accept: application/vnd.bambuser.v1+json" \
--H "Authorization: Bearer <YOUR_API_KEY>"
+#endif

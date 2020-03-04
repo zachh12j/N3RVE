@@ -104,14 +104,14 @@
                                 <rect key="frame" x="20" y="330" width="171" height="321"/>
                                 <state key="normal" image="Watcher"/>
                                 <connections>
-                                    <action selector="fromHomeToCategories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJM-Fa-WVt"/>
+                                    <action selector="goWatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGS-HP-IEe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1k-gf-2cN">
                                 <rect key="frame" x="227" y="330" width="167" height="321"/>
                                 <state key="normal" image="Player"/>
                                 <connections>
-                                    <action selector="fromHomeToSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9OQ-G9-4JR"/>
+                                    <action selector="goLive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qa-xe-nv2"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OR" translatesAutoresizingMaskIntoConstraints="NO" id="heF-hv-qwW">
@@ -195,11 +195,12 @@
                         <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromHomeToLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="o7u-q1-Myi"/>
                         <segue destination="0La-Yt-cdw" kind="presentation" identifier="fromHomeToHomePage" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fL6-2Z-xQV"/>
                         <segue destination="fWB-eG-c5V" kind="show" identifier="goLive" id="C9x-JO-yRr"/>
+                        <segue destination="LxV-9B-Eo7" kind="show" identifier="goWatch" id="CqI-MK-AoH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186.9565217391305" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1784" y="23"/>
         </scene>
         <!--Live View Controller-->
         <scene sceneID="MSI-1N-a4I">
@@ -215,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siu-CR-Epi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3132" y="23"/>
+            <point key="canvasLocation" x="2558" y="419"/>
         </scene>
         <!--Settings-->
         <scene sceneID="2YQ-Q3-MIo">
@@ -262,129 +263,21 @@
             </objects>
             <point key="canvasLocation" x="616" y="1509"/>
         </scene>
-        <!--Categories-->
+        <!--Player View Controller-->
         <scene sceneID="W3x-ul-sZt">
             <objects>
-                <viewController storyboardIdentifier="Categories" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LxV-9B-Eo7" customClass="Categories" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LxV-9B-Eo7" customClass="PlayerViewController" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RZu-nO-Ctp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="f9m-w3-PrC">
-                                <rect key="frame" x="-40" y="-40" width="494" height="976"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Choix" translatesAutoresizingMaskIntoConstraints="NO" id="a6N-Fr-iaq">
-                                <rect key="frame" x="33" y="257" width="325" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="a6N-Fr-iaq" secondAttribute="height" multiplier="286:37" id="a0A-Os-PRn"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Catégories" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-fj-k8X">
-                                <rect key="frame" x="33" y="190" width="237" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="QGc-fj-k8X" secondAttribute="height" multiplier="99:20" id="tOR-C5-2ma"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9L5-iZ-wxL">
-                                <rect key="frame" x="16" y="44" width="138" height="138"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9L5-iZ-wxL" secondAttribute="height" multiplier="1:1" id="Pku-Dt-COL"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Retour"/>
-                                <connections>
-                                    <action selector="fromCategoriestoHome:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="sxD-Xh-GG5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1K-nj-vWP" userLabel="c1">
-                                <rect key="frame" x="3" y="307" width="407" height="247.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="W1K-nj-vWP" secondAttribute="height" multiplier="23:14" id="GJl-py-IlS"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Catégorie 1"/>
-                                <connections>
-                                    <action selector="fromCategoriesToUserProfile:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="vgn-LG-9Br"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3k-ra-Wze" userLabel="c2">
-                                <rect key="frame" x="3" y="399.5" width="407" height="248"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="M3k-ra-Wze" secondAttribute="height" multiplier="23:14" id="YFD-ZI-WNr"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Catégorie 2"/>
-                                <connections>
-                                    <action selector="fromCategoriesToLoginScreen:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="wBu-3a-iAt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmI-gT-0YF" userLabel="c3">
-                                <rect key="frame" x="3" y="493.5" width="407" height="247.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="GmI-gT-0YF" secondAttribute="height" multiplier="23:14" id="eTy-QG-q9W"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Catégorie 3"/>
-                                <connections>
-                                    <action selector="fromCategoriesToSingUpScreen:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="OkO-Ph-vgb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-VD-hQQ" userLabel="c4">
-                                <rect key="frame" x="3" y="585" width="407" height="248"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Tas-VD-hQQ" secondAttribute="height" multiplier="23:14" id="9Jb-51-Nd2"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Catégorie 4"/>
-                                <connections>
-                                    <action selector="fromCategoriesToHomePage:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="rS0-bd-oI0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYl-2x-86b" userLabel="c5">
-                                <rect key="frame" x="3" y="677" width="407" height="247.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="lYl-2x-86b" secondAttribute="height" multiplier="23:14" id="jwC-UF-eF7"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Catégorie 5"/>
-                                <connections>
-                                    <action selector="fromCategoriesToCategory5:" destination="LxV-9B-Eo7" eventType="touchUpInside" id="CYH-uV-Mni"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="M3k-ra-Wze" secondAttribute="trailing" constant="4" id="0rW-Vy-tzl"/>
-                            <constraint firstItem="9L5-iZ-wxL" firstAttribute="top" secondItem="Jfr-B6-Lpr" secondAttribute="top" id="1qB-KE-g3l"/>
-                            <constraint firstAttribute="bottom" secondItem="f9m-w3-PrC" secondAttribute="bottom" constant="-40" id="2at-bX-yPJ"/>
-                            <constraint firstItem="9L5-iZ-wxL" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="16" id="7Ex-Va-d7C"/>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="QGc-fj-k8X" secondAttribute="trailing" constant="144" id="7bG-J8-0uw"/>
-                            <constraint firstItem="W1K-nj-vWP" firstAttribute="top" secondItem="a6N-Fr-iaq" secondAttribute="bottom" constant="8" id="8Kc-cH-YT9"/>
-                            <constraint firstItem="a6N-Fr-iaq" firstAttribute="top" secondItem="QGc-fj-k8X" secondAttribute="bottom" constant="19" id="8ze-PU-59o"/>
-                            <constraint firstItem="M3k-ra-Wze" firstAttribute="top" secondItem="W1K-nj-vWP" secondAttribute="bottom" constant="-155" id="9BZ-68-ONx"/>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="lYl-2x-86b" secondAttribute="trailing" constant="4" id="CdN-V6-Ve7"/>
-                            <constraint firstItem="f9m-w3-PrC" firstAttribute="top" secondItem="RZu-nO-Ctp" secondAttribute="top" constant="-40" id="EFv-p1-KuY"/>
-                            <constraint firstItem="GmI-gT-0YF" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="3" id="MZV-Ww-3Tq"/>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="GmI-gT-0YF" secondAttribute="trailing" constant="4" id="Nmz-aj-P4Z"/>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="a6N-Fr-iaq" secondAttribute="trailing" constant="56" id="OAK-90-8xo"/>
-                            <constraint firstItem="lYl-2x-86b" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="3" id="P7I-Uy-Xqe"/>
-                            <constraint firstItem="f9m-w3-PrC" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="-40" id="QRn-37-KBD"/>
-                            <constraint firstItem="Tas-VD-hQQ" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="3" id="SVu-KV-ZYp"/>
-                            <constraint firstItem="GmI-gT-0YF" firstAttribute="top" secondItem="M3k-ra-Wze" secondAttribute="bottom" constant="-154" id="b3Q-w2-6ek"/>
-                            <constraint firstItem="W1K-nj-vWP" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="3" id="fZA-qu-qiQ"/>
-                            <constraint firstItem="M3k-ra-Wze" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="3" id="hDo-nm-jDQ"/>
-                            <constraint firstItem="lYl-2x-86b" firstAttribute="top" secondItem="Tas-VD-hQQ" secondAttribute="bottom" constant="-156" id="lWf-7D-PXW"/>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="W1K-nj-vWP" secondAttribute="trailing" constant="4" id="nNI-rU-K47"/>
-                            <constraint firstItem="QGc-fj-k8X" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="33" id="ocv-bf-ljy"/>
-                            <constraint firstItem="Jfr-B6-Lpr" firstAttribute="trailing" secondItem="Tas-VD-hQQ" secondAttribute="trailing" constant="4" id="qaq-GX-VOg"/>
-                            <constraint firstItem="Tas-VD-hQQ" firstAttribute="top" secondItem="GmI-gT-0YF" secondAttribute="bottom" constant="-156" id="rLm-16-gNg"/>
-                            <constraint firstItem="a6N-Fr-iaq" firstAttribute="leading" secondItem="Jfr-B6-Lpr" secondAttribute="leading" constant="33" id="sPZ-8C-8oY"/>
-                            <constraint firstItem="f9m-w3-PrC" firstAttribute="trailing" secondItem="Jfr-B6-Lpr" secondAttribute="trailing" constant="40" id="u25-tU-x1y"/>
-                            <constraint firstItem="QGc-fj-k8X" firstAttribute="top" secondItem="9L5-iZ-wxL" secondAttribute="bottom" constant="8" id="x6t-uO-H7N"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Jfr-B6-Lpr"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="f9m-w3-PrC" id="TSJ-VE-zM6"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="BNp-9b-7L5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65x-Dy-1e9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="-1406"/>
+            <point key="canvasLocation" x="2558" y="-488"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="FtF-tt-0IU">
@@ -419,7 +312,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="RetourMenu"/>
                                 <connections>
-                                    <action selector="fromResultsToCategories:" destination="Myo-Z9-wPc" eventType="touchUpInside" id="2HH-0K-kB9"/>
+                                    <action selector="fromResultsToPlayerViewController:" destination="Myo-Z9-wPc" eventType="touchUpInside" id="2HH-0K-kB9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOUS POUVEZ M’AIDER EN VALIDANT MON PRODUIT. CLIQUER ICI POUR RÉPONDRE À UN COURT SONDAGE!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9r1-xY-64K">
@@ -727,7 +620,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-OP-1BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="419"/>
+            <point key="canvasLocation" x="1013" y="419"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="kqe-Rp-DB5">
@@ -824,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTs-Ih-YIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1121.7391304347827" y="-488.16964285714283"/>
+            <point key="canvasLocation" x="1012" y="-488"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="yxV-gh-O5C">
@@ -987,7 +880,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlo-Id-Mbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2187" y="958"/>
+            <point key="canvasLocation" x="1783" y="1100"/>
         </scene>
         <!--Other User Profile-->
         <scene sceneID="uNk-FO-TkV">
@@ -1154,7 +1047,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqC-fP-Qze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3133" y="958"/>
+            <point key="canvasLocation" x="2558" y="1100"/>
         </scene>
         <!--Category5-->
         <scene sceneID="7EX-OA-z0m">
@@ -1268,7 +1161,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="Retour"/>
                                 <connections>
-                                    <action selector="fromCategory5ToCategories:" destination="KXF-aE-b44" eventType="touchUpInside" id="y5P-h0-k9Y"/>
+                                    <action selector="fromCategory5ToPlayerViewController:" destination="KXF-aE-b44" eventType="touchUpInside" id="y5P-h0-k9Y"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Q" translatesAutoresizingMaskIntoConstraints="NO" id="Z98-Y1-ySz">
@@ -1350,20 +1243,13 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="1428" y="1563"/>
+            <point key="canvasLocation" x="1361" y="1856"/>
         </scene>
     </scenes>
     <resources>
         <image name="ARE YOU A" width="116" height="24"/>
         <image name="BY CHECKING THIS BOX" width="194" height="47"/>
         <image name="Background" width="375" height="812"/>
-        <image name="Catégorie 1" width="367" height="224"/>
-        <image name="Catégorie 2" width="367" height="224"/>
-        <image name="Catégorie 3" width="367" height="224"/>
-        <image name="Catégorie 4" width="367" height="224"/>
-        <image name="Catégorie 5" width="367" height="224"/>
-        <image name="Catégories" width="198" height="40"/>
-        <image name="Choix" width="286" height="37"/>
         <image name="ConnectedAs" width="186" height="18"/>
         <image name="EmptyBox" width="266" height="60"/>
         <image name="FollowBox" width="224" height="58"/>
@@ -1389,10 +1275,10 @@
         <image name="Watcher" width="154" height="59"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X6U-uK-4A5"/>
+        <segue reference="br8-gy-F5g"/>
         <segue reference="o7u-q1-Myi"/>
         <segue reference="l03-Xl-0ZQ"/>
         <segue reference="fL6-2Z-xQV"/>
-        <segue reference="58E-c9-Jgr"/>
+        <segue reference="nW8-mQ-wzq"/>
     </inferredMetricsTieBreakers>
 </document>

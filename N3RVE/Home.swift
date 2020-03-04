@@ -27,16 +27,18 @@ class Home: UIViewController {
     
     let selection = UISelectionFeedbackGenerator()
     
-    @IBAction func fromHomeToCategories(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromHomeToUserProfile", sender: self)
+    @IBAction func goWatch(_ sender: Any) {
+        self.performSegue(withIdentifier: "goWatch", sender: self)
         selection.selectionChanged()
         buttonClickSound()
     }
-    @IBAction func fromHomeToSettings(_ sender: Any) {
+
+    @IBAction func goLive(_ sender: Any) {
         self.performSegue(withIdentifier: "goLive", sender: self)
         selection.selectionChanged()
         buttonClickSound()
     }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

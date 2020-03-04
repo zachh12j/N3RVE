@@ -65,7 +65,7 @@ class ResultsViewController: UIViewController {
         lblResults.text = "Vous avec obtenu un résultat de \(percentRight)%. Vous avez donc répondu correctement à \(noCorrect) questions sur \(total)."
     }
 
-    @IBAction func fromResultsToCategories(_ sender: Any) {
+    @IBAction func fromResultsToPlayerViewController(_ sender: Any) {
         self.performSegue(withIdentifier: "fromResultsToHome", sender: self)
     }
     

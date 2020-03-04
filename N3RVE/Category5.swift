@@ -202,8 +202,8 @@ class Category5: UIViewController {
         loadNextQuestion()
     }
     
-    @IBAction func fromCategory5ToCategories(_ sender: Any) {
-        self.performSegue(withIdentifier: "fromCategory5ToCategories", sender: self)
+    @IBAction func fromCategory5ToPlayerViewController(_ sender: Any) {
+        self.performSegue(withIdentifier: "fromCategory5ToPlayerViewController", sender: self)
         buttonClickSound()
     }
     

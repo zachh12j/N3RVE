@@ -104,7 +104,7 @@ class SplashScreen: UIViewController{
         AudioPlayer.prepareToPlay()
         AudioPlayer.numberOfLoops = -1
         AudioPlayer.volume = 0.15
-        AudioPlayer.play()
+//        AudioPlayer.play()
         isMusicPlaying = 1
         }
         

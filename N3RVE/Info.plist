@@ -20,6 +20,10 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Access to the camera is required to live stream.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Access to the microphone is required to inlude audio in your live streams.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>TitilliumWeb-Black.ttf</string>
@@ -66,9 +70,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>Access to the camera is required to live stream.</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Access to the microphone is required to inlude audio in your live streams.</string>
 </dict>
 </plist>
