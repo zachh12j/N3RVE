@@ -201,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="2186.9565217391305" y="20.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Live View Controller-->
         <scene sceneID="MSI-1N-a4I">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="fWB-eG-c5V" customClass="ViewController" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fWB-eG-c5V" customClass="LiveViewController" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c5t-tA-pwW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1389,7 +1389,7 @@
         <image name="Watcher" width="154" height="59"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="br8-gy-F5g"/>
+        <segue reference="X6U-uK-4A5"/>
         <segue reference="o7u-q1-Myi"/>
         <segue reference="l03-Xl-0ZQ"/>
         <segue reference="fL6-2Z-xQV"/>

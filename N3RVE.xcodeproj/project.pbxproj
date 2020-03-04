@@ -28,6 +28,22 @@
 		04672678240A1000009720FE /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04672677240A1000009720FE /* ButtonClick.wav */; };
 		0476E09D240EB5B500E2C2DB /* BackgroundMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0476E09C240EB5B500E2C2DB /* BackgroundMusic.wav */; };
 		04F084BA241043B600FC054F /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F084B9241043B600FC054F /* LiveViewController.swift */; };
+		04F0852024104BB800FC054F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0851F24104BB800FC054F /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		04F0852224104BC600FC054F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852124104BC600FC054F /* AVFoundation.framework */; };
+		04F0852424104BCE00FC054F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852324104BCE00FC054F /* CoreGraphics.framework */; };
+		04F0852624104BFA00FC054F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852524104BFA00FC054F /* CoreLocation.framework */; };
+		04F0852824104C0400FC054F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852724104C0400FC054F /* CoreMedia.framework */; };
+		04F0852A24104C0D00FC054F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852924104C0D00FC054F /* CoreTelephony.framework */; };
+		04F0852C24104C1500FC054F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852B24104C1500FC054F /* CoreVideo.framework */; };
+		04F0852E24104C2200FC054F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852D24104C2200FC054F /* Foundation.framework */; };
+		04F0853024104C2A00FC054F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0852F24104C2A00FC054F /* QuartzCore.framework */; };
+		04F0853224104C3900FC054F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0853124104C3900FC054F /* libz.tbd */; };
+		04F0853424104C4100FC054F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0853324104C4100FC054F /* libc++.tbd */; };
+		04F0853624104C4A00FC054F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0853524104C4A00FC054F /* SystemConfiguration.framework */; };
+		04F0853824104C6000FC054F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0853724104C6000FC054F /* UIKit.framework */; };
+		04F0853A24104C6500FC054F /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0853924104C6500FC054F /* VideoToolbox.framework */; };
+		04F0854524104C8800FC054F /* libbambuserplayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0854324104C8800FC054F /* libbambuserplayer.a */; };
+		04F0854624104C8800FC054F /* libbambuser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0854424104C8800FC054F /* libbambuser.a */; };
 		04FB8EE4240A361000C118B2 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		227883E838DF63C897374843 /* Pods_N3RVE_N3RVEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDF3CCED1577B55CC89959A /* Pods_N3RVE_N3RVEUITests.framework */; };
 		4346663F68CA80B017AEB3DB /* Pods_N3RVE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */; };
@@ -104,6 +120,28 @@
 		04672677240A1000009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
 		0476E09C240EB5B500E2C2DB /* BackgroundMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BackgroundMusic.wav; sourceTree = "<group>"; };
 		04F084B9241043B600FC054F /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		04F084E82410489800FC054F /* libbambuser-bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libbambuser-bridge.h"; sourceTree = "<group>"; };
+		04F0851F24104BB800FC054F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		04F0852124104BC600FC054F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		04F0852324104BCE00FC054F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04F0852524104BFA00FC054F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		04F0852724104C0400FC054F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		04F0852924104C0D00FC054F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		04F0852B24104C1500FC054F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		04F0852D24104C2200FC054F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04F0852F24104C2A00FC054F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04F0853124104C3900FC054F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		04F0853324104C4100FC054F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		04F0853524104C4A00FC054F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		04F0853724104C6000FC054F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04F0853924104C6500FC054F /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		04F0853D24104C8800FC054F /* libbambuserplayer-constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libbambuserplayer-constants.h"; sourceTree = "<group>"; };
+		04F0853E24104C8800FC054F /* BambuserViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambuserViewDelegate.h; sourceTree = "<group>"; };
+		04F0853F24104C8800FC054F /* BambuserConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BambuserConstants.h; sourceTree = "<group>"; };
+		04F0854024104C8800FC054F /* libbambuserplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libbambuserplayer.h; sourceTree = "<group>"; };
+		04F0854124104C8800FC054F /* libbambuser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libbambuser.h; sourceTree = "<group>"; };
+		04F0854324104C8800FC054F /* libbambuserplayer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbambuserplayer.a; sourceTree = "<group>"; };
+		04F0854424104C8800FC054F /* libbambuser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbambuser.a; sourceTree = "<group>"; };
 		12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_N3RVE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2649F0E79A940347E7DF8AD0 /* Pods-N3RVETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVETests.release.xcconfig"; path = "Target Support Files/Pods-N3RVETests/Pods-N3RVETests.release.xcconfig"; sourceTree = "<group>"; };
 		2BEF3E1F60D9B4175B66FA0C /* Pods-N3RVE-N3RVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVE-N3RVEUITests.debug.xcconfig"; path = "Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +181,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F0853A24104C6500FC054F /* VideoToolbox.framework in Frameworks */,
+				04F0854624104C8800FC054F /* libbambuser.a in Frameworks */,
+				04F0853824104C6000FC054F /* UIKit.framework in Frameworks */,
+				04F0853624104C4A00FC054F /* SystemConfiguration.framework in Frameworks */,
+				04F0853424104C4100FC054F /* libc++.tbd in Frameworks */,
+				04F0853224104C3900FC054F /* libz.tbd in Frameworks */,
+				04F0853024104C2A00FC054F /* QuartzCore.framework in Frameworks */,
+				04F0852E24104C2200FC054F /* Foundation.framework in Frameworks */,
+				04F0854524104C8800FC054F /* libbambuserplayer.a in Frameworks */,
+				04F0852C24104C1500FC054F /* CoreVideo.framework in Frameworks */,
+				04F0852A24104C0D00FC054F /* CoreTelephony.framework in Frameworks */,
+				04F0852824104C0400FC054F /* CoreMedia.framework in Frameworks */,
+				04F0852624104BFA00FC054F /* CoreLocation.framework in Frameworks */,
+				04F0852424104BCE00FC054F /* CoreGraphics.framework in Frameworks */,
+				04F0852224104BC600FC054F /* AVFoundation.framework in Frameworks */,
+				04F0852024104BB800FC054F /* AudioToolbox.framework in Frameworks */,
 				4346663F68CA80B017AEB3DB /* Pods_N3RVE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,9 +238,55 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		04F0853B24104C8800FC054F /* prebuilt */ = {
+			isa = PBXGroup;
+			children = (
+				04F0853C24104C8800FC054F /* include */,
+				04F0854224104C8800FC054F /* lib */,
+			);
+			name = prebuilt;
+			path = "../../../../Downloads/libbambuser-ios-0.9.24-191008/prebuilt";
+			sourceTree = "<group>";
+		};
+		04F0853C24104C8800FC054F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				04F0853D24104C8800FC054F /* libbambuserplayer-constants.h */,
+				04F0853E24104C8800FC054F /* BambuserViewDelegate.h */,
+				04F0853F24104C8800FC054F /* BambuserConstants.h */,
+				04F0854024104C8800FC054F /* libbambuserplayer.h */,
+				04F0854124104C8800FC054F /* libbambuser.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		04F0854224104C8800FC054F /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				04F0854324104C8800FC054F /* libbambuserplayer.a */,
+				04F0854424104C8800FC054F /* libbambuser.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		11AE4445202EE6CFBBC09A14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04F0853B24104C8800FC054F /* prebuilt */,
+				04F0853924104C6500FC054F /* VideoToolbox.framework */,
+				04F0853724104C6000FC054F /* UIKit.framework */,
+				04F0853524104C4A00FC054F /* SystemConfiguration.framework */,
+				04F0853324104C4100FC054F /* libc++.tbd */,
+				04F0853124104C3900FC054F /* libz.tbd */,
+				04F0852F24104C2A00FC054F /* QuartzCore.framework */,
+				04F0852D24104C2200FC054F /* Foundation.framework */,
+				04F0852B24104C1500FC054F /* CoreVideo.framework */,
+				04F0852924104C0D00FC054F /* CoreTelephony.framework */,
+				04F0852724104C0400FC054F /* CoreMedia.framework */,
+				04F0852524104BFA00FC054F /* CoreLocation.framework */,
+				04F0852324104BCE00FC054F /* CoreGraphics.framework */,
+				04F0852124104BC600FC054F /* AVFoundation.framework */,
+				04F0851F24104BB800FC054F /* AudioToolbox.framework */,
 				12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */,
 				8FDF3CCED1577B55CC89959A /* Pods_N3RVE_N3RVEUITests.framework */,
 				C1147EF211D7752ED9B69F81 /* Pods_N3RVETests.framework */,
@@ -232,6 +332,7 @@
 		DE29471F21727D6C00C7D64A /* N3RVE */ = {
 			isa = PBXGroup;
 			children = (
+				04F084E82410489800FC054F /* libbambuser-bridge.h */,
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
 				0447F6C4240B025F0056244E /* SceneDelegate.swift */,
 				DE27F750217BD1910040A300 /* SplashScreen.swift */,
@@ -756,11 +857,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/prebuilt/lib",
 				);
 				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;
+				SWIFT_OBJC_BRIDGING_HEADER = "N3RVE/libbambuser-bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -787,11 +890,13 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/prebuilt/lib",
 				);
 				MARKETING_VERSION = 1.0.9;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;
+				SWIFT_OBJC_BRIDGING_HEADER = "N3RVE/libbambuser-bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
