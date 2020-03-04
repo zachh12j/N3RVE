@@ -24,7 +24,6 @@ class Home: UIViewController {
     var player: AVPlayer?
     
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var instagramButton: UIButton!
     
     let selection = UISelectionFeedbackGenerator()
     
@@ -51,7 +50,7 @@ class Home: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "NerveLogoBackground", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "BackgroundVid", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none
@@ -91,26 +90,10 @@ class Home: UIViewController {
          }
      }
     
-    @IBAction func didTapInsta(_ sender: Any) {
-        if let url = URL(string: "http://instagram.com/n3rve_app/") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    @IBAction func didTapFacebook(_ sender: Any) {
-        if let url = URL(string: "https://vm.tiktok.com/bKPSun/") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    @IBAction func didTapSnapchat(_ sender: Any) {
-        if let url = URL(string: "http://facebook.com/camilo.jrossi") {
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
-    
-    let url = Bundle.main.url(forResource: "BackgroundMusic", withExtension: "mp3")!
+    //let url = Bundle.main.url(forResource: "BackgroundMusic", withExtension: "mp3")!
 
     func buttonClickSound() {
-        let url = Bundle.main.url(forResource: "ButtonClick2", withExtension: "wav")!
+        let url = Bundle.main.url(forResource: "ButtonClick", withExtension: "wav")!
         
         do {
             playerSound = try AVAudioPlayer(contentsOf: url)
@@ -123,17 +106,16 @@ class Home: UIViewController {
         }
     }
     
-    @IBAction func Logout(_ sender: Any) {
-    
+    @IBAction func logout(_ sender: Any) {
         do {
                try Auth.auth().signOut()
            }
         catch let signOutError as NSError {
                print ("Error signing out: %@", signOutError)
            }
-            
         performSegue(withIdentifier: "fromHomeToHomePage", sender: self)
     }
+    
     
     @objc func finishBackgroundVideo(notification: NSNotification)
     {
@@ -141,11 +123,8 @@ class Home: UIViewController {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
-    
     @IBAction func editProfile(_ sender: Any) {
         performSegue(withIdentifier: "fromHomeToUserProfile", sender: self)
     }
-    
-
 }
 

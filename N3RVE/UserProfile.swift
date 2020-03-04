@@ -9,13 +9,22 @@
 import UIKit
 import AVFoundation
 import Firebase
+import FirebaseCoreDiagnostics
 
-class UserProfile: UIViewController {
+class UserProfile: UIViewController, UIImagePickerControllerDelegate{
     
-    var pfp: UIImage? = nil
+    
+    @IBOutlet weak var pfp: UIImageView!
+    @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
+    var paused: Bool = false
+    var player: AVPlayer?
+    
+    let imagePicker = UIImagePickerController()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -23,14 +32,38 @@ class UserProfile: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        
+//        LOAD VIDEO
+        
+        // Load the video from the app bundle.
+        /*
+        let videoURL: NSURL = Bundle.main.url(forResource: "BackgroundVid", withExtension: "mp4")! as NSURL
+        
+        player = AVPlayer(url: videoURL as URL)
+        player?.actionAtItemEnd = .none
+        player?.isMuted = true
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        playerLayer.zPosition = -1
+
+        playerLayer.frame = view.frame
+
+        view.layer.addSublayer(playerLayer)
+
+        player?.play()
+        */
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getDocument()
+        NotificationCenter.default.addObserver(self, selector: #selector(UserProfile.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
     }
 
     @IBAction func backToMenu(_ sender: Any) {
-        performSegue(withIdentifier: "backToMenu", sender: self)
+        performSegue(withIdentifier: "backToHome", sender: self)
     }
     
     private func getDocument() {
@@ -56,4 +89,18 @@ class UserProfile: UIViewController {
             }
          }
      }
+    @IBAction func searchForUserTapped(_ sender: Any) {
+        performSegue(withIdentifier: "fromUserToSearchUser", sender: self)
+    }
+    
+    @objc func finishBackgroundVideo(notification: NSNotification)
+    {
+            if let playerItem = notification.object as? AVPlayerItem {
+            playerItem.seek(to: CMTime.zero, completionHandler: nil)
+        }
+    }
+    
+    @IBAction func changePfp(_ sender: Any) {
+        
+    }
 }

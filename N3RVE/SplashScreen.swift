@@ -34,12 +34,11 @@ class SplashScreen: UIViewController{
     }
     
     @objc func updateCounter() {
-        //example functionality
         if counter > 0 {
             print("\(counter) seconds to the end of the world")
             counter -= 1
         } else {
-            muteSound()
+            
         }
     }
     
@@ -60,15 +59,15 @@ class SplashScreen: UIViewController{
         }
         
     }
-
+    /*
     deinit {
         print("Remove NotificationCenter Deinit")
         NotificationCenter.default.removeObserver(self)
     }
- 
+    */
     @objc func finishVideo()
     {
-        
+        /*
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomePage") as UIViewController
         vc.view.alpha = 0
@@ -87,27 +86,44 @@ class SplashScreen: UIViewController{
         {
             _ in
             self.present(vc, animated: false, completion: nil)
-        }
+        */
         
-        //Start the music
+        let HomePageVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "HomePage") as UIViewController
+        let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        appDelegate.window?.rootViewController = HomePageVC
+        muteSound()
     }
     
      func muteSound()
     {
         if isMusicPlaying == 0{
-            print("Music has not been started")
+        print("Music has not been started")
         //Music
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic5", ofType: "mp3")!)
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "BackgroundMusic", ofType: "wav")!)
         AudioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
         AudioPlayer.prepareToPlay()
         AudioPlayer.numberOfLoops = -1
         AudioPlayer.volume = 0.15
         AudioPlayer.play()
-        }
-        
-        if AudioPlayer.isPlaying == true {
         isMusicPlaying = 1
         }
+        
+        /*
+        if AudioPlayer.isPlaying == true {
+        isMusicPlaying = 1
+        print("Music is currently playing")
+        }
+        */
     }
+    
+    func stopMusic(){
+        if isMusicPlaying == 1 {
+        print("Music is currently playing2")
+        } else {
+            print("Music is at its inital state")
+            AudioPlayer.stop()
+        }
+    }
+    
 }
 

@@ -36,7 +36,7 @@ class LoginScreen: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
                 // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "BackgroundVid", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none
@@ -51,7 +51,14 @@ class LoginScreen: UIViewController {
         view.layer.addSublayer(playerLayer)
 
         player?.play()
+        
+        emailField.setLeftPaddingPoints(20)
+        emailField.setRightPaddingPoints(20)
+        passwordField.setLeftPaddingPoints(20)
+        passwordField.setRightPaddingPoints(20)
     }
+    
+    //Fin ViewDidLoad
     @objc func finishBackgroundVideo(notification: NSNotification)
     {
             if let playerItem = notification.object as? AVPlayerItem {
@@ -90,4 +97,17 @@ class LoginScreen: UIViewController {
         performSegue(withIdentifier: "fromLoginToHomePage", sender: self)
     }
     
+}
+
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
+    }
 }

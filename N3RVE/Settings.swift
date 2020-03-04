@@ -80,7 +80,7 @@ class Settings: UIViewController {
     }
     
     func buttonClickSound() {
-        let url = Bundle.main.url(forResource: "ButtonClick2", withExtension: "wav")!
+        let url = Bundle.main.url(forResource: "ButtonClick", withExtension: "wav")!
         
         do {
             player = try AVAudioPlayer(contentsOf: url)

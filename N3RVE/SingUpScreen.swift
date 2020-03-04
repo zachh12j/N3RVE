@@ -49,7 +49,7 @@ class SingUpScreen: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
         // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "BackgroundVid", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none

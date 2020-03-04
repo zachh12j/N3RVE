@@ -1,6 +1,6 @@
 //
-//  LoginScreen.swift
-//  Aeris
+//  HomePage.swift
+//  N3RVE
 //
 //  Created by Camilo Rossi on 2018-10-13.
 //  Copyright © 2018 Camilo Rossi. All rights reserved.
@@ -35,7 +35,7 @@ class HomePage: UIViewController {
         super.viewDidLoad()
         
         // Load the video from the app bundle.
-        let videoURL: NSURL = Bundle.main.url(forResource: "GlitchBackground", withExtension: "mp4")! as NSURL
+        let videoURL: NSURL = Bundle.main.url(forResource: "BackgroundVid", withExtension: "mp4")! as NSURL
         
         player = AVPlayer(url: videoURL as URL)
         player?.actionAtItemEnd = .none
@@ -81,6 +81,10 @@ class HomePage: UIViewController {
             if let playerItem = notification.object as? AVPlayerItem {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
+    }
+    
+    @IBAction func stopMusic(_ sender: Any) {
+        SplashScreen().stopMusic()
     }
     
 }
