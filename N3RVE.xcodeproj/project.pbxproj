@@ -45,6 +45,7 @@
 		04F0854524104C8800FC054F /* libbambuserplayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0854324104C8800FC054F /* libbambuserplayer.a */; };
 		04F0854624104C8800FC054F /* libbambuser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0854424104C8800FC054F /* libbambuser.a */; };
 		04F085482410587300FC054F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F085472410587300FC054F /* MediaPlayer.framework */; };
+		04F0854B2410C05800FC054F /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0854A2410C05800FC054F /* AlertController.swift */; };
 		04FB8EE4240A361000C118B2 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		227883E838DF63C897374843 /* Pods_N3RVE_N3RVEUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDF3CCED1577B55CC89959A /* Pods_N3RVE_N3RVEUITests.framework */; };
 		4346663F68CA80B017AEB3DB /* Pods_N3RVE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */; };
@@ -145,6 +146,7 @@
 		04F0854424104C8800FC054F /* libbambuser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbambuser.a; sourceTree = "<group>"; };
 		04F085472410587300FC054F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		04F08549241059D300FC054F /* libbambuserplayer-bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libbambuserplayer-bridge.h"; sourceTree = "<group>"; };
+		04F0854A2410C05800FC054F /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		12DA4904A35791F37AE6614B /* Pods_N3RVE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_N3RVE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2649F0E79A940347E7DF8AD0 /* Pods-N3RVETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVETests.release.xcconfig"; path = "Target Support Files/Pods-N3RVETests/Pods-N3RVETests.release.xcconfig"; sourceTree = "<group>"; };
 		2BEF3E1F60D9B4175B66FA0C /* Pods-N3RVE-N3RVEUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-N3RVE-N3RVEUITests.debug.xcconfig"; path = "Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			children = (
 				04F084E82410489800FC054F /* libbambuser-bridge.h */,
 				04F08549241059D300FC054F /* libbambuserplayer-bridge.h */,
+				04F0854A2410C05800FC054F /* AlertController.swift */,
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
 				0447F6C4240B025F0056244E /* SceneDelegate.swift */,
 				DE27F750217BD1910040A300 /* SplashScreen.swift */,
@@ -669,6 +672,7 @@
 				DEF2C888217283F2008F75A4 /* PlayerViewController.swift in Sources */,
 				DEF2C89421729062008F75A4 /* Category5.swift in Sources */,
 				DEF2C8982172995B008F75A4 /* Results.swift in Sources */,
+				04F0854B2410C05800FC054F /* AlertController.swift in Sources */,
 				DEF2C88C21728F3B008F75A4 /* LoginScreen.swift in Sources */,
 				DE4826ED21740AC500E2CDF2 /* Settings.swift in Sources */,
 				DEF2C88E21728F52008F75A4 /* SingUpScreen.swift in Sources */,

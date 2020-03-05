@@ -20,7 +20,7 @@
 #import "libbambuser.h"
 #endif
 
-curl -XGET "https://api.bambuser.com/broadcasts?limit=2&titleContains=Test" \
+curl -XGET "https://api.bambuser.com/broadcasts" \
 -H "Content-Type: application/json" \
 -H "Accept: application/vnd.bambuser.v1+json" \
--H "Authorization: Bearer <YOUR_API_KEY>"
+-H "Authorization: Bearer <RDFogjCLPa5u3CkdQAsb4P>"

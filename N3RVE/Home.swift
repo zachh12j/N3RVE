@@ -71,7 +71,7 @@ class Home: UIViewController {
         getDocument()
     }
     
-    private func getDocument() {
+        func getDocument() {
          //Get sspecific document from current user
          let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
 
