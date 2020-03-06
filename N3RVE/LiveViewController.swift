@@ -62,7 +62,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        bambuserView.orientation = UIApplication.shared.statusBarOrientation
+        bambuserView.orientation = (UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation)!
         self.view.addSubview(bambuserView.view)
         bambuserView.startCapture()
         broadcastButton.addTarget(self, action: #selector(LiveViewController.broadcast), for: UIControl.Event.touchUpInside)
@@ -116,8 +116,12 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
     }
 
     override func viewWillLayoutSubviews() {
-        var statusBarOffset : CGFloat = 0.0
-        statusBarOffset = CGFloat(self.topLayoutGuide.length)
+        let statusBarOffset:CGFloat
+        if #available(iOS 11.0, *) {
+            statusBarOffset = self.view.safeAreaInsets.top
+        } else {
+            statusBarOffset = self.topLayoutGuide.length
+        }
         currentViewersLabel.frame = CGRect(x: self.view.bounds.size.width - 100 , y: self.view.bounds.size.height - 30, width: 100, height: 30)
         bambuserView.previewFrame = CGRect(x: 0.0, y: 0.0 + statusBarOffset, width: self.view.bounds.size.width, height: self.view.bounds.size.height - statusBarOffset)
         broadcastButton.frame = CGRect(x: 0.0, y: 0.0 + statusBarOffset, width: 100.0, height: 50.0);

@@ -45,7 +45,12 @@ class PlayerViewController: UIViewController, BambuserPlayerDelegate {
     }
 
     override func viewWillLayoutSubviews() {
-        let statusBarOffset = self.topLayoutGuide.length
+        let statusBarOffset:CGFloat
+        if #available(iOS 11.0, *) {
+            statusBarOffset = self.view.safeAreaInsets.top
+        } else {
+            statusBarOffset = self.topLayoutGuide.length
+        }
         bambuserPlayer.frame = CGRect(x: 0, y: 0 + statusBarOffset, width: self.view.bounds.size.width, height: self.view.bounds.size.height - statusBarOffset)
         playButton.frame = CGRect(x: 20, y: 20 + statusBarOffset, width: 100, height: 40)
         pauseButton.frame = CGRect(x: 20, y: 80 + statusBarOffset, width: 100, height: 40)

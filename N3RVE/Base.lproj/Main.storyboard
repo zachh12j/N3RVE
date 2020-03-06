@@ -191,7 +191,7 @@
                     <navigationItem key="navigationItem" id="XeV-Vw-NbC"/>
                     <connections>
                         <outlet property="usernameLabel" destination="nEI-Ld-AP6" id="lRW-1E-KCO"/>
-                        <segue destination="zuC-eI-uhz" kind="presentation" identifier="fromHomeToUserProfile" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="br8-gy-F5g"/>
+                        <segue destination="zuC-eI-uhz" kind="presentation" identifier="fromHomeToUserProfile" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="br8-gy-F5g"/>
                         <segue destination="xV8-VN-XJU" kind="presentation" identifier="fromHomeToLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="o7u-q1-Myi"/>
                         <segue destination="0La-Yt-cdw" kind="presentation" identifier="fromHomeToHomePage" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="fL6-2Z-xQV"/>
                         <segue destination="fWB-eG-c5V" kind="show" identifier="goLive" id="C9x-JO-yRr"/>
@@ -489,14 +489,11 @@
                                     <constraint firstAttribute="width" secondItem="ddq-tt-yfH" secondAttribute="height" multiplier="194:47" id="PyH-Eg-c9n"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-1m-inl" userLabel="NameBox">
-                                <rect key="frame" x="49" y="202" width="314" height="60"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIRST &amp; LAST NAME" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wT-CY-wQs" userLabel="FirstAndLastNameField">
-                                <rect key="frame" x="91" y="202" width="232" height="60"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="FIRST &amp; LAST NAME" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="7wT-CY-wQs" userLabel="FirstAndLastNameField">
+                                <rect key="frame" x="79.5" y="218" width="255" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="232" id="1bB-K9-UC6"/>
-                                    <constraint firstAttribute="height" constant="60" id="Xve-Gc-zMo"/>
+                                    <constraint firstAttribute="height" constant="50" id="nBv-kn-cUj"/>
+                                    <constraint firstAttribute="width" secondItem="7wT-CY-wQs" secondAttribute="height" multiplier="51:10" id="tg8-tY-EZg"/>
                                 </constraints>
                                 <color key="textColor" red="0.52549019607843139" green="0.23921568627450979" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
@@ -507,24 +504,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyBox" id="Nh8-65-uBz" userLabel="UsernameBox">
-                                <rect key="frame" x="68" y="265" width="275" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyBox" id="iRC-qz-BrX" userLabel="EmailBox">
-                                <rect key="frame" x="68" y="329" width="276" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyBox" id="XFa-aM-9Vs" userLabel="PasswordField">
-                                <rect key="frame" x="68" y="393" width="276" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyBox" id="Zto-1j-hxq" userLabel="RepeatPasswordField">
-                                <rect key="frame" x="68" y="457" width="276" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-6j-rl7" userLabel="UsernameField">
-                                <rect key="frame" x="91" y="281" width="232" height="28"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="Uoe-6j-rl7" userLabel="UsernameField">
+                                <rect key="frame" x="79.5" y="276" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="oz4-0I-W71"/>
+                                    <constraint firstAttribute="width" secondItem="Uoe-6j-rl7" secondAttribute="height" multiplier="51:10" id="tWb-On-fXC"/>
+                                </constraints>
                                 <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
@@ -534,8 +519,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ypr-pB-MuF">
-                                <rect key="frame" x="91" y="345" width="232" height="28"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="Ypr-pB-MuF">
+                                <rect key="frame" x="79.5" y="334" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="73H-Y0-Efh"/>
+                                    <constraint firstAttribute="width" secondItem="Ypr-pB-MuF" secondAttribute="height" multiplier="51:10" id="jwN-Ye-VVF"/>
+                                </constraints>
                                 <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
@@ -545,8 +534,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-m8-0GQ">
-                                <rect key="frame" x="91" y="409" width="232" height="28"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-m8-0GQ">
+                                <rect key="frame" x="79.5" y="392" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MeE-aI-DHw"/>
+                                    <constraint firstAttribute="width" secondItem="1J8-m8-0GQ" secondAttribute="height" multiplier="51:10" id="uCB-EY-G8B"/>
+                                </constraints>
                                 <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
@@ -556,8 +549,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="REPEAT PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9d-CV-ZW6">
-                                <rect key="frame" x="91" y="473" width="232" height="28"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="REPEAT PASSWORD" textAlignment="natural" minimumFontSize="17" background="EmptyBox" translatesAutoresizingMaskIntoConstraints="NO" id="x9d-CV-ZW6">
+                                <rect key="frame" x="79.5" y="450" width="255" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x9d-CV-ZW6" secondAttribute="height" multiplier="51:10" id="9e9-dr-LVr"/>
+                                    <constraint firstAttribute="height" constant="50" id="UMl-64-GAX"/>
+                                </constraints>
                                 <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
@@ -570,40 +567,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="leading" secondItem="1J8-m8-0GQ" secondAttribute="leading" id="3BF-bO-RaK"/>
+                            <constraint firstItem="1J8-m8-0GQ" firstAttribute="leading" secondItem="x9d-CV-ZW6" secondAttribute="leading" id="2I7-Hj-mAz"/>
+                            <constraint firstItem="7wT-CY-wQs" firstAttribute="centerX" secondItem="F6T-Dd-ede" secondAttribute="centerX" id="4L2-2A-GMH"/>
+                            <constraint firstItem="7wT-CY-wQs" firstAttribute="top" secondItem="F6T-Dd-ede" secondAttribute="bottom" constant="35" id="4z5-9F-nOB"/>
+                            <constraint firstItem="Ypr-pB-MuF" firstAttribute="leading" secondItem="1J8-m8-0GQ" secondAttribute="leading" id="5Gt-nB-LLD"/>
                             <constraint firstItem="ddq-tt-yfH" firstAttribute="centerY" secondItem="4Ew-dI-pX8" secondAttribute="centerY" id="7X7-pl-DV6"/>
-                            <constraint firstItem="Uoe-6j-rl7" firstAttribute="top" secondItem="7wT-CY-wQs" secondAttribute="bottom" constant="19" id="7z3-Ba-OGM"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="trailing" secondItem="Ypr-pB-MuF" secondAttribute="trailing" id="82r-6g-W5m"/>
-                            <constraint firstItem="7wT-CY-wQs" firstAttribute="centerX" secondItem="F6T-Dd-ede" secondAttribute="centerX" id="A8e-4p-GDF"/>
+                            <constraint firstItem="Uoe-6j-rl7" firstAttribute="leading" secondItem="Ypr-pB-MuF" secondAttribute="leading" id="98H-kD-Z77"/>
+                            <constraint firstItem="1J8-m8-0GQ" firstAttribute="trailing" secondItem="x9d-CV-ZW6" secondAttribute="trailing" id="BN9-Tz-xwr"/>
                             <constraint firstItem="F6T-Dd-ede" firstAttribute="centerX" secondItem="yYE-Jw-rqm" secondAttribute="centerX" id="CI7-QN-6Zf"/>
-                            <constraint firstItem="Ypr-pB-MuF" firstAttribute="centerY" secondItem="iRC-qz-BrX" secondAttribute="centerY" id="DQG-rN-5aL"/>
-                            <constraint firstItem="yYE-Jw-rqm" firstAttribute="trailing" secondItem="Wew-1m-inl" secondAttribute="trailing" constant="51" id="Dpo-lA-uQM"/>
-                            <constraint firstItem="7wT-CY-wQs" firstAttribute="top" secondItem="yYE-Jw-rqm" secondAttribute="top" constant="158" id="EfG-Dc-Kip"/>
-                            <constraint firstItem="Uoe-6j-rl7" firstAttribute="centerY" secondItem="Nh8-65-uBz" secondAttribute="centerY" id="FFy-2g-oJs"/>
+                            <constraint firstItem="7wT-CY-wQs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Uoe-6j-rl7" secondAttribute="leading" id="Dbt-2q-YIe"/>
                             <constraint firstItem="yYE-Jw-rqm" firstAttribute="top" secondItem="XYR-qF-NH1" secondAttribute="top" constant="44" id="GKy-Bf-3Fo"/>
                             <constraint firstItem="Rsq-Ez-gBy" firstAttribute="centerX" secondItem="yYE-Jw-rqm" secondAttribute="centerX" id="HAj-ia-RaL"/>
                             <constraint firstItem="yYE-Jw-rqm" firstAttribute="trailing" secondItem="XYR-qF-NH1" secondAttribute="trailing" id="ITD-No-Lu8"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="trailing" secondItem="Uoe-6j-rl7" secondAttribute="trailing" id="JoK-cy-z8m"/>
+                            <constraint firstItem="7wT-CY-wQs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yYE-Jw-rqm" secondAttribute="leading" id="L0D-8V-Cnj"/>
                             <constraint firstItem="XYR-qF-NH1" firstAttribute="leading" secondItem="yYE-Jw-rqm" secondAttribute="leading" id="NLT-Yj-Ht6"/>
                             <constraint firstItem="ddq-tt-yfH" firstAttribute="leading" secondItem="4Ew-dI-pX8" secondAttribute="trailing" constant="21" id="OXQ-1k-fg5"/>
                             <constraint firstItem="F6T-Dd-ede" firstAttribute="top" secondItem="4Ga-vR-tAZ" secondAttribute="bottom" constant="25" id="PB5-Pd-Qll"/>
+                            <constraint firstItem="Ypr-pB-MuF" firstAttribute="top" secondItem="Uoe-6j-rl7" secondAttribute="bottom" constant="8" id="PZL-wJ-SkV"/>
                             <constraint firstItem="Rsq-Ez-gBy" firstAttribute="trailing" secondItem="ddq-tt-yfH" secondAttribute="trailing" id="T8v-f9-1K5"/>
-                            <constraint firstItem="7wT-CY-wQs" firstAttribute="top" secondItem="Wew-1m-inl" secondAttribute="top" id="Ul9-Sb-jol"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7wT-CY-wQs" secondAttribute="trailing" id="Wck-CQ-Atv"/>
+                            <constraint firstItem="7wT-CY-wQs" firstAttribute="trailing" secondItem="Uoe-6j-rl7" secondAttribute="trailing" id="XhQ-An-Rnw"/>
                             <constraint firstItem="4Ga-vR-tAZ" firstAttribute="top" secondItem="yYE-Jw-rqm" secondAttribute="top" constant="20" id="YYK-U4-nXp"/>
-                            <constraint firstItem="Wew-1m-inl" firstAttribute="leading" secondItem="yYE-Jw-rqm" secondAttribute="leading" constant="49" id="dSK-XZ-gYS"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="leading" secondItem="Uoe-6j-rl7" secondAttribute="leading" id="dxQ-4F-ObL"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="trailing" secondItem="1J8-m8-0GQ" secondAttribute="trailing" id="flg-TR-wEZ"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="leading" secondItem="Ypr-pB-MuF" secondAttribute="leading" id="fmr-ZX-L1I"/>
+                            <constraint firstItem="1J8-m8-0GQ" firstAttribute="top" secondItem="Ypr-pB-MuF" secondAttribute="bottom" constant="8" id="aI6-Tb-9mn"/>
+                            <constraint firstItem="Uoe-6j-rl7" firstAttribute="top" secondItem="7wT-CY-wQs" secondAttribute="bottom" constant="8" id="b22-vC-nsZ"/>
+                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="top" secondItem="1J8-m8-0GQ" secondAttribute="bottom" constant="8" id="gKu-KG-YoN"/>
                             <constraint firstItem="4Ga-vR-tAZ" firstAttribute="leading" secondItem="9Ga-vP-gc6" secondAttribute="leadingMargin" id="ioQ-Ql-Zev"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="centerY" secondItem="Zto-1j-hxq" secondAttribute="centerY" id="kHt-DV-JPQ"/>
-                            <constraint firstItem="1J8-m8-0GQ" firstAttribute="centerY" secondItem="XFa-aM-9Vs" secondAttribute="centerY" id="kyp-E5-NTf"/>
                             <constraint firstItem="Rsq-Ez-gBy" firstAttribute="leading" secondItem="4Ew-dI-pX8" secondAttribute="leading" id="mDf-Ry-riP"/>
-                            <constraint firstItem="x9d-CV-ZW6" firstAttribute="leading" secondItem="7wT-CY-wQs" secondAttribute="leading" id="oHX-ui-4mp"/>
+                            <constraint firstItem="Ypr-pB-MuF" firstAttribute="trailing" secondItem="1J8-m8-0GQ" secondAttribute="trailing" id="oRv-CT-E5i"/>
                             <constraint firstItem="yYE-Jw-rqm" firstAttribute="bottom" secondItem="Rsq-Ez-gBy" secondAttribute="bottom" constant="31" id="pCz-sK-eIo"/>
                             <constraint firstItem="XYR-qF-NH1" firstAttribute="bottom" secondItem="yYE-Jw-rqm" secondAttribute="bottom" constant="34" id="qYb-Fl-g8T"/>
                             <constraint firstItem="Rsq-Ez-gBy" firstAttribute="top" secondItem="4Ew-dI-pX8" secondAttribute="bottom" constant="15" id="sdP-x7-vYf"/>
-                            <constraint firstItem="7wT-CY-wQs" firstAttribute="bottom" secondItem="Wew-1m-inl" secondAttribute="bottom" id="wgK-py-w9I"/>
+                            <constraint firstItem="Uoe-6j-rl7" firstAttribute="trailing" secondItem="Ypr-pB-MuF" secondAttribute="trailing" id="vav-kX-jOh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yYE-Jw-rqm"/>
                     </view>
@@ -620,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2U-OP-1BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013" y="419"/>
+            <point key="canvasLocation" x="1011.5942028985507" y="418.52678571428572"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="kqe-Rp-DB5">
@@ -722,22 +715,27 @@
         <!--User Profile-->
         <scene sceneID="yxV-gh-O5C">
             <objects>
-                <viewController storyboardIdentifier="UserProfile" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zuC-eI-uhz" customClass="UserProfile" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserProfile" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zuC-eI-uhz" customClass="UserProfile" customModule="N3RVE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vTW-HF-9l8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-Yq-VK6" userLabel="BlackLayer">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="886"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BlackLayer" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-Yq-VK6" userLabel="BlackLayer">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePicBox" translatesAutoresizingMaskIntoConstraints="NO" id="yNO-yV-brn">
-                                <rect key="frame" x="87" y="85" width="239" height="210"/>
+                                <rect key="frame" x="132" y="130" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bpw-bx-Lqy"/>
+                                    <constraint firstAttribute="height" constant="150" id="FkC-4b-fcg"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX1-pI-edo">
-                                <rect key="frame" x="344" y="20" width="50" height="50"/>
+                                <rect key="frame" x="344" y="64" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="nX1-pI-edo" secondAttribute="height" multiplier="1:1" id="63t-a9-QgS"/>
+                                    <constraint firstAttribute="width" secondItem="nX1-pI-edo" secondAttribute="height" multiplier="1:1" id="Evs-XO-hry"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Search"/>
                                 <connections>
@@ -745,116 +743,95 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpV-de-Z66">
-                                <rect key="frame" x="16" y="20" width="50" height="50"/>
+                                <rect key="frame" x="16" y="64" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="rpV-de-Z66" secondAttribute="height" multiplier="1:1" id="g84-ZX-6Cf"/>
+                                    <constraint firstAttribute="width" secondItem="rpV-de-Z66" secondAttribute="height" multiplier="1:1" id="QTY-0L-mhI"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Return"/>
                                 <connections>
                                     <action selector="backToMenu:" destination="zuC-eI-uhz" eventType="touchUpInside" id="Q7k-D5-6ux"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-Gi-G6N">
-                                <rect key="frame" x="120.5" y="176.5" width="172" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="AjZ-Gi-G6N" secondAttribute="height" multiplier="191:30" id="lIn-z2-pLV"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjZ-Gi-G6N">
+                                <rect key="frame" x="154" y="195" width="106" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="CHANGE PROFILE PICTURE"/>
+                                <state key="normal" title="CHANGE PFP"/>
                                 <connections>
                                     <action selector="changePfp:" destination="zuC-eI-uhz" eventType="touchUpInside" id="2dA-uM-FoB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUx-X5-Jhd">
-                                <rect key="frame" x="87" y="303" width="239" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13.5K FOLLOWERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZJ-x7-AIP">
+                                <rect key="frame" x="132" y="325" width="150" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUx-X5-Jhd">
+                                <rect key="frame" x="102" y="288" width="210" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="24"/>
                                 <color key="textColor" red="0.93333333330000001" green="0.79215686269999996" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZY-D9-iFk">
-                                <rect key="frame" x="50" y="492.5" width="123.5" height="30.5"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
-                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-RU-lRK">
-                                <rect key="frame" x="50" y="548.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnM-v8-nhF">
-                                <rect key="frame" x="50" y="427.5" width="33" height="31"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
-                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confidential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-uX-PwL">
-                                <rect key="frame" x="50" y="453.5" width="93" height="28"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First &amp; Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZ8-mL-FrO">
-                                <rect key="frame" x="50" y="363" width="155" height="30.5"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
-                                <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmV-rP-rN9">
-                                <rect key="frame" x="50" y="419.5" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8fH-YC-fAh">
-                                <rect key="frame" x="108" y="92" width="197" height="197"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14 DARES BAILED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-RU-lRK">
+                                <rect key="frame" x="73" y="470" width="269" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DONE/BAILED DARE RATIO: 4.57" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASy-vc-svU">
+                                <rect key="frame" x="73" y="506" width="269" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="64 DARES COMPLETED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmV-rP-rN9">
+                                <rect key="frame" x="73" y="434" width="269" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RANK #23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsS-Q5-9n6">
+                                <rect key="frame" x="132" y="348" width="150" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LIFE-TIME TOP RANK: #5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k62-vo-Kfs">
+                                <rect key="frame" x="73" y="542" width="192" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CANADA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEK-dV-vW9">
+                                <rect key="frame" x="132" y="372" width="150" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yNO-yV-brn" firstAttribute="top" secondItem="rpV-de-Z66" secondAttribute="bottom" constant="15" id="1Ro-nc-iGl"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VOe-uX-PwL" secondAttribute="trailing" symbolic="YES" id="3w4-2I-LOr"/>
-                            <constraint firstItem="JUx-X5-Jhd" firstAttribute="trailing" secondItem="yNO-yV-brn" secondAttribute="trailing" id="4Df-e3-ELU"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" secondItem="i7m-Yq-VK6" secondAttribute="trailing" id="6zM-SA-buX"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" secondItem="yNO-yV-brn" secondAttribute="trailing" constant="88" id="8Sd-XG-gz0"/>
-                            <constraint firstItem="wnM-v8-nhF" firstAttribute="top" secondItem="PmV-rP-rN9" secondAttribute="bottom" constant="8" id="AZd-8L-XxQ"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fZY-D9-iFk" secondAttribute="trailing" symbolic="YES" id="Agf-uu-kx4"/>
-                            <constraint firstItem="wnM-v8-nhF" firstAttribute="top" secondItem="FZ8-mL-FrO" secondAttribute="bottom" constant="34" id="DM0-1g-iZf"/>
-                            <constraint firstItem="FZ8-mL-FrO" firstAttribute="leading" secondItem="PmV-rP-rN9" secondAttribute="leading" id="K7Y-WZ-iTd"/>
-                            <constraint firstItem="JUx-X5-Jhd" firstAttribute="leading" secondItem="FZ8-mL-FrO" secondAttribute="leading" constant="37" id="Oae-Ec-Vv0"/>
-                            <constraint firstItem="JUx-X5-Jhd" firstAttribute="top" secondItem="yNO-yV-brn" secondAttribute="bottom" constant="8" id="PIi-5J-b6v"/>
-                            <constraint firstItem="FZ8-mL-FrO" firstAttribute="top" secondItem="JUx-X5-Jhd" secondAttribute="bottom" constant="23" id="SKJ-Sf-ecr"/>
-                            <constraint firstItem="wnM-v8-nhF" firstAttribute="leading" secondItem="VOe-uX-PwL" secondAttribute="leading" id="TWc-CV-boN"/>
-                            <constraint firstItem="VOe-uX-PwL" firstAttribute="leading" secondItem="fZY-D9-iFk" secondAttribute="leading" id="TlO-VL-YHv"/>
-                            <constraint firstItem="AjZ-Gi-G6N" firstAttribute="centerX" secondItem="yNO-yV-brn" secondAttribute="centerX" id="UCo-S8-EiZ"/>
-                            <constraint firstItem="VOe-uX-PwL" firstAttribute="top" secondItem="PmV-rP-rN9" secondAttribute="bottom" constant="34" id="UYg-iq-Jyi"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FZ8-mL-FrO" secondAttribute="trailing" symbolic="YES" id="VDS-M2-2ML"/>
-                            <constraint firstItem="rpV-de-Z66" firstAttribute="leading" secondItem="VwA-sL-ilQ" secondAttribute="leading" constant="16" id="VjU-Gj-fN6"/>
-                            <constraint firstItem="fZY-D9-iFk" firstAttribute="leading" secondItem="wcu-RU-lRK" secondAttribute="leading" id="Whq-az-Izo"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" secondItem="nX1-pI-edo" secondAttribute="trailing" constant="20" id="Y2R-aG-B0U"/>
-                            <constraint firstItem="JUx-X5-Jhd" firstAttribute="leading" secondItem="yNO-yV-brn" secondAttribute="leading" id="Ylc-iA-SKk"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="top" secondItem="i7m-Yq-VK6" secondAttribute="top" constant="44" id="ZZe-1i-meP"/>
-                            <constraint firstItem="i7m-Yq-VK6" firstAttribute="bottom" secondItem="VwA-sL-ilQ" secondAttribute="bottom" constant="34" id="bBH-vI-bO8"/>
-                            <constraint firstItem="AjZ-Gi-G6N" firstAttribute="centerY" secondItem="yNO-yV-brn" secondAttribute="centerY" id="dje-fc-7WP"/>
-                            <constraint firstItem="PmV-rP-rN9" firstAttribute="leading" secondItem="wnM-v8-nhF" secondAttribute="leading" id="dnn-o0-Gj8"/>
-                            <constraint firstItem="nX1-pI-edo" firstAttribute="top" secondItem="VwA-sL-ilQ" secondAttribute="top" constant="20" id="hXA-X4-Chh"/>
-                            <constraint firstItem="wcu-RU-lRK" firstAttribute="top" secondItem="fZY-D9-iFk" secondAttribute="bottom" constant="25.5" id="hfX-bc-XAw"/>
-                            <constraint firstItem="i7m-Yq-VK6" firstAttribute="leading" secondItem="VwA-sL-ilQ" secondAttribute="leading" id="hol-hj-7zj"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wcu-RU-lRK" secondAttribute="trailing" symbolic="YES" id="joY-GA-YyO"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wnM-v8-nhF" secondAttribute="trailing" symbolic="YES" id="lTA-Wl-BD0"/>
-                            <constraint firstItem="rpV-de-Z66" firstAttribute="top" secondItem="VwA-sL-ilQ" secondAttribute="top" constant="20" id="mil-Ch-N2h"/>
-                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PmV-rP-rN9" secondAttribute="trailing" symbolic="YES" id="pt0-xK-dEq"/>
-                            <constraint firstItem="fZY-D9-iFk" firstAttribute="top" secondItem="VOe-uX-PwL" secondAttribute="bottom" constant="11" id="rnC-Bf-D7N"/>
-                            <constraint firstItem="yNO-yV-brn" firstAttribute="leading" secondItem="VwA-sL-ilQ" secondAttribute="leading" constant="87" id="xes-XM-lBS"/>
+                            <constraint firstItem="yNO-yV-brn" firstAttribute="top" secondItem="rpV-de-Z66" secondAttribute="bottom" constant="16" id="TbX-rk-B40"/>
+                            <constraint firstItem="rpV-de-Z66" firstAttribute="leading" secondItem="VwA-sL-ilQ" secondAttribute="leading" constant="16" id="Uiu-fl-pVg"/>
+                            <constraint firstItem="nX1-pI-edo" firstAttribute="top" secondItem="VwA-sL-ilQ" secondAttribute="top" constant="20" id="cFl-ay-148"/>
+                            <constraint firstItem="yNO-yV-brn" firstAttribute="centerX" secondItem="VwA-sL-ilQ" secondAttribute="centerX" id="cRX-zY-aqD"/>
+                            <constraint firstItem="VwA-sL-ilQ" firstAttribute="trailing" secondItem="nX1-pI-edo" secondAttribute="trailing" constant="20" id="esf-xH-Lvs"/>
+                            <constraint firstItem="rpV-de-Z66" firstAttribute="top" secondItem="VwA-sL-ilQ" secondAttribute="top" constant="20" id="pFI-HC-WKh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VwA-sL-ilQ"/>
                     </view>
                     <connections>
                         <outlet property="emailLabel" destination="wcu-RU-lRK" id="fSU-bG-vT0"/>
                         <outlet property="nameLabel" destination="PmV-rP-rN9" id="8T3-Gh-O2C"/>
-                        <outlet property="profilePicture" destination="8fH-YC-fAh" id="q1k-hP-MOP"/>
                         <outlet property="usernameLabel" destination="JUx-X5-Jhd" id="9jH-Jm-nSG"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="nW8-mQ-wzq"/>
                         <segue destination="xhg-qy-x84" kind="presentation" identifier="fromUserToSearchUser" modalPresentationStyle="automatic" modalTransitionStyle="coverVertical" id="o5U-w6-uiu"/>
@@ -862,7 +839,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlo-Id-Mbc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="1100"/>
+            <point key="canvasLocation" x="1781.1594202898552" y="1097.5446428571429"/>
         </scene>
         <!--Other User Profile-->
         <scene sceneID="uNk-FO-TkV">
@@ -892,10 +869,10 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfilePicBox" translatesAutoresizingMaskIntoConstraints="NO" id="fmP-1e-DQm">
-                                        <rect key="frame" x="87" y="85" width="239" height="210"/>
+                                        <rect key="frame" x="87" y="85" width="239" height="160"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcu-pu-GPw">
-                                        <rect key="frame" x="87" y="303" width="239" height="37"/>
+                                        <rect key="frame" x="87" y="253" width="239" height="37"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="24"/>
                                         <color key="textColor" red="0.93333333330000001" green="0.79215686269999996" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -922,37 +899,37 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-vO-ZPi">
-                                        <rect key="frame" x="50" y="474.5" width="90" height="30.5"/>
+                                        <rect key="frame" x="50" y="424.5" width="90" height="30.5"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Sb-gL-yKk">
-                                        <rect key="frame" x="50" y="531" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="50" y="455" width="264" height="0.0"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cck-pI-jnh">
-                                        <rect key="frame" x="50" y="409.5" width="33" height="31"/>
+                                        <rect key="frame" x="50" y="359.5" width="33" height="31"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confidential" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mc-f8-J9S">
-                                        <rect key="frame" x="50" y="435.5" width="93" height="28"/>
+                                        <rect key="frame" x="50" y="385.5" width="93" height="28"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First &amp; Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mi-sw-b92">
-                                        <rect key="frame" x="50" y="345" width="155" height="30.5"/>
+                                        <rect key="frame" x="50" y="295" width="155" height="30.5"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-Bold" family="Titillium Web" pointSize="20"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.23921568630000001" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-KE-WbQ">
-                                        <rect key="frame" x="50" y="401.5" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="50" y="351.5" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name="TitilliumWeb-SemiBold" family="Titillium Web" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -991,7 +968,7 @@
                                     <constraint firstItem="9Mc-f8-J9S" firstAttribute="leading" secondItem="oaf-vO-ZPi" secondAttribute="leading" id="W1X-Gh-QtH"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2mi-sw-b92" secondAttribute="trailing" symbolic="YES" id="XDW-FF-MCb"/>
                                     <constraint firstItem="wcu-pu-GPw" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fmP-1e-DQm" secondAttribute="trailing" id="Xf6-x2-PBi"/>
-                                    <constraint firstItem="2Sb-gL-yKk" firstAttribute="top" secondItem="oaf-vO-ZPi" secondAttribute="bottom" constant="26" id="YEf-tM-U7p"/>
+                                    <constraint firstItem="2Sb-gL-yKk" firstAttribute="top" secondItem="oaf-vO-ZPi" secondAttribute="bottom" id="YEf-tM-U7p"/>
                                     <constraint firstItem="R0A-ty-2nM" firstAttribute="leading" secondItem="0u5-Yv-d5W" secondAttribute="leading" constant="16" id="YEi-6H-luV"/>
                                     <constraint firstItem="wcu-pu-GPw" firstAttribute="top" secondItem="fmP-1e-DQm" secondAttribute="bottom" constant="8" id="bAg-Wn-iB5"/>
                                     <constraint firstItem="wcu-pu-GPw" firstAttribute="leading" secondItem="2mi-sw-b92" secondAttribute="leading" constant="37" id="eUn-Ly-d21"/>
@@ -1002,6 +979,7 @@
                                     <constraint firstItem="Cck-pI-jnh" firstAttribute="leading" secondItem="9Mc-f8-J9S" secondAttribute="leading" id="rnb-VH-yAQ"/>
                                     <constraint firstItem="fmP-1e-DQm" firstAttribute="leading" secondItem="0u5-Yv-d5W" secondAttribute="leading" constant="87" id="s1P-3U-Syg"/>
                                     <constraint firstItem="fmP-1e-DQm" firstAttribute="top" secondItem="R0A-ty-2nM" secondAttribute="bottom" constant="15" id="sUI-l6-MwD"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Sb-gL-yKk" secondAttribute="trailing" constant="100" id="uEx-pA-kEA"/>
                                     <constraint firstItem="9Mc-f8-J9S" firstAttribute="top" secondItem="ZcF-KE-WbQ" secondAttribute="bottom" constant="34" id="ySl-o7-yWu"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" secondItem="POK-XV-gTZ" secondAttribute="trailing" id="zYl-Sm-6iR"/>
                                 </constraints>
@@ -1023,7 +1001,7 @@
                         <outlet property="nameLabel" destination="ZcF-KE-WbQ" id="cwB-kf-ZjW"/>
                         <outlet property="searchField" destination="fak-Pv-gpn" id="cgp-og-SoL"/>
                         <outlet property="usernameLabel" destination="wcu-pu-GPw" id="lvq-N1-DlV"/>
-                        <segue destination="zuC-eI-uhz" kind="presentation" identifier="searchUserToUser" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="X6U-uK-4A5"/>
+                        <segue destination="zuC-eI-uhz" kind="presentation" identifier="searchUserToUser" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="X6U-uK-4A5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqC-fP-Qze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1231,6 +1209,7 @@
         <image name="ARE YOU A" width="116" height="24"/>
         <image name="BY CHECKING THIS BOX" width="194" height="47"/>
         <image name="Background" width="375" height="812"/>
+        <image name="BlackLayer" width="375" height="812"/>
         <image name="ConnectedAs" width="186" height="18"/>
         <image name="EmptyBox" width="266" height="60"/>
         <image name="FollowBox" width="224" height="58"/>
@@ -1240,7 +1219,7 @@
         <image name="N3RVE" width="163" height="44"/>
         <image name="OR" width="34" height="23"/>
         <image name="Player" width="154" height="59"/>
-        <image name="ProfilePicBox" width="210" height="210"/>
+        <image name="ProfilePicBox" width="160" height="160"/>
         <image name="Q" width="89" height="62"/>
         <image name="QuestionSuivante" width="204" height="69"/>
         <image name="Retour" width="69" height="69"/>
@@ -1256,10 +1235,11 @@
         <image name="Watcher" width="154" height="59"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="o5U-w6-uiu"/>
         <segue reference="X6U-uK-4A5"/>
         <segue reference="o7u-q1-Myi"/>
         <segue reference="l03-Xl-0ZQ"/>
-        <segue reference="fL6-2Z-xQV"/>
+        <segue reference="IQc-DB-gPi"/>
         <segue reference="nW8-mQ-wzq"/>
     </inferredMetricsTieBreakers>
 </document>
