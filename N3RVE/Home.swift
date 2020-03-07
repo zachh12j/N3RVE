@@ -66,10 +66,11 @@ class Home: UIViewController {
 
         view.layer.addSublayer(playerLayer)
 
-        player?.play()
+        //player?.play()
         getCurrentUserData = Firestore.firestore().collection("users")
         getDocument()
     }
+
     
         func getDocument() {
          //Get sspecific document from current user

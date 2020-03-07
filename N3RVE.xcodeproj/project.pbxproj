@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		041CD8C4240DB0A300F47651 /* NerveLogoBackground.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 041CD8C3240DB0A300F47651 /* NerveLogoBackground.mp4 */; };
+		041DE6D92414489900CA4E21 /* MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06.mblic in Resources */ = {isa = PBXBuildFile; fileRef = 041DE6D82414489800CA4E21 /* MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06.mblic */; };
+		041DE6DC24144BB300CA4E21 /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DE6DB24144BB300CA4E21 /* CustomOverlay.swift */; };
+		041DE6DE24144F4300CA4E21 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DE6DD24144F4300CA4E21 /* Accelerate.framework */; };
+		041DE6E72414508600CA4E21 /* Microblink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DE6E52414508500CA4E21 /* Microblink.framework */; };
+		041DE6EA2414515E00CA4E21 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 041DE6E92414515E00CA4E21 /* libiconv.tbd */; };
 		0447F6B0240AF2B60056244E /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6A5240AF2B50056244E /* TitilliumWeb-Italic.ttf */; };
 		0447F6B1240AF2B60056244E /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6A6240AF2B50056244E /* TitilliumWeb-ExtraLight.ttf */; };
 		0447F6B2240AF2B60056244E /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0447F6A7240AF2B50056244E /* TitilliumWeb-Light.ttf */; };
@@ -66,7 +71,7 @@
 		DEF2C89021728F72008F75A4 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C88F21728F72008F75A4 /* HomePage.swift */; };
 		DEF2C89421729062008F75A4 /* Category5.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C89321729062008F75A4 /* Category5.swift */; };
 		DEF2C8982172995B008F75A4 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C8972172995B008F75A4 /* Results.swift */; };
-		DEF2C89A2172A9D6008F75A4 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */; };
+		DEF2C89A2172A9D6008F75A4 /* SignUpNextScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF2C8992172A9D6008F75A4 /* SignUpNextScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +107,12 @@
 
 /* Begin PBXFileReference section */
 		041CD8C3240DB0A300F47651 /* NerveLogoBackground.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = NerveLogoBackground.mp4; sourceTree = "<group>"; };
+		041DE6D82414489800CA4E21 /* MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06.mblic */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06.mblic"; sourceTree = "<group>"; };
+		041DE6DB24144BB300CA4E21 /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
+		041DE6DD24144F4300CA4E21 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		041DE6E52414508500CA4E21 /* Microblink.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Microblink.framework; path = "../../../../Downloads/blinkid-ios-master/Microblink.framework"; sourceTree = "<group>"; };
+		041DE6E62414508500CA4E21 /* Microblink.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Microblink.bundle; path = "../../../../Downloads/blinkid-ios-master/Microblink.bundle"; sourceTree = "<group>"; };
+		041DE6E92414515E00CA4E21 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		0447F6A5240AF2B50056244E /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
 		0447F6A6240AF2B50056244E /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
 		0447F6A7240AF2B50056244E /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
@@ -122,7 +133,6 @@
 		04672677240A1000009720FE /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
 		0476E09C240EB5B500E2C2DB /* BackgroundMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BackgroundMusic.wav; sourceTree = "<group>"; };
 		04F084B9241043B600FC054F /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
-		04F084E82410489800FC054F /* libbambuser-bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libbambuser-bridge.h"; sourceTree = "<group>"; };
 		04F0851F24104BB800FC054F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		04F0852124104BC600FC054F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		04F0852324104BCE00FC054F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -178,7 +188,7 @@
 		DEF2C88F21728F72008F75A4 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		DEF2C89321729062008F75A4 /* Category5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category5.swift; sourceTree = "<group>"; };
 		DEF2C8972172995B008F75A4 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
-		DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		DEF2C8992172A9D6008F75A4 /* SignUpNextScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +196,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041DE6EA2414515E00CA4E21 /* libiconv.tbd in Frameworks */,
+				041DE6E72414508600CA4E21 /* Microblink.framework in Frameworks */,
+				041DE6DE24144F4300CA4E21 /* Accelerate.framework in Frameworks */,
 				04F085482410587300FC054F /* MediaPlayer.framework in Frameworks */,
 				04F0853A24104C6500FC054F /* VideoToolbox.framework in Frameworks */,
 				04F0854624104C8800FC054F /* libbambuser.a in Frameworks */,
@@ -278,6 +291,10 @@
 		11AE4445202EE6CFBBC09A14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				041DE6E92414515E00CA4E21 /* libiconv.tbd */,
+				041DE6E62414508500CA4E21 /* Microblink.bundle */,
+				041DE6E52414508500CA4E21 /* Microblink.framework */,
+				041DE6DD24144F4300CA4E21 /* Accelerate.framework */,
 				04F085472410587300FC054F /* MediaPlayer.framework */,
 				04F0853B24104C8800FC054F /* prebuilt */,
 				04F0853924104C6500FC054F /* VideoToolbox.framework */,
@@ -339,8 +356,8 @@
 		DE29471F21727D6C00C7D64A /* N3RVE */ = {
 			isa = PBXGroup;
 			children = (
-				04F084E82410489800FC054F /* libbambuser-bridge.h */,
 				04F08549241059D300FC054F /* libbambuserplayer-bridge.h */,
+				041DE6DB24144BB300CA4E21 /* CustomOverlay.swift */,
 				04F0854A2410C05800FC054F /* AlertController.swift */,
 				DE29472021727D6C00C7D64A /* AppDelegate.swift */,
 				0447F6C4240B025F0056244E /* SceneDelegate.swift */,
@@ -356,7 +373,8 @@
 				DEF2C88F21728F72008F75A4 /* HomePage.swift */,
 				DEF2C89321729062008F75A4 /* Category5.swift */,
 				DEF2C8972172995B008F75A4 /* Results.swift */,
-				DEF2C8992172A9D6008F75A4 /* ResultsViewController.swift */,
+				DEF2C8992172A9D6008F75A4 /* SignUpNextScreen.swift */,
+				041DE6D82414489800CA4E21 /* MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06.mblic */,
 				DE29472421727D6C00C7D64A /* Main.storyboard */,
 				DE29472721727D6F00C7D64A /* Assets.xcassets */,
 				DE29472921727D6F00C7D64A /* LaunchScreen.storyboard */,
@@ -412,6 +430,7 @@
 				DE29471B21727D6C00C7D64A /* Resources */,
 				04FB8EE5240A361000C118B2 /* Embed Frameworks */,
 				245CFC8DA375D7620F837AFB /* [CP] Embed Pods Frameworks */,
+				ABE123CB59AA317A725640D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -450,6 +469,7 @@
 				DE29473921727D7000C7D64A /* Frameworks */,
 				DE29473A21727D7000C7D64A /* Resources */,
 				7FEDD2121EB8D4CA55F726A7 /* [CP] Embed Pods Frameworks */,
+				0035C715347529DE8ADEB4C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -521,6 +541,7 @@
 				0447F6B4240AF2B60056244E /* TitilliumWeb-Bold.ttf in Resources */,
 				041CD8C4240DB0A300F47651 /* NerveLogoBackground.mp4 in Resources */,
 				04672678240A1000009720FE /* ButtonClick.wav in Resources */,
+				041DE6D92414489900CA4E21 /* MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06.mblic in Resources */,
 				DE29472B21727D6F00C7D64A /* LaunchScreen.storyboard in Resources */,
 				0447F6B0240AF2B60056244E /* TitilliumWeb-Italic.ttf in Resources */,
 				DE29472821727D6F00C7D64A /* Assets.xcassets in Resources */,
@@ -553,6 +574,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0035C715347529DE8ADEB4C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		245CFC8DA375D7620F837AFB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,6 +691,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-N3RVE-N3RVEUITests/Pods-N3RVE-N3RVEUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ABE123CB59AA317A725640D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE/Pods-N3RVE-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-N3RVE/Pods-N3RVE-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-N3RVE/Pods-N3RVE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -667,7 +722,8 @@
 				04F084BA241043B600FC054F /* LiveViewController.swift in Sources */,
 				DEF2C88A21728EF0008F75A4 /* UserProfile.swift in Sources */,
 				0447F6C5240B025F0056244E /* SceneDelegate.swift in Sources */,
-				DEF2C89A2172A9D6008F75A4 /* ResultsViewController.swift in Sources */,
+				DEF2C89A2172A9D6008F75A4 /* SignUpNextScreen.swift in Sources */,
+				041DE6DC24144BB300CA4E21 /* CustomOverlay.swift in Sources */,
 				DE29472121727D6C00C7D64A /* AppDelegate.swift in Sources */,
 				DEF2C888217283F2008F75A4 /* PlayerViewController.swift in Sources */,
 				DEF2C89421729062008F75A4 /* Category5.swift in Sources */,
@@ -852,7 +908,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 2K34Y7LDN6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -869,7 +925,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/prebuilt/lib",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;
@@ -885,7 +941,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = 2K34Y7LDN6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -902,7 +958,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/prebuilt/lib",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				OTHER_LDFLAGS = "$(OTHER_LDFLAGS)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.justynramirez.N3RVE;
 				PRODUCT_NAME = N3RVE;

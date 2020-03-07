@@ -49,7 +49,7 @@ class HomePage: UIViewController {
 
         view.layer.addSublayer(playerLayer)
 
-        player?.play()
+        //player?.play()
         }
     /*
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
@@ -82,9 +82,4 @@ class HomePage: UIViewController {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
-    
-    @IBAction func stopMusic(_ sender: Any) {
-        SplashScreen().stopMusic()
-    }
-    
 }

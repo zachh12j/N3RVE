@@ -31,10 +31,7 @@ class Settings: UIViewController {
     
     @IBAction func unmuteSound(_ sender: Any) {
     }
-    
-    @IBAction func muteSound(_ sender: Any) {
-        SplashScreen().muteSound()
-    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

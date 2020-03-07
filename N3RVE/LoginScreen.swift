@@ -50,7 +50,7 @@ class LoginScreen: UIViewController {
 
         view.layer.addSublayer(playerLayer)
 
-        player?.play()
+        //player?.play()
         
         emailField.setLeftPaddingPoints(20)
         emailField.setRightPaddingPoints(20)
@@ -79,7 +79,7 @@ class LoginScreen: UIViewController {
             
             if error != nil {
                 // Couldn't sign in
-                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Oops! Something went wrong", message: error?.localizedDescription, preferredStyle: .alert)
                 let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                                
                  alertController.addAction(defaultAction)

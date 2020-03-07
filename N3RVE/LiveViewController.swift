@@ -17,13 +17,15 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
     var broadcastButton : UIButton
     var currentViewersLabel: UILabel
     var swapButton: UIButton
+    var backButton: UIButton
     var liveTitle = String()
     
     required init?(coder aDecoder: NSCoder) {
         bambuserView = BambuserView(preparePreset: kSessionPresetAuto)
-    broadcastButton = UIButton(type: UIButton.ButtonType.system)
+        broadcastButton = UIButton(type: UIButton.ButtonType.system)
         currentViewersLabel = UILabel()
         swapButton = UIButton(type: UIButton.ButtonType.system)
+        backButton = UIButton(type: UIButton.ButtonType.system)
     super.init(coder: aDecoder)
         bambuserView.delegate = self
         bambuserView.applicationId = "9RX2zwlVLQX9OtdgQ6aQnQ"
@@ -37,6 +39,11 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         swapButton.setTitle("Swap", for: UIControl.State())
     }
     
+    @objc func goBack()
+    {
+        performSegue(withIdentifier: "fromLiveToHome", sender: self)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
 
@@ -48,6 +55,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
             } else if querySnapshot!.documents.count != 1 {
                 print("More than one documents or none")
             } else {
+                
                 let document = querySnapshot!.documents.first
                 let dataDescription = document?.data()
                 guard let username = dataDescription?["username"] else { return }
@@ -67,7 +75,10 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         bambuserView.startCapture()
         broadcastButton.addTarget(self, action: #selector(LiveViewController.broadcast), for: UIControl.Event.touchUpInside)
         broadcastButton.setTitle("Broadcast", for: UIControl.State.normal)
+        backButton.addTarget(self, action: #selector(LiveViewController.goBack), for: UIControl.Event.touchUpInside)
+        backButton.setTitle("Back", for: UIControl.State.normal)
         self.view.addSubview(broadcastButton)
+        self.view.addSubview(backButton)
         self.view.addSubview(bambuserView.chatView)
         self.view.addSubview(currentViewersLabel)
         if (bambuserView.hasFrontCamera) {
@@ -98,10 +109,10 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
                            
             // Print out entire dictionary
             print(convertedJsonIntoDict)
-            }
+                }
             } catch let error as NSError {
                        print(error.localizedDescription)
-             }
+            }
         }
         task.resume()
     }
@@ -125,6 +136,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         currentViewersLabel.frame = CGRect(x: self.view.bounds.size.width - 100 , y: self.view.bounds.size.height - 30, width: 100, height: 30)
         bambuserView.previewFrame = CGRect(x: 0.0, y: 0.0 + statusBarOffset, width: self.view.bounds.size.width, height: self.view.bounds.size.height - statusBarOffset)
         broadcastButton.frame = CGRect(x: 0.0, y: 0.0 + statusBarOffset, width: 100.0, height: 50.0);
+        backButton.frame = CGRect(x: 0.0, y: 140.0 + statusBarOffset, width: 100.0, height: 50.0);
         bambuserView.chatView.frame = CGRect(x: 0.0, y: self.view.bounds.size.height-self.view.bounds.size.height/3.0, width: self.view.bounds.size.width, height: self.view.bounds.size.height/3.0)
         if (bambuserView.hasFrontCamera) {
             swapButton.frame = CGRect(x: 0.0, y: 50.0 + statusBarOffset, width: 100.0, height: 50.0);
@@ -162,4 +174,5 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         broadcastButton.addTarget(self, action: #selector(LiveViewController.broadcast), for: UIControl.Event.touchUpInside)
         self.currentViewersLabel.text = ""
     }
+    
 }

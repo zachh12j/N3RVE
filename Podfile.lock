@@ -281,6 +281,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - PPBlinkID (5.2.0)
   - PromisesObjC (1.2.8)
 
 DEPENDENCIES:
@@ -290,6 +291,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - libbambuser-ios (= 0.9.24)
+  - PPBlinkID (~> 5.2.0)
 
 SPEC REPOS:
   trunk:
@@ -315,6 +317,7 @@ SPEC REPOS:
     - leveldb-library
     - libbambuser-ios
     - nanopb
+    - PPBlinkID
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -340,8 +343,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   libbambuser-ios: b72869a4f04485befc3237aab425a5021d183788
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  PPBlinkID: edf6ceb7efe869f1326d670dbb02e5d155a5864f
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
 
-PODFILE CHECKSUM: a815d3b4befde322e5e7dc02ef99cde14a9dfa82
+PODFILE CHECKSUM: 3187538670ad3c38e462f2a615d8ac5698a1e811
 
 COCOAPODS: 1.9.0

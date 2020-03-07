@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import Firebase
+import Microblink
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

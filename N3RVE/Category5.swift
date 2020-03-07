@@ -236,13 +236,6 @@ class Category5: UIViewController {
     }
     
     // Before we move to the results screen pass the how many we got correct, and the total number of questions
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "fromCategory5ToResults") {
-            let vc = segue.destination as! ResultsViewController
-            vc.noCorrect = noCorrect
-            vc.total = questions.count
-        }
-    }
     
     func buttonClickSound() {
         let url = Bundle.main.url(forResource: "button", withExtension: "wav")!

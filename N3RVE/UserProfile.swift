@@ -19,6 +19,10 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var followersLabel: UILabel!
+    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
     var paused: Bool = false
@@ -53,7 +57,7 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
 
         view.layer.addSublayer(playerLayer)
 
-        player?.play()
+        //player?.play()
         */
     }
     
@@ -82,9 +86,13 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
                     let username = document.get("username") as! String
                     let firstAndLastName = document.get("firstandlastname") as! String
                     let email = document.get("email") as! String
+                    let followers = document.get("currentFollowers") as! Int
+                    let country = document.get("country") as! String
                     self.usernameLabel.text = "@\(username)"
                     self.nameLabel.text = "\(firstAndLastName)"
                     self.emailLabel.text = "\(email)"
+                    self.followersLabel.text = "\(followers) FOLLOWERS"
+                    self.countryLabel.text = "\(country)"
                  }
             }
          }
@@ -98,9 +106,5 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
             if let playerItem = notification.object as? AVPlayerItem {
             playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
-    }
-    
-    @IBAction func changePfp(_ sender: Any) {
-        
     }
 }

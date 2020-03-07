@@ -13,12 +13,14 @@ class PlayerViewController: UIViewController, BambuserPlayerDelegate {
     var playButton: UIButton
     var pauseButton: UIButton
     var rewindButton: UIButton
+    var backButton: UIButton
 
     required init?(coder aDecoder: NSCoder) {
         bambuserPlayer = BambuserPlayer()
         playButton = UIButton(type: UIButton.ButtonType.system)
         pauseButton = UIButton(type: UIButton.ButtonType.system)
         rewindButton = UIButton(type: UIButton.ButtonType.system)
+        backButton = UIButton(type: UIButton.ButtonType.system)
         super.init(coder: aDecoder)
     }
 
@@ -38,6 +40,14 @@ class PlayerViewController: UIViewController, BambuserPlayerDelegate {
         rewindButton.setTitle("Rewind", for: UIControl.State.normal)
         rewindButton.addTarget(self, action: #selector(PlayerViewController.rewind), for: UIControl.Event.touchUpInside)
         self.view.addSubview(rewindButton)
+        backButton.setTitle("Back", for: UIControl.State.normal)
+        backButton.addTarget(self, action: #selector(PlayerViewController.goBack), for: UIControl.Event.touchUpInside)
+        self.view.addSubview(backButton)
+    }
+    
+    @objc func goBack()
+    {
+        performSegue(withIdentifier: "fromPlayerToHome", sender: self)
     }
 
     @objc func rewind() {
@@ -55,6 +65,7 @@ class PlayerViewController: UIViewController, BambuserPlayerDelegate {
         playButton.frame = CGRect(x: 20, y: 20 + statusBarOffset, width: 100, height: 40)
         pauseButton.frame = CGRect(x: 20, y: 80 + statusBarOffset, width: 100, height: 40)
         rewindButton.frame = CGRect(x: 20, y: 140 + statusBarOffset, width: 100, height: 40)
+        backButton.frame = CGRect(x: 20, y: 200 + statusBarOffset, width: 100, height: 40)
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,4 +98,5 @@ class PlayerViewController: UIViewController, BambuserPlayerDelegate {
             break
         }
     }
+    
 }

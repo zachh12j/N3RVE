@@ -25,6 +25,12 @@ class OtherUserProfile: UIViewController {
     var peopleFollowing = 0
     var hasTappedOnFollow = Bool()
     var getsFollowedUid = String()
+    var IsDonator = Bool()
+    var IsFounder = Bool()
+    var IsHighRoller = Bool()
+    var isAdmin = Bool()
+    var isCEO = Bool()
+    var isHeadDev = Bool()
     
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(OtherUserProfile.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)}
@@ -35,7 +41,6 @@ class OtherUserProfile: UIViewController {
         searchField.setRightPaddingPoints(20)
         self.hideKeyboardWhenTappedAround()
         hasTappedOnFollow = false
-        print("had tapped on follow 0")
         
         //        LOAD VIDEO
         
@@ -49,7 +54,7 @@ class OtherUserProfile: UIViewController {
         playerLayer.zPosition = -1
         playerLayer.frame = view.frame
         view.layer.addSublayer(playerLayer)
-        player?.play()
+        //player?.play()
     }
     
     @IBAction func searchForUser(_ sender: Any) {
@@ -60,20 +65,79 @@ class OtherUserProfile: UIViewController {
             if let err = err {
                 print(err.localizedDescription)
                 return
-            } else if querySnapshot!.documents.count != 1 {
-                print("More than one documents or none")
-            } else {
+            } else
+            if querySnapshot!.documents.count != 1
+            {
+                let alertController = UIAlertController(title: "Oops!", message: "Seems like there is no user on our database matching this username!", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            else
+            {
                 for document in querySnapshot!.documents {
 
                     let docId = document.documentID
-                   let username = document.get("username") as! String
-                   let firstAndLastName = document.get("firstandlastname") as! String
+                    let userID = document.get("uid") as! String
+                    let username = document.get("username") as! String
+                    let firstAndLastName = document.get("firstandlastname") as! String
                     let pplFollowing = document.get("currentFollowers") as! Int
+                    let DonatorBadge = document.get("DonatorBadge") as! Bool
+                    let FounderBadge = document.get("FounderBadge") as! Bool
+                    let HighRollerBadge = document.get("HighRollerBadge") as! Bool
+                    let HeadDev = document.get("isHeadDev") as! Bool
+                    let Admin = document.get("isAdmin") as! Bool
+                    let CEO = document.get("isCEO") as! Bool
                     self.followersLabel.text = "\(pplFollowing)"
                     self.nameLabel.text = "\(firstAndLastName)"
                     self.usernameLabel.text = "@\(username)"
+                    
                     self.peopleFollowing = pplFollowing
                     self.getsFollowedUid = docId
+                    self.IsDonator = DonatorBadge
+                    self.IsFounder = FounderBadge
+                    self.IsHighRoller = HighRollerBadge
+                    self.isCEO = CEO
+                    self.isAdmin = Admin
+                    self.isHeadDev = HeadDev
+                    
+                    if self.IsDonator == true
+                    {
+                        print("This user is a Donator")
+                    }
+                    if self.IsFounder == true
+                    {
+                        print("This user is a Founder")
+                    }
+                    if self.IsHighRoller == true
+                    {
+                        print("This user is a High Roller")
+                    }
+                    if self.isHeadDev == true
+                    {
+                        print("You're actually the head dev...")
+                    }
+                    if self.isCEO == true
+                    {
+                        print("Welcome, CEO of N3RVE B)")
+                    }
+                    if self.isAdmin == true
+                    {
+                        print("Oh hey you guys!")
+                    }
+                    
+                    let db = Firestore.firestore()
+                    if let userId = Auth.auth().currentUser?.uid
+                    {
+                        db.collection("users").document(userId).collection("username").addSnapshotListener
+                        {
+                            (snapshot, error ) in
+                        }
+                        if userID == userId
+                        {
+                            self.performSegue(withIdentifier: "searchUserToUser", sender: self)
+                        }
+                    }
                 }
            }
         }
@@ -82,16 +146,6 @@ class OtherUserProfile: UIViewController {
     @IBAction func goBack(_ sender: Any) {
         performSegue(withIdentifier: "searchUserToUser", sender: self)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @objc func finishBackgroundVideo(notification: NSNotification)
     {

@@ -22,5 +22,6 @@ target 'N3RVE' do
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Storage'
 	pod 'libbambuser-ios', '0.9.24'
+	pod 'PPBlinkID', '~> 5.2.0'
 
 end
