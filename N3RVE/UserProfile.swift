@@ -76,7 +76,7 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate
     
     private func getDocument()
     {
-    //Get sspecific document from current user
+        //Get specific document from current user
         let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
         // Get data
         docRef.getDocuments
@@ -88,6 +88,7 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate
                 return
             }
             else
+                
             if querySnapshot!.documents.count != 1
             {
                 print("More than one documents or none")
