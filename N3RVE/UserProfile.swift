@@ -73,7 +73,6 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
     private func getDocument() {
          //Get sspecific document from current user
          let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
-
          // Get data
          docRef.getDocuments { (querySnapshot, err) in
              if let err = err {
@@ -91,20 +90,60 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
                     self.usernameLabel.text = "@\(username)"
                     self.nameLabel.text = "\(firstAndLastName)"
                     self.emailLabel.text = "\(email)"
-                    self.followersLabel.text = "\(followers) FOLLOWERS"
+                    let kFollowers: Double = Double(followers)
+                    let roundedKFollower = kFollowers.kmFormatted
+                    let mFollowers: Double = Double(followers)
+                    let roundedMFollower = mFollowers.kmFormatted
+                    if followers > 1
+                    {
+                        self.followersLabel.text = "\(followers) FOLLOWERS"
+                    }
+                    else
+                    {
+                        self.followersLabel.text = "\(followers) FOLLOWER"
+                    }
+                    if followers > 9999
+                    {
+                        self.followersLabel.text = "\(roundedKFollower) FOLLOWERS"
+                    }
+                    if followers >= 999999
+                    {
+                        self.followersLabel.text = "\(roundedMFollower) FOLLOWERS"
+                    }
                     self.countryLabel.text = "\(country)"
                  }
             }
          }
      }
-    @IBAction func searchForUserTapped(_ sender: Any) {
+    @IBAction func searchForUserTapped(_ sender: Any)
+    {
         performSegue(withIdentifier: "fromUserToSearchUser", sender: self)
     }
     
     @objc func finishBackgroundVideo(notification: NSNotification)
     {
-            if let playerItem = notification.object as? AVPlayerItem {
-            playerItem.seek(to: CMTime.zero, completionHandler: nil)
+        if let playerItem = notification.object as? AVPlayerItem
+        {
+        playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
+    }
+}
+
+extension Double
+{
+    var kmFormatted: String
+    {
+
+        if self >= 10000, self <= 999999
+        {
+            return String(format: "%.1fK", locale: Locale.current,self/1000).replacingOccurrences(of: ".0", with: "")
+        }
+
+        if self >= 999999
+        {
+            return String(format: "%.1fM", locale: Locale.current,self/1000000).replacingOccurrences(of: ".0", with: "")
+        }
+        
+        return String(format: "%.0f", locale: Locale.current,self)
     }
 }

@@ -15,18 +15,23 @@ import Microblink
 class SingUpNextScreen: UIViewController{
     
     var blinkIdRecognizer : MBBlinkIdRecognizer?
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         MBMicroblinkSDK.sharedInstance().setLicenseResource("MB_com.justynramirez.N3RVE_BlinkID_iOS_2020-04-06", withExtension: "mblic", inSubdirectory: "", for: Bundle.main)
+        signUpButton.isHidden = true
     }
     
     //END VIEWDIDLOAD
 
-    @IBAction func signUpTapped(_ sender: Any)
+    @IBAction func scanID(_ sender: Any)
     {
+        //Show the signUpButton
+        self.signUpButton.isHidden = false
+        
         /** Create BlinkID recognizer */
         self.blinkIdRecognizer = MBBlinkIdRecognizer()
         self.blinkIdRecognizer?.returnFullDocumentImage = true;

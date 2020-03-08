@@ -12,6 +12,7 @@ import AVFoundation
 
 class OtherUserProfile: UIViewController {
 
+    @IBOutlet weak var unfollowButton: UIButton!
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
@@ -41,6 +42,8 @@ class OtherUserProfile: UIViewController {
         searchField.setRightPaddingPoints(20)
         self.hideKeyboardWhenTappedAround()
         hasTappedOnFollow = false
+        followButton.isHidden = true
+        unfollowButton.isHidden = true
         
         //        LOAD VIDEO
         
@@ -58,6 +61,7 @@ class OtherUserProfile: UIViewController {
     }
     
     @IBAction func searchForUser(_ sender: Any) {
+        self.followButton.isHidden = false
         let searchRef = Firestore.firestore().collection("users").whereField("username", isEqualTo: searchField.text ?? nil!)
         
         // Get data
@@ -154,31 +158,67 @@ class OtherUserProfile: UIViewController {
         }
     }
     
-    @IBAction func followUser(_ sender: Any) {
-        if hasTappedOnFollow == false{
-            hasTappedOnFollow = true
+    @IBAction func followUser(_ sender: Any)
+    {
+        self.followButton.isHidden = true
+        self.unfollowButton.isHidden = false
+        hasTappedOnFollow = true
         print(self.getsFollowedUid)
         let db = Firestore.firestore()
-            self.followersLabel.text = "\(peopleFollowing+1)"
+        self.followersLabel.text = "\(peopleFollowing+1)"
+
+        if let userId = Auth.auth().currentUser?.uid
+        {
+                db.collection("users").document(userId).collection("currentFollowers").addSnapshotListener
+            { (snapshot, error ) in
+                
+                let docsRef = db.collection("users").document(self.getsFollowedUid)
+                // Set the "capital" field of the city 'DC'
+                docsRef.updateData([
+                    "currentFollowers": self.peopleFollowing+1
+            ]) { err in
+                    if let err = err
+                    {
+                        print("Error updating document: \(err)")
+                    }
+                    else
+                    {
+                        print("Document successfully updated")
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func unfollowUser(_ sender: Any)
+    {
+            self.followButton.isHidden = false
+            self.unfollowButton.isHidden = true
+        print(self.getsFollowedUid)
+        let db = Firestore.firestore()
+            self.followersLabel.text = "\(peopleFollowing)"
 
             if let userId = Auth.auth().currentUser?.uid {db.collection("users").document(userId).collection("currentFollowers").addSnapshotListener { (snapshot, error ) in
                 
                 let docsRef = db.collection("users").document(self.getsFollowedUid)
                 // Set the "capital" field of the city 'DC'
                 docsRef.updateData([
-                    "currentFollowers": self.peopleFollowing+1
-                ]) { err in
-                    if let err = err {
+                    "currentFollowers": self.peopleFollowing
+                ])
+                {
+                    err in
+                    if let err = err
+                    {
                         print("Error updating document: \(err)")
-                    } else {
+                    }
+                    else
+                    {
                         print("Document successfully updated")
                     }
                 }
             }
         }
-        }
-        if hasTappedOnFollow == true{
-            print("t'as déjà tappé gros")
-        }
+
     }
+    
 }

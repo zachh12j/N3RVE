@@ -307,7 +307,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Scan ID"/>
                                 <connections>
-                                    <action selector="signUpTapped:" destination="Myo-Z9-wPc" eventType="touchUpInside" id="eIe-qA-E9J"/>
+                                    <action selector="scanID:" destination="Myo-Z9-wPc" eventType="touchUpInside" id="1K7-wr-Pbv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lv9-j4-b37">
@@ -324,7 +324,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jfv-pC-Hoh"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="signUp" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="y1J-FI-nVS"/>
+                        <outlet property="signUpButton" destination="Lv9-j4-b37" id="vjH-Mq-dne"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="signUp" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="y1J-FI-nVS"/>
                         <segue destination="XBq-aC-AaW" kind="presentation" identifier="returnBackSignUp" id="KqK-P5-d52"/>
                     </connections>
                 </viewController>
@@ -931,6 +932,13 @@
                                             <action selector="followUser:" destination="xhg-qy-x84" eventType="touchUpInside" id="MCo-GJ-QQ3"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMU-wz-eJa">
+                                        <rect key="frame" x="146" y="645" width="83" height="30"/>
+                                        <state key="normal" title="UNFOLLOW"/>
+                                        <connections>
+                                            <action selector="unfollowUser:" destination="xhg-qy-x84" eventType="touchUpInside" id="rhE-ex-yaD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -967,6 +975,8 @@
                                     <constraint firstItem="fmP-1e-DQm" firstAttribute="leading" secondItem="0u5-Yv-d5W" secondAttribute="leading" constant="87" id="s1P-3U-Syg"/>
                                     <constraint firstItem="fmP-1e-DQm" firstAttribute="top" secondItem="R0A-ty-2nM" secondAttribute="bottom" constant="15" id="sUI-l6-MwD"/>
                                     <constraint firstAttribute="trailing" secondItem="2Sb-gL-yKk" secondAttribute="trailing" constant="100" id="uEx-pA-kEA"/>
+                                    <constraint firstItem="dMU-wz-eJa" firstAttribute="centerY" secondItem="0Zt-a1-7O4" secondAttribute="centerY" id="v2W-A6-ZFI"/>
+                                    <constraint firstItem="0u5-Yv-d5W" firstAttribute="bottom" secondItem="dMU-wz-eJa" secondAttribute="bottom" constant="49" id="yCJ-m6-Zad"/>
                                     <constraint firstItem="9Mc-f8-J9S" firstAttribute="top" secondItem="ZcF-KE-WbQ" secondAttribute="bottom" constant="34" id="ySl-o7-yWu"/>
                                     <constraint firstItem="0u5-Yv-d5W" firstAttribute="trailing" secondItem="POK-XV-gTZ" secondAttribute="trailing" id="zYl-Sm-6iR"/>
                                 </constraints>
@@ -978,6 +988,7 @@
                             <constraint firstItem="y6d-Lw-uDI" firstAttribute="bottom" secondItem="0Zt-a1-7O4" secondAttribute="bottom" constant="35" id="HS9-jc-Gon"/>
                             <constraint firstItem="y6d-Lw-uDI" firstAttribute="trailing" secondItem="ang-IW-6Gy" secondAttribute="trailing" constant="22" id="R0o-Yr-KPt"/>
                             <constraint firstItem="ang-IW-6Gy" firstAttribute="top" secondItem="y6d-Lw-uDI" secondAttribute="top" constant="20" id="ScS-Xz-IqM"/>
+                            <constraint firstItem="dMU-wz-eJa" firstAttribute="centerX" secondItem="y6d-Lw-uDI" secondAttribute="centerX" id="lwf-GN-sWd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y6d-Lw-uDI"/>
                     </view>
@@ -987,6 +998,7 @@
                         <outlet property="followersLabel" destination="2Sb-gL-yKk" id="4YZ-Up-8Me"/>
                         <outlet property="nameLabel" destination="ZcF-KE-WbQ" id="cwB-kf-ZjW"/>
                         <outlet property="searchField" destination="fak-Pv-gpn" id="cgp-og-SoL"/>
+                        <outlet property="unfollowButton" destination="dMU-wz-eJa" id="ajK-Ku-12g"/>
                         <outlet property="usernameLabel" destination="wcu-pu-GPw" id="lvq-N1-DlV"/>
                         <segue destination="zuC-eI-uhz" kind="presentation" identifier="searchUserToUser" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="X6U-uK-4A5"/>
                     </connections>
@@ -1220,11 +1232,10 @@
         <image name="Watcher" width="154" height="59"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GyL-Nr-S1a"/>
-        <segue reference="br8-gy-F5g"/>
+        <segue reference="X6U-uK-4A5"/>
         <segue reference="o7u-q1-Myi"/>
         <segue reference="KqK-P5-d52"/>
         <segue reference="IQc-DB-gPi"/>
-        <segue reference="y1J-FI-nVS"/>
+        <segue reference="nW8-mQ-wzq"/>
     </inferredMetricsTieBreakers>
 </document>
