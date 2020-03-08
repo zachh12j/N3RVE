@@ -11,7 +11,8 @@ import AVFoundation
 import Firebase
 import FirebaseCoreDiagnostics
 
-class UserProfile: UIViewController, UIImagePickerControllerDelegate{
+class UserProfile: UIViewController, UIImagePickerControllerDelegate
+{
     
     
     @IBOutlet weak var pfp: UIImageView!
@@ -30,16 +31,17 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
     
     let imagePicker = UIImagePickerController()
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle
+    {
         return .lightContent
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        
-//        LOAD VIDEO
+        //LOAD VIDEO
         
         // Load the video from the app bundle.
         /*
@@ -61,27 +63,39 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
         */
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         getDocument()
         NotificationCenter.default.addObserver(self, selector: #selector(UserProfile.finishBackgroundVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
     }
 
-    @IBAction func backToMenu(_ sender: Any) {
+    @IBAction func backToMenu(_ sender: Any)
+    {
         performSegue(withIdentifier: "backToHome", sender: self)
     }
     
-    private func getDocument() {
-         //Get sspecific document from current user
-         let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
-         // Get data
-         docRef.getDocuments { (querySnapshot, err) in
-             if let err = err {
-                 print(err.localizedDescription)
-                 return
-             } else if querySnapshot!.documents.count != 1 {
-                 print("More than one documents or none")
-             } else {
-                 for document in querySnapshot!.documents {
+    private func getDocument()
+    {
+    //Get sspecific document from current user
+        let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
+        // Get data
+        docRef.getDocuments
+        {
+            (querySnapshot, err) in
+            if let err = err
+            {
+                print(err.localizedDescription)
+                return
+            }
+            else
+            if querySnapshot!.documents.count != 1
+            {
+                print("More than one documents or none")
+            }
+            else
+            {
+                for document in querySnapshot!.documents
+                {
                     let username = document.get("username") as! String
                     let firstAndLastName = document.get("firstandlastname") as! String
                     let email = document.get("email") as! String
@@ -111,10 +125,11 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
                         self.followersLabel.text = "\(roundedMFollower) FOLLOWERS"
                     }
                     self.countryLabel.text = "\(country)"
-                 }
+                }
             }
-         }
-     }
+        }
+    }
+    
     @IBAction func searchForUserTapped(_ sender: Any)
     {
         performSegue(withIdentifier: "fromUserToSearchUser", sender: self)
@@ -124,7 +139,7 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate{
     {
         if let playerItem = notification.object as? AVPlayerItem
         {
-        playerItem.seek(to: CMTime.zero, completionHandler: nil)
+            playerItem.seek(to: CMTime.zero, completionHandler: nil)
         }
     }
 }
@@ -143,7 +158,6 @@ extension Double
         {
             return String(format: "%.1fM", locale: Locale.current,self/1000000).replacingOccurrences(of: ".0", with: "")
         }
-        
         return String(format: "%.0f", locale: Locale.current,self)
     }
 }
