@@ -15,6 +15,7 @@ import Photos
 class LiveViewController: UIViewController, BambuserViewDelegate{
     var bambuserView : BambuserView
     var broadcastButton : UIButton
+    var titleButton : UIButton
     var currentViewersLabel: UILabel
     var swapButton: UIButton
     var backButton: UIButton
@@ -23,6 +24,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
     required init?(coder aDecoder: NSCoder) {
         bambuserView = BambuserView(preparePreset: kSessionPresetAuto)
         broadcastButton = UIButton(type: UIButton.ButtonType.system)
+        titleButton = UIButton(type: UIButton.ButtonType.system)
         currentViewersLabel = UILabel()
         swapButton = UIButton(type: UIButton.ButtonType.system)
         backButton = UIButton(type: UIButton.ButtonType.system)
@@ -71,29 +73,33 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
                 guard let username = dataDescription?["username"] else { return }
                 print(username)
                 self.liveTitle = "\(username as! String)'s Live"
-                print(self.liveTitle)
-                self.bambuserView.broadcastTitle = "\(self.liveTitle)"
+                self.bambuserView.author = "\(username)"
             }
         }
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         bambuserView.orientation = (UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.windowScene?.interfaceOrientation)!
         self.view.addSubview(bambuserView.view)
         bambuserView.startCapture()
-        broadcastButton.addTarget(self, action: #selector(LiveViewController.broadcast), for: UIControl.Event.touchUpInside)
+        broadcastButton.addTarget(self, action: #selector(LiveViewController.promptForAnswer), for: UIControl.Event.touchUpInside)
         broadcastButton.setTitle("Broadcast", for: UIControl.State.normal)
+        titleButton.setTitle("Broadcast", for: UIControl.State.normal)
         backButton.addTarget(self, action: #selector(LiveViewController.goBack), for: UIControl.Event.touchUpInside)
         backButton.setTitle("Back", for: UIControl.State.normal)
         self.view.addSubview(broadcastButton)
+        self.view.addSubview(titleButton)
         self.view.addSubview(backButton)
         self.view.addSubview(bambuserView.chatView)
         self.view.addSubview(currentViewersLabel)
-        if (bambuserView.hasFrontCamera) {
+        if (bambuserView.hasFrontCamera)
+        {
             self.view.addSubview(swapButton)
         }
+        /*
         //GET DATA FROM LIVES
         // Create URL
         let url = URL(string: "https://api.bambuser.com/broadcasts?order&titleContains=Live")
@@ -125,8 +131,24 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
             }
         }
         task.resume()
+         */
     }
     
+    @objc func promptForAnswer() {
+        let ac = UIAlertController(title: "Enter your awesome live title", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+
+        let submitAction = UIAlertAction(title: "Go live!", style: .default)
+        {
+            [unowned ac] _ in
+            let typedTitle = ac.textFields![0]
+            print(typedTitle)
+            //self.bambuserView.broadcastTitle = "\(typedTitle)"
+            //self.broadcast()
+        }
+        ac.addAction(submitAction)
+        present(ac, animated: true)
+    }
     
     func currentViewerCountUpdated(_ viewers: Int32) {
         currentViewersLabel.text = "Viewers: \(viewers)"

@@ -39,7 +39,6 @@ class Home: UIViewController {
         buttonClickSound()
     }
     
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
