@@ -13,8 +13,6 @@ import FirebaseCoreDiagnostics
 
 class UserProfile: UIViewController, UIImagePickerControllerDelegate
 {
-    
-    
     @IBOutlet weak var pfp: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -41,9 +39,6 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate
         super.viewDidLoad()
         
         imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        //LOAD VIDEO
-        
-        // Load the video from the app bundle.
         /*
         let videoURL: NSURL = Bundle.main.url(forResource: "BackgroundVid", withExtension: "mp4")! as NSURL
         
@@ -72,6 +67,11 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate
     @IBAction func backToMenu(_ sender: Any)
     {
         performSegue(withIdentifier: "backToHome", sender: self)
+    }
+    
+    func RankPlayers(followers: Int)
+    {
+        
     }
     
     private func getDocument()
@@ -109,6 +109,7 @@ class UserProfile: UIViewController, UIImagePickerControllerDelegate
                     let roundedKFollower = kFollowers.kmFormatted
                     let mFollowers: Double = Double(followers)
                     let roundedMFollower = mFollowers.kmFormatted
+                    self.RankPlayers(followers: followers)
                     if followers > 1
                     {
                         self.followersLabel.text = "\(followers) FOLLOWERS"

@@ -42,19 +42,29 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
     @objc func goBack()
     {
         performSegue(withIdentifier: "fromLiveToHome", sender: self)
+        bambuserView.stopBroadcasting()
+        broadcastStopped()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         let docRef = Firestore.firestore().collection("users").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "")
 
         // Get data
-        docRef.getDocuments { (querySnapshot, err) in
-            if let err = err {
+        docRef.getDocuments
+        {
+                (querySnapshot, err) in
+            if let err = err
+            {
                 print(err.localizedDescription)
                 return
-            } else if querySnapshot!.documents.count != 1 {
+            }
+            else if querySnapshot!.documents.count != 1
+            {
                 print("More than one documents or none")
-            } else {
+            }
+            else
+            {
                 
                 let document = querySnapshot!.documents.first
                 let dataDescription = document?.data()
@@ -84,7 +94,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         if (bambuserView.hasFrontCamera) {
             self.view.addSubview(swapButton)
         }
-        
+        //GET DATA FROM LIVES
         // Create URL
         let url = URL(string: "https://api.bambuser.com/broadcasts?order&titleContains=Live")
         guard let requestUrl = url else { fatalError() }
