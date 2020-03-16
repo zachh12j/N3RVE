@@ -8,14 +8,16 @@
 
 import UIKit
 
-class PlayerViewController: UIViewController, BambuserPlayerDelegate {
+class PlayerViewController: UIViewController, BambuserPlayerDelegate
+{
     var bambuserPlayer: BambuserPlayer
     var playButton: UIButton
     var pauseButton: UIButton
     var rewindButton: UIButton
     var backButton: UIButton
 
-    required init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder)
+    {
         bambuserPlayer = BambuserPlayer()
         playButton = UIButton(type: UIButton.ButtonType.system)
         pauseButton = UIButton(type: UIButton.ButtonType.system)
