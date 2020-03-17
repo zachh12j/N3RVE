@@ -135,16 +135,15 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
     }
     
     @objc func promptForAnswer() {
-        let ac = UIAlertController(title: "Enter your awesome live title", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "Enter your live title", message: nil, preferredStyle: .alert)
         ac.addTextField()
 
         let submitAction = UIAlertAction(title: "Go live!", style: .default)
         {
             [unowned ac] _ in
             let typedTitle = ac.textFields![0]
-            print(typedTitle)
-            //self.bambuserView.broadcastTitle = "\(typedTitle)"
-            //self.broadcast()
+            self.bambuserView.broadcastTitle = "\(typedTitle.text!)"
+            self.broadcast()
         }
         ac.addAction(submitAction)
         present(ac, animated: true)
@@ -190,6 +189,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         broadcastButton.removeTarget(nil, action: nil, for: UIControl.Event.touchUpInside)
         broadcastButton.addTarget(bambuserView, action: #selector(bambuserView.stopBroadcasting), for: UIControl.Event.touchUpInside)
         bambuserView.startBroadcasting()
+        bambuserView.sendPosition = true
     }
 
     func broadcastStarted() {
@@ -197,6 +197,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         broadcastButton.setTitle("Stop", for: UIControl.State.normal)
         broadcastButton.removeTarget(nil, action: nil, for: UIControl.Event.touchUpInside)
         broadcastButton.addTarget(bambuserView, action: #selector(bambuserView.stopBroadcasting), for: UIControl.Event.touchUpInside)
+        bambuserView.sendPosition = true
     }
 
     func broadcastStopped() {
