@@ -204,7 +204,7 @@ class LiveViewController: UIViewController, BambuserViewDelegate{
         NSLog("Received broadcastStopped signal")
         broadcastButton.setTitle("Broadcast", for: UIControl.State.normal)
         broadcastButton.removeTarget(nil, action: nil, for: UIControl.Event.touchUpInside)
-        broadcastButton.addTarget(self, action: #selector(LiveViewController.broadcast), for: UIControl.Event.touchUpInside)
+        broadcastButton.addTarget(self, action: #selector(LiveViewController.promptForAnswer), for: UIControl.Event.touchUpInside)
         self.currentViewersLabel.text = ""
     }
     
