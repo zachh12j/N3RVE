@@ -158,6 +158,8 @@ class OtherUserProfile: UIViewController {
         }
     }
     
+    
+    
     @IBAction func followUser(_ sender: Any)
     {
         self.followButton.isHidden = true
