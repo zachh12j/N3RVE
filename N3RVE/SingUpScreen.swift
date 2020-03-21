@@ -166,4 +166,3 @@ class SingUpScreen: UIViewController {
         performSegue(withIdentifier: "fromSignUpToHomePage", sender: self)
     }
     
-}
